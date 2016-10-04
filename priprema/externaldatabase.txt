@@ -1,0 +1,4 @@
+skinuto sa http://www.vb123.com/toolshed/02_accvb/remotequeries.htm
+
+SELECT [Orders Qry].* FROM [Orders Qry]
+IN 'C:\msoffice97\Office\Samples\Northwind.mdb';

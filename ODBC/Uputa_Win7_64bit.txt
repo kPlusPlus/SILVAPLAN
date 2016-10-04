@@ -1,0 +1,14 @@
+http://www.utteraccess.com/forum/ODBC-Windows-7-64bit-V-t1944299.html
+
+If anyone is curious or having the same issue. I did manage to find a work around. The integrated services was one option but a timely one. Below is the steps I took to fix my issue.
+
+
+1. Copied the vfpodbc.dll from a working computer.
+2. Placed this file into the c:\windows\SysWOW64 directory.
+3. Launched the 32bit ODBC Manager from the SysWOW64 directory. C:\windows\SysWOW64\odbcad32.exe
+4. Added a new DSN and chose the Visual FoxPro Driver.
+5. Named the DSN to match the original connection name that was to the database. I found this by getting into the design on the Access Database and mousing over the linked table. It shows you the DSN Name. Make sure it's spelled exactly the same.
+
+Mine happened to be very simple. Visual FoxPro Table and Visual FoxPro Database.
+
+Clicked ok the entire way out of the ODBC admin and double clicked my table. Bingo.. connection established. Microsoft clearly states they provide very limited support for this product. Hope this would help anyone that might be having issues with the same issue I was. 

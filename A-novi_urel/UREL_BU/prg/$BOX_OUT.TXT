@@ -1,0 +1,10 @@
+\a\urel\ptt\ods_318.dbf
+\a\urel\ptt\ovr_318.dbf
+\a\urel\ptt\uro_318.dbf
+\a\urel\ptt\tar_318.dbf
+\a\urel\ptt\uto_318.dbf
+\a\urel\ptt\urg_318.dbf
+\a\urel\ptt\utg_318.dbf
+\a\urel\ptt\pre_318.dbf
+\a\urel\ptt\osn_318.dbf
+

@@ -1,0 +1,5 @@
+
+Form_Glavna
+qDebljinska_subform1
+
+Form_Glavna.qDebljinska_subform1.Controls("cardNO").value

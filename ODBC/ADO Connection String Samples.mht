@@ -1,0 +1,2869 @@
+From: <Saved by Mozilla 5.0 (Windows)>
+Subject: ADO Connection String Samples
+Date: Tue, 07 Feb 2012 13:11:40 +0100
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="ISO-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.codemaker.co.uk/it/tips/ado_conn.htm
+X-MAF-Information: Produced By MAF V2.0.4
+
+<html><head>
+<meta http-equiv=3D"content-type" content=3D"text/html; charset=3DISO-8859-=
+1">
+<title>ADO Connection String Samples</title>
+
+</head>
+
+<body>
+<table style=3D"font-family: Verdana, Arial, Helvetica; font-size: 10pt" bo=
+rder=3D"0" width=3D"100%">
+  <tbody><tr>
+    <td valign=3D"top" width=3D"500" align=3D"left">
+        <h2>ADO Connection String Samples</h2>
+        This page contains sample ADO connection strings for=A0ODBC DSN /=
+ DSN-Less, OLE DB Providers, Remote Data Services (RDS), MS Remote, and MS
+        DataShape.
+        <p>Also included are ADO.NET connection strings for MySQL, ODBC, OL=
+E DB, Oracle, and SQL
+        Server .NET
+              Data Providers.</p>
+        <p>These
+sample connection strings are compiled=A0by Carl Prothman, a
+              <a href=3D"http://support.microsoft.com/support/mvp" target=
+=3D"_blank">Microsoft
+              ASP.NET MVP</a> and <a href=3D"http://www.microsoft.com/train=
+cert/mcp/" target=3D"_blank">Microsoft
+        Certified Professional (MCP)</a>
+        </p><p>If you have an ADO or ADO.NET connection string that is not=
+ listed below,
+        or you see an connection string that does not have the correct sett=
+ing, please
+        send an email to <a href=3D"mailto:carlpr@spamcop.net">Carl Prothma=
+n</a>.=A0
+        Thanks!
+
+    </p></td>
+  </tr>
+  <tr>
+    <td valign=3D"top" width=3D"500" align=3D"left">
+
+        <hr>
+
+        <h2> Table of Contents</h2>
+<ul>
+  <li><b>=A0</b><a href=3D"#DOTNETManagedProviderConnections"><b>.NET
+            Data Provider
+            Connections</b></a>
+    <ul>
+      <li><a href=3D"#MySQLNETNativeProvider">MySQL .NET Native
+        Provider</a></li>
+      <li><a href=3D"#ODBCManagedProvider">ODBC .NET Data Provider</a></li>
+      <li><a href=3D"#OLEDBManagedProvider">OLE DB .NET Data Provider</a></=
+li>
+      <li><a href=3D"#OracleNETDataProvider">Oracle .NET Data Provider
+        </a></li>
+      <li><a href=3D"#SQLClientManagedProvider">SQL Server .NET Data Provid=
+er<br>
+        </a>=A0=A0</li>
+    </ul>
+  </li>
+  <li><b>=A0</b><a href=3D"#ODBCDSNConnections"><b>ODBC DSN Connections</b>=
+</a>
+    <ul>
+      <li><a href=3D"#DSN">DSN</a></li>
+      <li><a href=3D"#FileDSN">File DSN<br>
+                </a>=A0</li>
+    </ul>
+  </li>
+  <li>
+<b>
+=A0
+<a href=3D"#ODBCDSN-LessConnections">
+ODBC DSN-Less Connections</a>=A0=A0=A0
+</b>
+    <ul>
+      <li><a href=3D"#ODBCDriverForAccess">ODBC Driver for Access</a></li>
+      <li><a href=3D"#ODBCDriverForAS400">ODBC Driver for AS/400</a></li>
+      <li><a href=3D"#ODBCDriverForDBASE">ODBC Driver for dBASE</a></li>
+      <li><a href=3D"#ODBCDriverForExcel">ODBC Driver for Excel</a></li>
+      <li><a href=3D"#ODBCDriverForInformix">ODBC Driver for
+        Informix</a></li>
+      <li><a href=3D"#ODBCDriverForInterbaseEasysoft">ODBC Driver for Inter=
+base
+        (from Easysoft)</a></li>
+      <li><a href=3D"#ODBCDriverForInterbaseIntersolv">ODBC Driver for Inte=
+rbase (from
+        InterSolv)</a></li>
+      <li><a href=3D"#ODBCDriverForLotusNotes">ODBC Driver for <font size=
+=3D"2">Lotus
+        Notes</font></a></li>
+      <li><a href=3D"#ODBCDriverForMySQL">ODBC Driver for MySQL</a></li>
+      <li><a href=3D"#ODBCDriverForOracle">ODBC Driver for Oracle
+        (from Microsoft)</a></li>
+      <li><a href=3D"#ODBCDriverForOracleFromOracle">ODBC Driver
+        for Oracle (from Oracle)</a></li>
+      <li><a href=3D"#ODBCDriverForParadox">ODBC Driver for Paradox</a></li>
+      <li><a href=3D"#ODBCDriverForSQLServer">ODBC Driver for SQL Server</a=
+></li>
+      <li><a href=3D"#ODBCDriverForSybase">ODBC Driver for Sybase</a></li>
+      <li><a href=3D"#ODBCDriverForSybaseSQLAnywhere">ODBC Driver for Sybas=
+e SQL Anywhere</a></li>
+      <li><a href=3D"#ODBCDriverForText">ODBC Driver for Text</a></li>
+      <li><a href=3D"#ODBCDriverForTeradata">ODBC Driver
+                for Teradata</a></li>
+      <li><a href=3D"#ODBCDriverForVisualFoxPro">ODBC Driver for Visual
+                FoxPro<br>
+                </a>=A0</li>
+    </ul>
+  </li>
+  <li><b>=A0</b><a href=3D"#OLEDBDataLinkConnections"><b>OLE DB Data Link=
+ Connections</b></a>
+    <ul>
+      <li><a href=3D"#DataLinkFile">Data Link File (UDL)<br>
+                </a>
+        =A0</li>
+    </ul>
+  </li>
+  <li><b>=A0<a href=3D"#OLEDBProviderConnections">OLE DB Data Provider Conn=
+ections</a>=A0=A0=A0
+    </b>
+    <ul>
+      <li><a href=3D"#OLEDBProviderforActiveDirectoryService">
+            OLE DB
+                Provider for Active Directory Service</a></li>
+      <li><a href=3D"#OLEDBProviderForAdvantage">OLE DB Provider
+        for Advantage</a></li>
+      <li><a href=3D"#OLEDBProviderForAS400FromIBM">OLE DB Provider for
+                AS/400 (from IBM)</a></li>
+      <li><a href=3D"#OLEDBProviderForAS400AndVSAM">OLE DB Provider for
+                AS/400 and VSAM (from Microsoft)</a></li>
+      <li><a href=3D"#OLEDBProviderForCommerceServer">OLE DB Provider for=
+ Commerce Server</a></li>
+      <li><a href=3D"#OLEDBProviderForDB2">OLE DB Provider for DB2</a></li>
+      <li><a href=3D"#OLEDBProviderForDTSPackages">OLE DB Provider for DTS
+                Packages</a></li>
+      <li><a href=3D"#OLEDBProviderForExchange">OLE DB Provider for Exchang=
+e</a></li>
+      <li><a href=3D"#OLEDBProviderForExcel">OLE DB Provider for
+        Excel</a></li>
+      <li><a href=3D"#OLEDBProviderForInternetPublishing">OLD DB Provider=
+ for Internet Publishing</a></li>
+      <li><a href=3D"#OLEDBProviderforIndexServer">OLE DB Provider for
+            Index Server</a></li>
+      <li><a href=3D"#OLEDBProviderForMicrosoftJet">OLE DB Provider for Mic=
+rosoft Jet</a></li>
+      <li><a href=3D"#OLEDBProviderForMicrosoftProject">OLE DB Provider
+                for Microsoft Project</a></li>
+      <li><a href=3D"#OLEDBProviderForMySQL">OLE DB Provider for
+        MySQL</a></li>
+      <li><a href=3D"#OLEDBProviderForODBCDatabases">OLE DB Provider for OD=
+BC Databases</a></li>
+      <li><a href=3D"#OLEDBProviderForOLAPServices">OLE DB Provider for
+                OLAP Services</a></li>
+      <li><a href=3D"#OLEDBProviderForOracleFromMicrosoft">OLE DB Provider=
+ for
+                Oracle (from Microsoft)</a></li>
+      <li><a href=3D"#OLEDBProviderForOracleFromOracle">OLE DB Provider for
+                Oracle (from Oracle)</a></li>
+      <li><a href=3D"#OLEDBProviderForPervasive">OLE DB Provider
+        for Pervasive</a></li>
+      <li><a href=3D"#OLEDBProviderForSimpleProvider">OLE DB Provider for
+                Simple Provider</a></li>
+      <li><a href=3D"#OLEDBProviderForSybase">OLE DB
+                Provider for SQLBase</a></li>
+      <li><a href=3D"#OLEDBProviderForSQLServer">OLE DB Provider for SQL Se=
+rver</a></li>
+      <li><a href=3D"#OLEDBProviderForSQLServerViaSQLXMLOLEDB">
+            OLE
+                DB Provider for SQL Server via SQLXMLOLEDB</a></li>
+      <li><a href=3D"#OLEDBProviderForAdaptiveServerAnywhere">
+            OLE
+                DB Provider for Sybase Adaptive Server Anywhere</a></li>
+      <li><a href=3D"#OLEDBProviderForSybaseAdaptiveServerEnterprise">OLE
+        DB Provider for Sybase Adaptive Server Enterprise</a></li>
+      <li><a href=3D"#OLEDBProviderForTextFiles">OLE DB Provider
+        for Text Files</a></li>
+      <li><a href=3D"#OLEDBProviderForUniDataAndUniVerse">OLE DB
+        Provider for UniData and UniVerse</a></li>
+      <li><a href=3D"#OLEDBProviderForVisualFoxPro">OLE DB
+                Provider for Visual FoxPro<br>
+                </a>=A0</li>
+    </ul>
+  </li>
+  <li><b>=A0<a href=3D"#AdoUrlConnection">ADO URL Connections</a>=A0=A0
+    </b>
+    <ul>
+      <li><a href=3D"#AdoUrlConnectionADORecordset">ADO
+                Recordset<br>
+                </a>=A0</li>
+    </ul>
+  </li>
+  <li><b>=A0</b><a href=3D"#RemoteDataServiceConnections"><b>Remote Data Se=
+rvice (RDS)
+            Connections</b></a>
+    <ul>
+      <li><a href=3D"#RDSConnectProperty">RDS Data Control - Connect Proper=
+ty</a></li>
+      <li><a href=3D"#RDSURLProperty">RDS Data Control - URL Property<br>
+        </a>=A0</li>
+    </ul>
+  </li>
+  <li><b>=A0</b><a href=3D"#RemoteOLEDBProviderConnections"><b>MS Remote Pr=
+ovider Connections</b></a>
+    <ul>
+      <li><a href=3D"#MSRemoteAccess">MS Remote - Access (Jet)</a></li>
+      <li><a href=3D"#MSRemoteSQLServer">MS Remote - SQL Server<br>
+                </a>
+        =A0</li>
+    </ul>
+  </li>
+  <li><b>=A0<a href=3D"#DataShapeProviderConnections">Data Shape Provider
+            Connections</a>=A0=A0=A0
+    </b>
+    <ul>
+      <li><a href=3D"#MSDataShapeSQLServer">MS DataShape - SQL Server
+                </a>
+      </li>
+    </ul>
+  </li>
+</ul>
+        <p>=A0
+
+    </p></td>
+  </tr>
+  <tr>
+    <td valign=3D"top" width=3D"500" align=3D"left">
+        <hr>
+        <h2><a name=3D"ODBCDSNConnections">ODBC DSN Connections</a></h2>
+        <p>Using an ODBC DSN (Data Source Name) is a two step process.=A0</=
+p>
+        <p>1) You must first create the DSN via the "ODBC Data Source
+        Administrator" program=A0found in your computer's Control Panel (or=
+ Administrative Tools
+        menu in
+        Windows 2000).
+        Make sure to create a SYSTEM DSN (not a USER DSN) when using ASP.=
+=A0You can also <a href=3D"http://support.microsoft.com/support/kb/articles=
+/Q171/1/46.ASP">create</a>
+        the DSN via Visual Basic code.</p>
+        <p>2) Then use the following connection string - with your own DSN=
+=20
+        <br>
+        name of course.=A0</p>
+      <ul>
+        <li><b>ODBC - <a name=3D"DSN">DSN</a></b></li>
+      </ul>
+        <pre>oConn.Open "<font color=3D"#0000FF">DSN</font>=3DmySystemDSN;"=
+ &amp; _=20
+           "Uid=3DmyUsername;" &amp; _=20
+           "Pwd=3DmyPassword"
+</pre>
+      <ul>
+        <li><b>ODBC - <a name=3D"FileDSN">File DSN</a></b></li>
+      </ul>
+        <pre>oConn.Open "<font color=3D"#0000FF">FILEDSN</font>=3Dc:\somepa=
+th\mydb.dsn;" &amp; _=20
+           "Uid=3DmyUsername;" &amp; _
+           "Pwd=3DmyPassword"</pre>
+
+<p>For more information, see:=A0 <a href=3D"http://msdn.microsoft.com/libra=
+ry/officedev/off2000/acconAboutODBCDataSources.htm">About
+ODBC data sources</a>=A0and=A0 <a href=3D"http://support.microsoft.com/supp=
+ort/kb/articles/Q165/8/66.ASP">
+<br>
+How
+to Use File DSNs and DSN-less Connections</a></p>
+
+        <p>Note: The problem with DSN is that Users can (and will) modify=
+  or delete=20
+        them
+        by mistake,=A0then your program won't work so well. So it's better=
+ to use a
+        DSN-Less
+        or OLE DB Provider=A0connection string - with a Trusted Connection=
+ if possible!
+
+        </p>
+
+        <p>=A0
+
+        </p>
+
+    </td>
+  </tr>
+  <tr>
+    <td valign=3D"top" width=3D"500" align=3D"left">
+
+<hr>
+
+<h2><a name=3D"ODBCDSN-LessConnections">ODBC DSN-Less Connections</a></h2>
+
+      <ul>
+        <li><strong><a name=3D"ODBCDriverForAccess">ODBC Driver for Access<=
+/a></strong></li>
+      </ul>
+
+<p><b><u>For Standard Security</u>:</b></p>
+
+      <pre>oConn.Open "Driver=3D{<font color=3D"#0000FF">Microsoft Access=
+ Driver (*.mdb)</font>};" &amp; _=20
+           "Dbq=3Dc:\somepath\mydb.mdb;" &amp; _
+           "<font color=3D"#0000FF">Uid</font>=3Dadmin;" &amp; _
+           "<font color=3D"#0000FF">Pwd</font>=3D"
+ </pre>
+
+<p><b><u>If you are using a Workgroup</u> (System database):</b></p>
+
+      <pre>oConn.Open "Driver=3D{<font color=3D"#0000FF">Microsoft Access=
+ Driver (*.mdb)</font>};" &amp; _=20
+           "Dbq=3Dc:\somepath\mydb.mdb;" &amp; _
+           "<font color=3D"#0000FF">SystemDB</font>=3Dc:\somepath\mydb.mdw;=
+", _
+           "myUsername", "myPassword"
+ </pre>
+
+<p><b><u>If want to open up the MDB exclusively</u></b></p>
+
+      <pre>oConn.Open "Driver=3D{<font color=3D"#0000FF">Microsoft Access=
+ Driver (*.mdb)</font>};" &amp; _
+           "Dbq=3Dc:\somepath\mydb.mdb;" &amp; _
+           "<font color=3D"#0000FF">Exclusive=3D1</font>;" &amp; _
+           "Uid=3Dadmin;" &amp; _
+           "Pwd=3D"=20
+ </pre>
+
+<p><b>
+<u>
+If MDB is located on a Network Share</u></b></p>
+
+      <pre>oConn.Open "Driver=3D{<font color=3D"#0000FF">Microsoft Access=
+ Driver (*.mdb)</font>};" &amp; _
+           "Dbq=3D<font color=3D"#0000FF">\\myServer\myShare</font>\myPath\=
+myDb.mdb;" &amp; _
+           "Uid=3Dadmin;" &amp; _
+           "Pwd=3D"
+ </pre><p><b><u>If MDB is located on a remote machine</u></b></p><p><font=
+ face=3D"Trebuchet MS">-
+Or use an XML Web Service via <a href=3D"http://msdn.microsoft.com/library/=
+default.asp?url=3D/nhp/Default.asp?contentid=3D28000523">SOAP Toolkit</a>=20
+or <a href=3D"http://msdn.microsoft.com/library/default.asp?url=3D/nhp/Defa=
+ult.asp?contentid=3D28000442">ASP.NET<br>
+</a>- Or upgrade to SQL Server and use an <a href=3D"#OLEDBProviderForSQLSe=
+rverIP">IP
+connection string</a><br>
+- Or use an <a href=3D"#AdoUrlConnection">ADO URL</a>  with a remote ASP we=
+b page<br>
+- Or use a <a href=3D"#RemoteOLEDBProviderConnections">MS Remote</a> or <a=
+ href=3D"#RemoteDataServiceConnections">RDS</a>=20
+connection string<br>
+=A0=A0
+  </font></p>
+
+        <p><u><b>If you don't know the path to the MDB (using ASP)</b></u><=
+/p>
+
+      <pre>&lt;%  ' ASP server-side code
+oConn.Open "Driver=3D{<font color=3D"#0000FF">Microsoft Access Driver (*.md=
+b)</font>};" &amp; _
+           "Dbq=3D" &amp; <font color=3D"#0000FF">Server.MapPath</font>("."=
+)=A0&amp; "\myDb.mdb;" &amp; _
+           "Uid=3Dadmin;" &amp; _
+           "Pwd=3D"
+%&gt;</pre>
+<p>This assumes the MDB is in the same directory=20
+          where the ASP page is running.
+Also make sure this directory has Write permissions for the=20
+          user account.<br>
+=A0</p>
+
+        <p><u><b>If you don't know the path to the MDB (using VB)</b></u></=
+p>
+
+      <pre>oConn.Open "Driver=3D{<font color=3D"#0000FF">Microsoft Access=
+ Driver (*.mdb)</font>};" &amp; _
+           "Dbq=3D" &amp; <font color=3D"#0000FF">App.Path</font>=A0&amp;=
+ "\myDb.mdb;" &amp; _
+           "Uid=3Dadmin;" &amp; _
+           "Pwd=3D"</pre>
+          <p>This assumes the MDB is in the same directory=20
+          where the application is running.</p>
+
+        <p>For more information, see:=A0 <a href=3D"http://msdn.microsoft.c=
+om/library/en-us/odbc/htm/odbcjetmicrosoft_access_driver_programming_consid=
+erations.asp">Microsoft
+        Access Driver Programming Considerations</a></p>
+
+        <p>To view Microsoft KB articles related to Microsoft
+        Access Driver, <a href=3D"http://search.support.microsoft.com/searc=
+h/default.aspx?Catalog=3DLCID%3D1033%26CDID%3DEN-US-KB%26PRODLISTSRC%3DON&a=
+mp;Product=3Dmdac&amp;Query=3DMicrosoft%2520Access%2520Driver&amp;Queryc=3D=
+Microsoft+Access+Driver&amp;REF=3Dfalse&amp;srchstep=3D0&amp;KeywordType=3D=
+PHRASE&amp;Titles=3Dfalse&amp;numDays=3D&amp;maxResults=3D100">click
+        here</a>=A0</p>
+
+        <p>=A0</p>
+
+      <ul>
+        <li><strong><a name=3D"ODBCDriverForAS400">ODBC Driver for AS/400</=
+a>
+            (from IBM)</strong></li>
+      </ul>
+<pre>oConn.Open "Driver=3D{<font color=3D"#0000FF">Client Access ODBC Drive=
+r (32-bit)</font>};" &amp; _
+           "<font color=3D"#0000FF">System</font>=3DmyAS400;" &amp; _
+           "Uid=3DmyUsername;" &amp; _
+           "Pwd=3DmyPassword"</pre>
+        <p>
+
+        For more information, see:=A0=A0 <a href=3D"http://publib-b.boulder=
+.ibm.com/Redbooks.nsf/RedbookAbstracts/sg245183.html"><span class=3D"ft2"><=
+nobr>A
+        Fast Path to AS/400 Client/Server</nobr></span></a>
+
+        </p>
+        <p>=A0</p>
+      <ul>
+        <li><strong><a name=3D"ODBCDriverForDBASE">ODBC Driver for dBASE</a=
+></strong></li>
+      </ul>
+<pre>oConn.Open "Driver=3D{<font color=3D"#0000FF">Microsoft dBASE Driver=
+ (*.dbf)</font>};" &amp; _
+           "<font color=3D"#0000FF">DriverID</font>=3D277;" &amp; _
+           "Dbq=3Dc:\somepath"</pre>
+<p>Then specify the filename in the SQL statement:</p>
+      <pre>oRs.Open "Select * From <font color=3D"#0000FF">user.dbf</font>"=
+, oConn, , ,adCmdText</pre>
+<p>Note:<b> </b>MDAC 2.1 (or greater) requires the Borland Database Engine
+(BDE)
+to <font color=3D"#0000FF">
+update
+</font> dBase DBF files. (<a href=3D"http://support.microsoft.com/support/k=
+b/articles/Q238/4/31.ASP">Q238431</a>).</p>
+
+<p>For more information, see:=A0 <a href=3D"http://msdn.microsoft.com/libra=
+ry/en-us/odbc/htm/odbcjetdbase_programming_considerations.asp">dBASE
+Driver Programming Considerations</a></p>
+
+        <p>To view Microsoft KB articles related to Microsoft
+        dBASE Driver, <a href=3D"http://search.support.microsoft.com/search=
+/default.aspx?Catalog=3DLCID%3D1033%26CDID%3DEN-US-KB%26PRODLISTSRC%3DON&am=
+p;Product=3Dmdac&amp;Query=3DMicrosoft%2520dBASE%2520Driver&amp;Queryc=3DMi=
+crosoft+dBASE+Driver&amp;REF=3Dfalse&amp;srchstep=3D0&amp;KeywordType=3DPHR=
+ASE&amp;Titles=3Dfalse&amp;numDays=3D&amp;maxResults=3D100">click
+        here</a>=A0</p>
+
+<p>=A0</p>
+
+      <ul>
+        <li><strong><a name=3D"ODBCDriverForExcel">ODBC Driver for Excel</a=
+></strong></li>
+      </ul>
+<pre>oConn.Open "Driver=3D{<font color=3D"#0000FF">Microsoft Excel Driver=
+ (*.xls)</font>};" &amp; _
+           "<font color=3D"#0000FF">DriverId</font>=3D790;" &amp; _
+           "<font color=3D"#0000FF">Dbq</font>=3Dc:\somepath\mySpreadsheet.=
+xls;" &amp; _
+           "<font color=3D"#0000FF">DefaultDir</font>=3Dc:\somepath"=A0</pr=
+e>
+        <p>For more information, see:=A0 <a href=3D"http://msdn.microsoft.c=
+om/library/en-us/odbc/htm/odbcjetmicrosoft_excel_driver_programming_conside=
+rations.asp">Microsoft
+        Excel Driver Programming Considerations</a></p>
+
+        <p>To view Microsoft KB articles related to Microsoft
+        Excel Driver, <a href=3D"http://search.support.microsoft.com/search=
+/default.aspx?Catalog=3DLCID%3D1033%26CDID%3DEN-US-KB%26PRODLISTSRC%3DON&am=
+p;Product=3Dmdac&amp;Query=3DMicrosoft%2520Excel%2520Driver&amp;Queryc=3DMi=
+crosoft+Excel+Driver&amp;REF=3Dfalse&amp;srchstep=3D0&amp;KeywordType=3DPHR=
+ASE&amp;Titles=3Dfalse&amp;numDays=3D&amp;maxResults=3D100">click
+        here</a>=A0</p>
+
+        <p>=A0</p>
+
+      <ul>
+        <li><strong><a name=3D"ODBCDriverForInformix">ODBC Driver for
+    Informix</a></strong></li>
+      </ul>
+<p><u><b>If using INFORMIX 3.30 ODBC Driver</b></u></p>
+<pre>oConn.Open "Dsn=3D'';" &amp; _
+           "Driver=3D{<font color=3D"#0000FF">INFORMIX 3.30 32 BIT</font>};=
+" &amp; _
+           "Host=3DmyHostname;" &amp; _
+           "Server=3DmyServerName;" &amp; _
+           "Service=3DmyServiceName;" &amp; _
+           "Protocol=3D<font color=3D"#0000FF">olsoctcp</font>;" &amp; _
+           "Database=3DmyDbName;" &amp; _
+           "UID=3DmyUsername;" &amp; _
+           "PWD=3DmyPassword" &amp; _
+
+' Or</pre><pre>oConn.Open "<font color=3D"#0000FF">Dsn</font>=3DmyDsn;" &am=
+p; _
+           "Host=3DmyHostname;" &amp; _
+           "Server=3DmyServerName;" &amp; _
+           "Service=3DmyServiceName;" &amp; _
+           "Protocol=3D<font color=3D"#0000FF">onsoctcp</font>;" &amp; _
+           "Database=3DmyDbName;" &amp; _
+           "Uid=3DmyUsername;" &amp; _
+           "Pwd=3DmyPassword"</pre>
+<p><u><b>If using INFORMIX-CLI 2.5 ODBC Driver</b></u></p>
+<pre>oConn.Open "Driver=3D{<font color=3D"#0000FF">Informix-CLI 2.5 (32 Bit=
+)</font>};" &amp; _
+           "Server=3DmyServerName;" &amp; _
+           "Database=3DmyDbName;" &amp; _
+           "Uid=3DmyUsername;" &amp; _
+           "Pwd=3DmyPassword" &amp; _</pre>
+<p>For more information, see: <a href=3D"http://www7b.boulder.ibm.com/dmdd/=
+zones/informix/">Informix
+Developer Zone</a>,=A0 <a href=3D"http://www.informix.com/answers/english/d=
+ocs/11objtrans/install.html#1083028">Connection
+to ODBC Data Source</a>,=A0</p>
+
+        <p>=A0</p>
+
+<ul>
+  <li><b><a name=3D"ODBCDriverForInterbaseEasysoft">ODBC Driver for Interba=
+se</a>
+    (from Easysoft)</b></li>
+</ul>
+<p><u><b>For the local machine</b></u></p>
+<pre>oConn.Open "Driver=3D{<font color=3D"#0000FF">Easysoft IB6 ODBC</font>=
+};" &amp; _
+           "Server=3D<font color=3D"#0000FF">localhost</font>;" &amp; _
+           "Database=3D<font color=3D"#0000FF">localhost:</font>C:\Home\Dat=
+a\Mydb.<font color=3D"#0000FF">gdb</font>;" &amp; _
+           "Uid=3DmyUsername;" &amp; _
+           "Pwd=3DmyPassword" </pre>
+<p><u><b>For a remote machine</b></u></p>
+<pre>oConn.Open "Driver=3D{<font color=3D"#0000FF">Easysoft IB6 ODBC</font>=
+};" &amp; _
+           "Server=3D<font color=3D"#0000FF">myMachineName</font>;" &amp;=
+ _
+           "Database=3D<font color=3D"#0000FF">myMachineName:</font>C:\Home=
+\Data\Mydb.<font color=3D"#0000FF">gdb</font>;" &amp; _
+           "Uid=3DmyUsername;" &amp; _
+           "Pwd=3DmyPassword" </pre>
+<p>For more information, see:=A0=A0<span class=3D"title3"><a href=3D"http:/=
+/community.borland.com/article/0,1410,27152,00.html">Connecting
+to InterBase</a> and <a href=3D"http://www.easysoft.com/">Easysoft</a></spa=
+n></p>
+
+        <p>=A0</p>
+
+<ul>
+  <li><b><a name=3D"ODBCDriverForInterbaseIntersolv">ODBC Driver for Interb=
+ase</a>
+    (from InterSolv)</b></li>
+</ul>
+<p><u><b>For the local machine</b></u></p>
+<pre>oConn.Open "Driver=3D{<font color=3D"#0000FF">INTERSOLV InterBase ODBC=
+ Driver (*.gdb)</font>};" &amp; _
+           "Server=3D<font color=3D"#0000FF">localhost</font>;" &amp; _
+           "Database=3D<font color=3D"#0000FF">localhost:</font>C:\Home\Dat=
+a\Mydb.<font color=3D"#0000FF">gdb</font>;" &amp; _
+           "Uid=3DmyUsername;" &amp; _
+           "Pwd=3DmyPassword" </pre>
+<p><u><b>For a remote machine</b></u></p>
+<pre>oConn.Open "Driver=3D{<font color=3D"#0000FF">INTERSOLV InterBase ODBC=
+ Driver (*.gdb)</font>};" &amp; _
+           "Server=3D<font color=3D"#0000FF">myMachineName</font>;" &amp;=
+ _
+           "Database=3D<font color=3D"#0000FF">myMachineName:</font>C:\Home=
+\Data\Mydb.<font color=3D"#0000FF">gdb</font>;" &amp; _
+           "Uid=3DmyUsername;" &amp; _
+           "Pwd=3DmyPassword" </pre>
+<p>For more information, see: <a href=3D"http://www.google.com/search?sourc=
+eid=3Dnavclient&amp;q=3D%22INTERSOLV+InterBase+ODBC+Driver%22">Google
+Search</a>=A0 (if you know a direct URL <a href=3D"mailto:carlpr@spamcop.ne=
+t">email
+me</a>)</p>
+
+        <p>=A0</p>
+
+<ul>
+  <li><a name=3D"ODBCDriverForLotusNotes"><b>ODBC Driver for Lotus Notes</b=
+></a></li>
+</ul>
+<pre>oConn.Open "Driver=3D{<font color=3D"#0000FF">Lotus NotesSQL 3.01 (32-=
+bit) ODBC DRIVER (*.nsf)</font>};" &amp; _
+           "Server=3DmyServerName;" &amp; _
+           "Database=3Dmydir\myDbName.<font color=3D"#0000FF">nsf</font>;"=
+ &amp; _
+           "Uid=3DmyUsername;" &amp; _
+           "Pwd=3DmyPassword" &amp; _</pre>
+<p>For more information, see:=A0=A0 <a href=3D"http://doc.notes.net/notessq=
+l/3.0.1/notes_sql.nsf/4d74586c8dcad500852563c000646f90/1ac11d9717ac5dc98525=
+6a710056419f?OpenDocument">Connection keywords</a></p>
+
+        <p>=A0</p>
+
+      <ul>
+        <li><b><a name=3D"ODBCDriverForMySQL">ODBC Driver for MySQL</a> (vi=
+a MyODBC)</b></li>
+      </ul>
+          <p>
+<u>
+<b>To connect to a local database</b></u></p>
+
+<pre>oConn.Open "Driver=3D{<font color=3D"#0000FF">mySQL</font>};" &amp; _=
+=20
+           "<font color=3D"#0000FF">Server</font>=3DMyServerName;" &amp; _
+           "<font color=3D"#0000FF">Option</font>=3D16834;" &amp; _
+           "Database=3Dmydb"
+ </pre>
+
+          <p>
+<u>
+<b>To connect to a remote database</b></u></p>
+
+<pre>oConn.Open "Driver=3D{<font color=3D"#0000FF">mySQL</font>};" &amp; _=
+=20
+           "<font color=3D"#0000FF">Server</font>=3Ddb1.database.com;" &amp=
+; _
+           "<font color=3D"#0000FF">Port</font>=3D3306;" &amp; _
+           "<font color=3D"#0000FF">Option</font>=3D131072;" &amp; _
+           "Stmt=3D;" &amp; _
+           "Database=3Dmydb;" &amp; _
+           "Uid=3DmyUsername;" &amp; _
+           "Pwd=3DmyPassword"</pre>
+
+<p>
+For more information, see:=A0 <a href=3D"http://www.mysql.com/doc/M/y/MyODB=
+C_clients.html">Programs
+Known to Work with MyODBC</a></p>
+
+<p>
+=A0</p>
+
+      <ul>
+        <li><strong><a name=3D"ODBCDriverForOracleFromMicrosoft">ODBC Drive=
+r for Oracle
+    (from Microsoft)</a></strong></li>
+      </ul>
+
+<p><u><b>For the current Oracle ODBC Driver from Microsoft</b></u></p>
+
+<pre>oConn.Open "Driver=3D{<font color=3D"#0000FF">Microsoft ODBC for Oracl=
+e</font>};" &amp; _
+           "<font color=3D"#0000FF">Server</font>=3DOracleServer.world;" &a=
+mp; _
+           "Uid=3DmyUsername;" &amp; _
+           "Pwd=3DmyPassword"
+ </pre>
+
+<p><u><b>For the older Oracle ODBC Driver from Microsoft</b></u></p>
+
+<pre>oConn.Open "Driver=3D{<font color=3D"#0000FF">Microsoft ODBC Driver fo=
+r Oracle</font>};" &amp; _
+           "<font color=3D"#0000FF">ConnectString</font>=3DOracleServer.wor=
+ld;" &amp; _
+           "Uid=3DmyUsername;" &amp; _
+           "Pwd=3DmyPassword"</pre>
+
+<p>For more information, see:=A0 <a href=3D"http://msdn.microsoft.com/libra=
+ry/en-us/odbc/htm/odbcoracleconnection_string_format_and_attributes.asp">Co=
+nnection
+String Format and Attributes</a></p>
+
+        <p>To view Microsoft KB articles related to Microsoft
+        ODBC for Oracle, <a href=3D"http://search.support.microsoft.com/sea=
+rch/default.aspx?Catalog=3DLCID%3D1033%26CDID%3DEN-US-KB%26PRODLISTSRC%3DON=
+&amp;Product=3Dmdac&amp;Query=3DMicrosoft%2520ODBC%2520for%2520Oracle&amp;Q=
+ueryc=3DMicrosoft+ODBC+for+Oracle&amp;REF=3Dfalse&amp;srchstep=3D0&amp;Keyw=
+ordType=3DPHRASE&amp;Titles=3Dfalse&amp;numDays=3D&amp;maxResults=3D100">cl=
+ick
+        here</a>=A0</p>
+
+<p>
+=A0</p>
+
+      <ul>
+        <li><b><a name=3D"ODBCDriverForOracleFromOracle">ODBC Driver for Or=
+acle (from
+    Oracle)</a></b></li>
+      </ul>
+<pre>oConn.Open "Driver=3D{<font color=3D"#0000FF">Oracle ODBC Driver</font=
+>};" &amp; _
+           "<font color=3D"#0000FF">Dbq</font>=3DmyDBName;" &amp; _
+           "Uid=3DmyUsername;" &amp; _
+           "Pwd=3DmyPassword"</pre><p>Where:=A0 The
+  DBQ name must be defined in the tnsnames.ora file</p>
+<p>For more information, see:=A0 <a href=3D"http://otn.oracle.com/docs/tech=
+/windows/odbc/htdocs/817help/start.htm">Oracle8
+ODBC Driver Help</a>, <a href=3D"http://www.orafaq.com/faqodbc.htm">Oracle=
+ ODBC
+FAQs</a>,=A0<a href=3D"http://www.learnasp.com/learn/FAQOracleconnect.asp">=
+[asporacle] listserv FAQs</a>, and <a href=3D"http://www.aspdb.com/doc2002/=
+Oracle.shtm">ASPDB
+Oracle</a></p>
+
+<p>=A0</p>
+
+      <ul>
+        <li><strong><a name=3D"ODBCDriverForParadox">ODBC Driver for Parado=
+x</a></strong></li>
+      </ul>
+      <pre>oConn.Open "Driver=3D{<font color=3D"#0000FF">Microsoft Paradox=
+ Driver<span class=3D"106273519-11082000"> (</span>*.db )</font>};" &amp;=
+ _
+           "<font color=3D"#0000FF">DriverID</font>=3D538;" &amp; _
+           "<font color=3D"#0000FF">Fil</font>=3DParadox=A0<span class=3D"1=
+06273519-11082000">5</span>.X;" &amp; _
+           "<font color=3D"#0000FF">DefaultDir</font><span class=3D"1062735=
+19-11082000">=3Dc:\dbpath\</span>;" &amp; _
+           "<font color=3D"#0000FF">Dbq</font>=3D<span class=3D"106273519-1=
+1082000">c:\dbpath\</span>;" &amp; _
+           "CollatingSequence=3DASCII"=A0</pre>
+<p>Note:<b> </b>MDAC 2.1 (or greater) requires the Borland Database Engine
+(BDE)
+to <font color=3D"#0000FF">update</font>
+ Paradox ISAM fDBF files. (<a href=3D"http://support.microsoft.com/support/=
+kb/articles/Q230/1/26.ASP">Q230126</a>).</p>
+
+<p>Note: There is an extra space after "db" in the
+Paradox Driver name</p>
+
+        <p>For more information, see:=A0 <a href=3D"http://msdn.microsoft.c=
+om/library/en-us/odbc/htm/odbcjetparadox_driver_programming_considerations.=
+asp">Paradox
+        Driver Programming Considerations</a></p>
+
+        <p>To view Microsoft KB articles related to Microsoft
+        Paradox Driver, <a href=3D"http://search.support.microsoft.com/sear=
+ch/default.aspx?Catalog=3DLCID%3D1033%26CDID%3DEN-US-KB%26PRODLISTSRC%3DON&=
+amp;Product=3Dmdac&amp;Query=3DParadox&amp;Queryc=3DParadox&amp;REF=3Dfalse=
+&amp;srchstep=3D0&amp;KeywordType=3DPHRASE&amp;Titles=3Dfalse&amp;numDays=
+=3D&amp;maxResults=3D100">click
+        here</a>=A0</p>
+
+        <p>=A0</p>
+
+      <ul>
+        <li><strong><a name=3D"ODBCDriverForSQLServer">ODBC Driver for SQL=
+ Server</a></strong></li>
+      </ul>
+
+<p><u><b>For Standard Security</b></u></p>
+
+<pre>oConn.Open "Driver=3D{<font color=3D"#0000FF">SQL Server</font>};" &am=
+p; _=20
+           "Server=3DMyServerName;" &amp; _
+           "Database=3DmyDatabaseName;" &amp; _
+           "<font color=3D"#0000FF">Uid</font>=3DmyUsername;" &amp; _
+           "<font color=3D"#0000FF">Pwd</font>=3DmyPassword"
+ </pre>
+
+<p><u><b>For Trusted Connection security</b></u></p>
+
+      <pre>oConn.Open "Driver=3D{<font color=3D"#0000FF">SQL Server</font>}=
+;" &amp; _=20
+           "Server=3DMyServerName;" &amp; _
+           "Database=3DmyDatabaseName;" &amp; _
+           "<font color=3D"#0000FF">Uid=3D</font>;" &amp; _
+           "<font color=3D"#0000FF">Pwd=3D</font>"
+' Or</pre><pre>oConn.Open "Driver=3D{<font color=3D"#0000FF">SQL Server</fo=
+nt>};" &amp; _=20
+           "Server=3DMyServerName;" &amp; _
+           "Database=3DmyDatabaseName;" &amp; _
+           "<font color=3D"#0000FF">Trusted_Connection=3Dyes</font>"
+ </pre>
+
+<p>
+<u>
+<b>To Prompt user for username and password</b></u></p>
+
+<pre>oConn.Properties("<font color=3D"#000000">Prompt</font>") =3D <font co=
+lor=3D"#0000FF">adPromptAlways</font>
+oConn.Open "Driver=3D{<font color=3D"#0000FF">SQL Server</font>};" &amp; _=
+=20
+           "Server=3DMyServerName;" &amp; _=20
+           "DataBase=3DmyDatabaseName"
+ </pre>
+
+<p><u>
+        <b>To connect to SQL Server running on the same computer</b></u></p>
+
+<pre>oConn.Open "Driver=3D{<font color=3D"#0000FF">SQL Server</font>};" &am=
+p; _
+           "Server=3D<font color=3D"#0000FF">(local)</font>;" &amp; _
+           "Database=3DmyDatabaseName;" &amp; _
+           "Uid=3DmyUsername;" &amp; _
+           "Pwd=3DmyPassword"
+ </pre>
+
+<p>
+<u>
+<b>To connect to SQL Server running on a remote computer (via an IP address=
+)</b></u></p>
+
+<pre>oConn.Open "Driver=3D{<font color=3D"#0000FF">SQL Server</font>};" &am=
+p; _
+           "Server=3D<font color=3D"#0000FF">xxx.xxx.xxx.xxx</font>;" &amp;=
+ _
+           "Address=3D<font color=3D"#0000FF">xxx.xxx.xxx.xxx,1433</font>;"=
+ &amp; _
+           "Network=3D<font color=3D"#0000FF">DBMSSOCN</font>;" &amp; _
+           "Database=3DmyDatabaseName;" &amp; _
+           "Uid=3DmyUsername;" &amp; _
+           "Pwd=3DmyPassword"</pre>
+<p>Where:<br>
+- xxx.xxx.xxx.xxx is an IP address<br>
+- 1433 is the default port number for SQL Server.<br>
+- "Network=3DDBMSSOCN" tells ODBC to use TCP/IP rather than Named <br>
+=A0=A0 Pipes (<a href=3D"http://support.microsoft.com/support/kb/articles/Q=
+238/9/49.ASP">Q238949</a>)<br>
+=A0</p>
+
+        <p>For more information, see:=A0 <a href=3D"http://msdn.microsoft.c=
+om/library/en-us/odbcsql/od_odbc_d_4x4k.asp">SQLDriverConnect
+        (ODBC)</a></p>
+
+        <p>To view Microsoft KB articles related to ODBC Driver
+        for SQL Server, <a href=3D"http://search.support.microsoft.com/sear=
+ch/default.aspx?Catalog=3DLCID%3D1033%26CDID%3DEN-US-KB%26PRODLISTSRC%3DON&=
+amp;Product=3Dmdac&amp;Query=3DSQL%2520Server%2520ODBC%2520Driver&amp;Query=
+c=3DSQL+Server+ODBC+Driver&amp;REF=3Dfalse&amp;srchstep=3D0&amp;KeywordType=
+=3DALL&amp;Titles=3Dfalse&amp;numDays=3D&amp;maxResults=3D100">click
+        here</a>=A0</p>
+
+        <p>=A0</p>
+
+      <ul>
+        <li><a name=3D"ODBCDriverForSybase"><b>ODBC Driver for Sybase</b></=
+a></li>
+      </ul>
+<p><u><b>If using the Sybase System 12 (or 12.5) Enterprise
+        Open Client ODBC Driver</b></u></p>
+
+<pre>oConn.Open "Driver=3D{<font color=3D"#0000FF" size=3D"2">SYBASE ASE OD=
+BC Driver</font>};" &amp; _
+           "<font color=3D"#0000FF">Srvr</font>=3D<span class=3D"106273519-=
+11082000">myServerName</span>;" &amp; _
+           "Uid=3DmyUsername;" &amp; _
+           "Pwd=3DmyPassword"
+ </pre>
+
+<p><u><b>If using the Sybase System 11 ODBC Driver</b></u></p>
+
+<pre>oConn.Open "Driver=3D{<font color=3D"#0000FF">SYBASE SYSTEM 11</font>}=
+;" &amp; _
+           "<font color=3D"#0000FF">Srvr</font>=3D<span class=3D"106273519-=
+11082000">myServerName</span>;" &amp; _
+           "Uid=3DmyUsername;" &amp; _
+           "Pwd=3DmyPassword"
+ </pre>
+
+<p><u><b>If using the Intersolv 3.10 Sybase ODBC Driver</b></u></p>
+
+<pre>oConn.Open "Driver=3D{<font color=3D"#0000FF">INTERSOLV 3.10 32-BIT Sy=
+base</font>};" &amp; _
+           "<font color=3D"#0000FF">Srvr</font>=3D<span class=3D"106273519-=
+11082000">myServerName</span>;" &amp; _
+           "Uid=3DmyUsername;" &amp; _
+           "Pwd=3DmyPassword"</pre>
+
+        <p>For more information, see:=A0<a href=3D"http://manuals.sybase.co=
+m/onlinebooks/group-cn/cng1000e/odbc_ref/@ebt-link;pt=3D622?target=3D%25N%1=
+4_1044_START_RESTART_N%25">Sybase
+        System 10 ODBC Driver Reference Guide</a></p>
+
+        <p>To view Microsoft KB articles related to ODBC Driver
+        for Sybase, <a href=3D"http://search.support.microsoft.com/search/d=
+efault.aspx?Catalog=3DLCID%3D1033%26CDID%3DEN-US-KB%26PRODLISTSRC%3DON&amp;=
+Product=3Dmdac&amp;Query=3DSybase&amp;Queryc=3DSybase&amp;REF=3Dfalse&amp;s=
+rchstep=3D0&amp;KeywordType=3DPHRASE&amp;Titles=3Dfalse&amp;numDays=3D&amp;=
+maxResults=3D100">click
+        here</a>=A0</p>
+
+        <p>=A0</p>
+
+      <ul>
+        <li><a name=3D"ODBCDriverForSybaseSQLAnywhere"><b>ODBC Driver for=
+ Sybase SQL
+            Anywhere</b></a></li>
+      </ul>
+      <pre>oConn.Open "ODBC; Driver=3D<font color=3D"#0000FF" size=3D"2">Sy=
+base SQL Anywhere 5.0</font>;" &amp; _
+           "<font color=3D"#0000FF">DefaultDir</font><span class=3D"1062735=
+19-11082000">=3Dc:\dbpath\</span>;" &amp; _
+           "<font color=3D"#0000FF">Dbf</font>=3D<span class=3D"106273519-1=
+1082000">c:\sqlany50\mydb.db</span>;" &amp; _
+           "Uid=3DmyUsername;" &amp; _
+           "Pwd=3DmyPassword;" &amp; _
+           "<font color=3D"#0000FF">Dsn</font>=3D<span class=3D"106273519-1=
+1082000">""""</span>"</pre>
+<p>Note: Including the DSN tag with a null string is absolutely critical or=
+ else
+you
+get=A0the dreaded -7778 error.</p>
+
+<p>For more information, see:=A0 <a href=3D"http://manuals.sybase.com/onlin=
+ebooks/group-im/imcore5/conndb/@Generic__BookView/3404;cs=3Ddefault;ts=3Dde=
+fault">Sybase
+SQL Anywhere User Guide</a></p>
+
+<p>=A0</p>
+
+      <ul>
+        <li><b><a name=3D"ODBCDriverForTeradata">ODBC Driver for
+            Teradata</a></b></li>
+      </ul>
+<pre>oConn.Open "Provider=3D<font color=3D"#0000FF" size=3D"2">Teradata</fo=
+nt>;" &amp; _
+           "<font color=3D"#0000FF" size=3D"2">DBCName</font>=3DMyDbcName;"=
+ &amp; _=20
+           "Database=3DMyDatabaseName;" &amp; _=20
+           "Uid=3DmyUsername;" &amp; _
+           "Pwd=3DmyPassword"</pre>
+
+<p>For more information, see=A0 <a href=3D"http://www.teradata.com/main/">T=
+eradata
+ODBC Driver</a></p>
+
+<p>=A0</p>
+
+      <ul>
+        <li><b><a name=3D"ODBCDriverForText">ODBC Driver for Text</a></b></=
+li>
+      </ul>
+<pre>oConn.Open _
+    "Driver=3D{<font color=3D"#0000FF">Microsoft Text Driver (*.txt; *.csv)=
+</font>};" &amp; _
+    "<font color=3D"#0000FF">Dbq</font>=3Dc:\somepath\;" &amp; _
+    "<font color=3D"#0000FF">Extensions</font>=3Dasc,csv,tab,txt"=A0</pre>
+<p>Then specify the filename in the SQL statement:</p>
+      <pre>oRs.Open "Select * From <font color=3D"#0000FF">customer.csv</fo=
+nt>", _
+         oConn, adOpenStatic, adLockReadOnly, adCmdText</pre>
+<p>Note: If you are using a Tab delimited file, then make sure you create
+a
+<a href=3D"http://msdn.microsoft.com/library/en-us/odbc/htm/odbcjetschema_i=
+ni_file.asp">
+schema.ini</a> file,
+and include the "Format=3DTabDelimited" option. </p>
+        <p>For more information, see:=A0 <a href=3D"http://msdn.microsoft.c=
+om/library/en-us/odbc/htm/odbcjettext_file_driver_programming_consideration=
+s.asp">Text
+        File Driver Programming Considerations</a></p>
+        <p>To view Microsoft KB articles related to Microsoft
+        Text Driver, <a href=3D"http://search.support.microsoft.com/search/=
+default.aspx?Catalog=3DLCID%3D1033%26CDID%3DEN-US-KB%26PRODLISTSRC%3DON&amp=
+;Product=3Dmdac&amp;Query=3DText%2520Driver&amp;Queryc=3DText+Driver&amp;wi=
+thinResults=3Dfalse&amp;srchstep=3D0&amp;KeywordType=3DPHRASE&amp;Titles=3D=
+false&amp;numDays=3D&amp;maxResults=3D100">click
+        here</a>=A0</p>
+        <p>=A0</p>
+
+      <ul>
+        <li><b><a name=3D"ODBCDriverForVisualFoxPro">ODBC Driver for Visual
+            FoxPro</a></b></li>
+      </ul>
+<p><u><b>With a database container</b></u></p>
+      <pre>oConn.Open "Driver=3D{<font color=3D"#0000FF">Microsoft Visual=
+ FoxPro Driver</font>};" &amp; _
+           "SourceType=3D<font color=3D"#0000FF">DBC</font>;" &amp; _
+           "SourceDB=3Dc:\somepath\mySourceDb.dbc;" &amp; _
+           "Exclusive=3DNo"=A0
+ </pre>
+<p><b><u>Without a database container</u> (Free Table
+Directory)</b></p>
+      <pre>oConn.Open "Driver=3D{<font color=3D"#0000FF">Microsoft Visual=
+ FoxPro Driver</font>};" &amp; _
+           "SourceType=3D<font color=3D"#0000FF">DBF</font>;" &amp; _
+           "SourceDB=3Dc:\somepath\mySourceDbFolder;" &amp; _
+           "Exclusive=3DNo"=A0</pre>
+        <p>For more information, see:=A0 <a href=3D"http://msdn.microsoft.c=
+om/library/en-us/odbc/htm/vfpodbcvisualfoxproodbcdriveroverview.asp">Visual
+        FoxPro ODBC Driver</a> and <a href=3D"http://support.microsoft.com/=
+support/kb/articles/Q165/4/92.ASP">
+        Q165492</a></p>
+
+        <p>To view Microsoft KB articles related to ODBC Driver
+        for Visual FoxPro, <a href=3D"http://search.support.microsoft.com/s=
+earch/default.aspx?Catalog=3DLCID%3D1033%26CDID%3DEN-US-KB%26PRODLISTSRC%3D=
+ON&amp;Product=3Dmdac&amp;Query=3DFoxPro%2520Driver&amp;Queryc=3DFoxPro+Dri=
+ver&amp;REF=3Dfalse&amp;srchstep=3D0&amp;KeywordType=3DPHRASE&amp;Titles=3D=
+false&amp;numDays=3D&amp;maxResults=3D100">click
+        here</a>=A0</p>
+
+        <p>=A0</p>
+
+        <p>=A0</p>
+
+    </td>
+  </tr>
+  <tr>
+    <td valign=3D"top" width=3D"500" align=3D"left">
+
+<hr>
+
+<h2><a name=3D"OLEDBDataLinkConnections">OLE DB Data Link Connections</a></=
+h2>
+
+      <ul>
+        <li><strong><a name=3D"DataLinkFile">Data Link File</a>  (UDL)</str=
+ong></li>
+      </ul>
+
+<p><u><b>For Absolute Path</b></u></p>
+
+<pre>oConn.Open "<font color=3D"#0000FF">File Name</font>=3Dc:\somepath\myD=
+atabaseName<font color=3D"#000000">.udl</font>"=20
+ </pre>
+
+<p><u><b>For Relative Path</b></u></p>
+
+<pre>oConn.Open "<font color=3D"#0000FF">File Name</font>=3DmyDatabaseName<=
+font color=3D"#000000">.udl</font>"
+   </pre>
+
+<p>For more information, see:=A0 <a href=3D"http://support.microsoft.com/su=
+pport/kb/articles/Q189/6/80.ASP">HOWTO:
+Use Data Link Files with ADO</a></p>
+
+        <p>Note: Windows 2000 no longer contains the "New | Microsoft Data
+Link" menu=A0=A0anymore. You can add the Data Link menu back in the menu li=
+st
+        by
+        running the=A0"<a href=3D"file:///C:/Program%20Files/Common%20Files=
+/System/Ole%20DB/newudl.reg">C:\Program Files\Common Files\System\Ole
+        DB\newudl.reg</a>"
+        reg file,=A0then right-click on the desktop and
+        select "New | Microsoft Data
+<br>
+        Link" menu.</p>
+
+        <p>Or you can also create a Data Link file by creating a text
+        file and change
+        it's=A0file extension to ".udl", then double-click the file.</p>
+
+        <p>To view Microsoft KB articles related to Data Link
+        File, <a href=3D"http://search.support.microsoft.com/search/default=
+.aspx?Catalog=3DLCID%3D1033%26CDID%3DEN-US-KB%26PRODLISTSRC%3DON&amp;Produc=
+t=3Dmdac&amp;Query=3DData%2520Link&amp;Queryc=3DData+Link&amp;REF=3Dfalse&a=
+mp;srchstep=3D0&amp;KeywordType=3DPHRASE&amp;Titles=3Dfalse&amp;numDays=3D&=
+amp;maxResults=3D100">click
+        here</a>=A0</p>
+
+        <p>=A0</p>
+
+        <p>=A0</p>
+
+    </td>
+  </tr>
+  <tr>
+    <td valign=3D"top" width=3D"500" align=3D"left">
+
+<hr>
+
+<h2><a name=3D"OLEDBProviderConnections">OLE DB Provider Connections</a></h=
+2>
+
+      <ul>
+        <li><strong><a name=3D"OLEDBProviderForActiveDirectoryService">
+          OLE DB Provider for
+            Active Directory Service</a></strong></li>
+      </ul>
+<pre>oConn.Open "Provider=3D<font color=3D"#0000FF">ADSDSOObject</font>;"=
+ &amp; _
+           "User Id=3DmyUsername;" &amp; _
+           "Password=3DmyPassword"</pre>
+
+<p>For more information, see:=A0 <a href=3D"http://msdn.microsoft.com/libra=
+ry/en-us/ado270/htm/mdrefadsprovspec.asp">Microsoft
+OLE DB Provider for Microsoft Active Directory Service</a></p>
+
+        <p>To view Microsoft KB articles related to Data Link
+        File, <a href=3D"http://search.support.microsoft.com/search/default=
+.aspx?Catalog=3DLCID%3D1033%26CDID%3DEN-US-KB%26PRODLISTSRC%3DON&amp;Produc=
+t=3Dmdac&amp;Query=3DADSDSOObject&amp;Queryc=3DADSDSOObject&amp;REF=3Dfalse=
+&amp;srchstep=3D0&amp;KeywordType=3DPHRASE&amp;Titles=3Dfalse&amp;numDays=
+=3D&amp;maxResults=3D100">click
+        here</a>=A0</p>
+
+<p>=A0</p>
+
+      <ul>
+        <li><b><a name=3D"OLEDBProviderForAdvantage">OLE DB Provider for Ad=
+vantage</a></b></li>
+      </ul>
+<pre>oConn.Open "Provider=3D<font color=3D"#0000FF" size=3D"2">Advantage OL=
+E DB Provider</font>;" &amp; _
+           "Data source=3Dc:\myDbfTableDir;" &amp; _
+           "ServerType=3DADS_LOCAL_SERVER;" &amp; _
+           "TableType=3DADS_CDX"</pre>
+<p>For more information, see:=A0 <a href=3D"http://www.advantagedatabase.co=
+m/ADS/Product+Detail/Advantage+OLE+DB+Provider/default.htm">Advantage
+OLE DB Provider (for ADO)</a></p>
+<p>=A0</p>
+      <ul>
+        <li><b><a name=3D"OLEDBProviderForAS400FromIBM">OLE DB Provider for
+            AS/400 (from IBM)</a></b></li>
+      </ul>
+<pre>oConn.Open "Provider=3D<font color=3D"#0000FF">IBMDA400</font>;" &amp;=
+ _
+           "Data source=3DmyAS400;" &amp; _
+           "User Id=3DmyUsername;" &amp; _
+           "Password=3DmyPassword"</pre>
+        <p>For more information, see:=A0=A0 <a href=3D"http://publib-b.boul=
+der.ibm.com/Redbooks.nsf/RedbookAbstracts/sg245183.html"><span class=3D"ft2=
+"><nobr>A
+        Fast Path to AS/400 Client/Server</nobr></span></a></p>
+        <p>=A0</p>
+      <ul>
+        <li><b><a name=3D"OLEDBProviderForAS400AndVSAM">OLE DB Provider for
+            AS/400 and VSAM (from Microsoft)</a></b></li>
+      </ul>
+<pre>oConn.Open "Provider=3D<font color=3D"#0000FF">SNAOLEDB</font>;" &amp;=
+ _
+           "Data source=3DmyAS400;" &amp; _
+           "User Id=3DmyUsername;" &amp; _
+           "Password=3DmyPassword"</pre>
+        <p>For more information, see:=A0=A0<a href=3D"http://msdn.microsoft=
+.com/library/en-us/his/db2oldb1_3r36.asp">Connection</a>
+        and <a href=3D"http://msdn.microsoft.com/library/en-us/his/thorref4=
+_04bm.asp">ConnectionString
+        Property</a>=20
+
+        </p>
+
+        <p>To view Microsoft KB articles related to OLE DB
+        Provider for AS/400 and VSAM, <a href=3D"http://search.support.micr=
+osoft.com/search/default.aspx?Catalog=3DLCID%3D1033%26CDID%3DEN-US-KB%26PRO=
+DLISTSRC%3DON&amp;Product=3Dmdac&amp;Query=3DSNAOLEDB&amp;Queryc=3DSNAOLEDB=
+&amp;REF=3Dfalse&amp;srchstep=3D0&amp;KeywordType=3DPHRASE&amp;Titles=3Dfal=
+se&amp;numDays=3D&amp;maxResults=3D100">click
+        here</a>=A0</p>
+
+        <p>=A0</p>
+      <ul>
+        <li><strong><a name=3D"OLEDBProviderForCommerceServer">OLE DB Provi=
+der for Commerce Server</a></strong></li>
+      </ul>
+
+<p><u><b>For Data Warehouse</b></u></p>
+
+      <pre>oConn.Open "Provider=3D<font color=3D"#0000FF">Commerce.DSO.1</f=
+ont>;" &amp; _
+       "Data Source=3Dmscop://InProcConn/Server=3DmySrvName:" &amp; _
+       "Catalog=3D<font color=3D"#0000FF">DWSchema</font>:Database=3DmyDBna=
+me:" &amp; _
+       "User=3DmyUsername:Password=3DmyPassword:" &amp; _
+       "<font color=3D"#0000FF">FastLoad=3DTrue</font>"=A0
+
+' Or
+
+oConn.Open "<font color=3D"#0000FF">URL=3D</font>mscop://InProcConn/Server=
+=3DmyServerName:" &amp; _
+           "Database=3DmyDBname:Catalog=3D<font color=3D"#0000FF">DWSchema<=
+/font>:" &amp; _
+           "User=3DmyUsername:Password=3DmyPassword:" &amp; _
+           "<font color=3D"#0000FF">FastLoad=3DTrue</font>"
+ </pre>
+
+        <p><u><b>For Profiling System</b></u></p>
+
+      <pre>oConn.Open "Provider=3D<font color=3D"#0000FF">Commerce.DSO.1</f=
+ont>;" &amp; _
+      "Data Source=3Dmscop://InProcConn/Server=3DmySrvName:" &amp; _
+      "Catalog=3D<font color=3D"#0000FF">Profile Definitions</font>:Databas=
+e=3DmyDBname:" &amp; _
+      "User=3DmyUsername:Password=3DmyPassword"=A0
+
+' Or
+
+oConn.Open _
+       "<font color=3D"#0000FF">URL=3D</font>mscop://InProcConnect/Server=
+=3DmyServerName:" &amp; _
+       "Database=3DmyDBname:Catalog=3D<font color=3D"#0000FF">Profile Defin=
+itions</font>:" &amp; _
+       "User=3DmyUsername:Password=3DmyPassword"</pre>
+
+        <p>For more information, see:=A0 <a href=3D"http://msdn.microsoft.c=
+om/library/en-us/comsrv2k/htm/cs_rp_oledb_vgwa.asp">OLE DB Provider for Com=
+merce Server</a>,
+        <a href=3D"http://msdn.microsoft.com/library/en-us/comsrv2k/htm/cs_=
+rp_oledb_ehaa.asp">DataWarehouse</a>,=A0and <a href=3D"http://msdn.microsof=
+t.com/library/en-us/comsrv2k/htm/cs_rp_oledb_ehff.asp">
+        Profiling System</a></p>
+
+        <p>To view Microsoft KB articles related to OLE DB
+        Provider for Commerce Server, <a href=3D"http://search.support.micr=
+osoft.com/search/default.aspx?Catalog=3DLCID%3D1033%26CDID%3DEN-US-KB%26PRO=
+DLISTSRC%3DON&amp;Product=3Dmdac&amp;Query=3DCommerce&amp;Queryc=3DCommerce=
+&amp;REF=3Dfalse&amp;srchstep=3D0&amp;KeywordType=3DPHRASE&amp;Titles=3Dfal=
+se&amp;numDays=3D&amp;maxResults=3D100">click
+        here</a>=A0</p>
+
+        <p>=A0</p>
+
+      <ul>
+        <li><b><a name=3D"OLEDBProviderForDB2">OLE DB Provider
+            for DB2</a> (from Microsoft)</b></li>
+      </ul>
+
+<p><u><b>For TCP/IP connections</b></u></p>
+
+<pre>oConn.Open =3D "Provider=3D<font color=3D"#0000FF">DB2OLEDB</font>;"=
+ &amp;=A0_
+             "<font color=3D"#0000FF">Network Transport Library</font>=3DTC=
+PIP;" &amp;=A0=A0_
+             "<font color=3D"#0000FF">Network Address</font>=3Dxxx.xxx.xxx.=
+xxx;" &amp; _
+             "Initial Catalog=3DMyCatalog;" &amp;=A0_
+             "Package Collection=3DMyPackageCollection;" &amp;=A0_
+             "Default Schema=3DMySchema;" &amp; _
+             "User ID=3DMyUsername;" &amp; _
+             "Password=3DMyPassword"
+ </pre>
+
+<p><u><b>For APPC connections</b></u></p>
+
+<pre>oConn.Open =3D "Provider=3D<font color=3D"#0000FF">DB2OLEDB</font>;"=
+ &amp;=A0=A0_
+=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0"<font color=3D"#0000FF">APPC Local=
+ LU Alias</font>=3DMyLocalLUAlias;" &amp;=A0=A0_
+             "<font color=3D"#0000FF">APPC Remote LU Alias</font>=3DMyRemot=
+eLUAlias;" &amp;=A0=A0_
+             "Initial Catalog=3DMyCatalog;" &amp;=A0_
+             "Package Collection=3DMyPackageCollection;" &amp;=A0_
+             "Default Schema=3DMySchema;" &amp; _
+             "User ID=3DMyUsername;" &amp; _
+             "Password=3DMyPassword"</pre>
+
+<p>For more information, see:=A0<a href=3D"http://msdn.microsoft.com/librar=
+y/en-us/his/db2oldb1_3r36.asp">Connection</a>,
+<a href=3D"http://msdn.microsoft.com/library/en-us/his/thorref4_04bm.asp">C=
+onnectionString
+Property</a>,
+and <a href=3D"http://support.microsoft.com/default.aspx?scid=3Dkb;EN-US;q2=
+18590">Q218590</a>
+ </p>
+
+        <p>To view Microsoft KB articles related to OLE DB
+        Provider for DB2, <a href=3D"http://search.support.microsoft.com/se=
+arch/default.aspx?Catalog=3DLCID%3D1033%26CDID%3DEN-US-KB%26PRODLISTSRC%3DO=
+N&amp;Product=3Dmdac&amp;Query=3DDB2OLEDB&amp;Queryc=3DDB2OLEDB&amp;withinR=
+esults=3Dfalse&amp;srchstep=3D0&amp;KeywordType=3DALL&amp;Titles=3Dfalse&am=
+p;numDays=3D&amp;maxResults=3D100">click
+        here</a>=A0</p>
+
+        <p>=A0</p>
+
+      <ul>
+        <li><b><a name=3D"OLEDBProviderForDTSPackages">OLE DB Provider for=
+ DTS
+            Packages</a></b></li>
+      </ul>
+        <p>The Microsoft OLE DB Provider for DTS Packages is a read-only
+        provider
+        that exposes=A0Data Transformation Services Package Data Source Obj=
+ects.</p>
+
+<pre>oConn.Open =3D "Provider=3D<font color=3D"#0000FF">DTSPackageDSO</font=
+>;" &amp;=A0_
+=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0"Data Source=3Dmydatasource"
+</pre>
+
+        <p>For more information, see:=A0 <a href=3D"http://msdn.microsoft.c=
+om/library/default.asp?url=3D/library/en-us/acdata/ac_8_qd_12_6uyb.asp">OLE=
+ DB Providers Tested with SQL Server</a>
+ </p>
+
+        <p>To view Microsoft KB articles related to OLE DB
+        Provider for DTS Packages, <a href=3D"http://search.support.microso=
+ft.com/search/default.aspx?Catalog=3DLCID%3D1033%26CDID%3DEN-US-KB%26PRODLI=
+STSRC%3DON&amp;Product=3Dmdac&amp;Query=3DDTS&amp;Queryc=3DDTS&amp;REF=3Dfa=
+lse&amp;srchstep=3D0&amp;KeywordType=3DALL&amp;Titles=3Dfalse&amp;numDays=
+=3D&amp;maxResults=3D100">click
+        here</a>=A0</p>
+
+        <p>=A0</p>
+
+      <ul>
+        <li><b><a name=3D"OLEDBProviderForExchange">OLE DB Provider
+            for Exchange</a></b></li>
+      </ul>
+      <pre>oConn.Provider =3D "<font color=3D"#0000FF">EXOLEDB.DataSource</=
+font>"
+oConn.Open =3D "http://myServerName/myVirtualRootName"</pre>
+
+        <p>For more information, see:=A0=A0<a href=3D"http://msdn.microsoft=
+.com/library/en-us/wss/wss/wss_references_oledb.asp">Exchange
+        OLE DB Provider</a>,=A0 <a href=3D"http://msdn.microsoft.com/librar=
+y/en-us/wss/wss/_cdo_sending_and_posting_messages.asp">Messaging</a>,
+        <a href=3D"http://msdn.microsoft.com/library/en-us/wss/wss/_clb_vie=
+wing_the_calendar_using_ado_vbs.asp">Calendaring</a>,
+        <a href=3D"http://msdn.microsoft.com/library/default.asp?url=3D/lib=
+rary/en-us/wss/wss/_cdo_idatasource_savetocontainer.asp">Contacts</a>,=A0an=
+d <a href=3D"http://msdn.microsoft.com/library/en-us/wss/wss/_exch2k_using_=
+ado_objects.asp">Exchange
+        using ADO objects</a> </p>
+
+        <p>To view Microsoft KB articles related to OLE DB
+        Provider for Exchange, <a href=3D"http://search.support.microsoft.c=
+om/search/default.aspx?Catalog=3DLCID%3D1033%26CDID%3DEN-US-KB%26PRODLISTSR=
+C%3DON&amp;Product=3Dmdac&amp;Query=3DExchange&amp;Queryc=3DExchange&amp;RE=
+F=3Dfalse&amp;srchstep=3D0&amp;KeywordType=3DALL&amp;Titles=3Dfalse&amp;num=
+Days=3D&amp;maxResults=3D100">click
+        here</a>=A0</p>
+
+        <p>=A0</p>
+
+      <ul>
+        <li><b><a name=3D"OLEDBProviderForExcel">OLE DB Provider for Excel<=
+/a></b></li>
+      </ul>
+<p>Actually there is no OLE DB Provider for Excel.=A0 However,
+you can use the=A0<a href=3D"#OLEDBProviderForMicrosoftJetExcel">OLE DB Pro=
+vider for JET</a> to read
+and write data in Microsoft Excel workbooks.
+Or you can use the <a href=3D"#ODBCDriverForExcel">ODBC Driver for Excel</a=
+>.</p>
+
+        <p>=A0</p>
+
+      <ul>
+        <li><strong><a name=3D"OLEDBProviderForIndexServer">OLE DB Provider=
+ for
+            Index Server</a></strong></li>
+      </ul>
+<pre>oConn.Open "Provider=3D<font color=3D"#0000FF">MSIDXS</font>;" &amp;=
+ _
+           "Data source=3DMyCatalog"
+=A0=A0=A0</pre>
+
+<p>For more information, see:=A0<a href=3D"http://msdn.microsoft.com/librar=
+y/en-us/ado270/htm/mdrefindservprovspec.asp">Microsoft
+OLE DB Provider for Microsoft Indexing Service</a></p>
+
+        <p>To view Microsoft KB articles related to OLE DB
+        Provider for Index Server, <a href=3D"http://search.support.microso=
+ft.com/search/default.aspx?Catalog=3DLCID%3D1033%26CDID%3DEN-US-KB%26PRODLI=
+STSRC%3DON&amp;Product=3Dmdac&amp;Query=3DMSIDXS&amp;Queryc=3DMSIDXS&amp;RE=
+F=3Dfalse&amp;srchstep=3D0&amp;KeywordType=3DALL&amp;Titles=3Dfalse&amp;num=
+Days=3D&amp;maxResults=3D100">click
+        here</a>=A0</p>
+
+<p>=A0</p>
+
+      <ul>
+        <li><b><a name=3D"OLEDBProviderForInternetPublishing">OLE DB Provid=
+er for Internet Publishing</a></b></li>
+      </ul>
+<pre>oConn.Open "Provider=3D<font color=3D"#0000FF">MSDAIPP.DSO</font>;" &a=
+mp; _
+           "Data Source=3Dhttp://mywebsite/myDir;" &amp; _=20
+           "User Id=3DmyUsername;" &amp; _
+           "Password=3DmyPassword"</pre>
+<p>
+
+        ' Or
+</p>
+<pre>oConn.Open "<font color=3D"#0000FF">URL=3D</font>http://mywebsite/myDi=
+r;" &amp; _=20
+           "User Id=3DmyUsername;" &amp; _
+           "Password=3DmyPassword"</pre>
+
+<p>For more information, see: <a href=3D"http://msdn.microsoft.com/library/=
+en-us/ado270/htm/mdrefproviderrosebud.asp">Microsoft
+OLE DB Provider for Internet Publishing</a>=A0and=A0 <a href=3D"http://supp=
+ort.microsoft.com/support/kb/articles/Q245/3/59.ASP">Q245359</a></p>
+
+        <p>To view Microsoft KB articles related to OLE DB Provider for Int=
+ernet
+        Publishing, <a href=3D"http://search.support.microsoft.com/search/d=
+efault.aspx?Catalog=3DLCID%3D1033%26CDID%3DEN-US-KB%26PRODLISTSRC%3DON&amp;=
+Product=3Dmdac&amp;Query=3DInternet%2520Publishing&amp;Queryc=3DInternet+Pu=
+blishing&amp;REF=3Dfalse&amp;srchstep=3D0&amp;KeywordType=3DALL&amp;Titles=
+=3Dfalse&amp;numDays=3D&amp;maxResults=3D100">click
+        here</a>=A0</p>
+
+<font size=3D"2">
+
+<p>=A0</p>
+
+        </font>
+      <ul>
+        <li><strong><a name=3D"OLEDBProviderForMicrosoftJet">OLE DB Provide=
+r for Microsoft Jet</a></strong></li>
+      </ul>
+
+<p><u><b>For standard security</b></u></p>
+
+      <pre>oConn.Open "Provider=3D<font color=3D"#0000FF">Microsoft.Jet.OLE=
+DB.4.0</font>;" &amp; _
+           "Data Source=3Dc:\somepath\myDb.mdb;" &amp; _=20
+           "<font color=3D"#0000FF">User Id</font>=3Dadmin;" &amp; _
+           "<font color=3D"#0000FF">Password</font>=3D"
+ </pre>
+
+<p><b><u>If using a Workgroup</u>  (System
+Database)</b></p>
+
+<pre>oConn.Open "Provider=3D<font color=3D"#0000FF">Microsoft.Jet.OLEDB.4.0=
+</font>;" &amp; _
+=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0"Data Source=3Dc:\somepath\mydb.mdb;" &amp=
+; _=20
+=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0"<font color=3D"#0000FF">Jet OLEDB:System=
+ Database</font>=3DMySystem.mdw", _
+           "myUsername", "myPassword" </pre>
+<p>Note, remember to convert both the MDB and the MDW to the
+4.0<br>
+database format=A0when using the 4.0 OLE DB Provider.<br>
+=A0</p>
+
+<p><u><b>If MDB has a database password</b></u></p>
+
+<pre>oConn.Open "Provider=3D<font color=3D"#0000FF">Microsoft.Jet.OLEDB.4.0=
+</font>;" &amp; _
+           "Data Source=3Dc:\somepath\mydb.mdb;" &amp; _=20
+           "<font color=3D"#0000FF">Jet OLEDB:Database Password</font>=3DMy=
+DbPassword", _
+           "myUsername", "myPassword"
+ </pre>
+
+<p><u><b>If want to open up the MDB exclusively</b></u></p>
+
+      <pre>oConn.Mode =3D <font color=3D"#0000FF">adModeShareExclusive</fon=
+t>
+oConn.Open "Provider=3DMicrosoft.Jet.OLEDB.4.0;" &amp; _
+           "Data Source=3Dc:\somepath\myDb.mdb;" &amp; _
+           "User Id=3Dadmin;" &amp; _
+           "Password=3D"=20
+ </pre>
+
+<p>
+<u>
+<b>If MDB is located on a <a name=3D"OLEDBProviderForMicrosoftJetUNC">netwo=
+rk
+share</a></b></u></p>
+
+<pre>oConn.Open "Provider=3D<font color=3D"#0000FF">Microsoft.Jet.OLEDB.4.0=
+</font>;" &amp; _
+           "Data Source=3D<font color=3D"#0000FF">\\myServer\myShare</font>=
+\myPath\myDb.mdb"
+ </pre><p><u><b>If MDB is located on a remote machine</b></u></p><p><font=
+ face=3D"Trebuchet MS">-
+Or use an XML Web Service via <a href=3D"http://msdn.microsoft.com/library/=
+default.asp?url=3D/nhp/Default.asp?contentid=3D28000523">SOAP Toolkit</a>=20
+or <a href=3D"http://msdn.microsoft.com/library/default.asp?url=3D/nhp/Defa=
+ult.asp?contentid=3D28000442">ASP.NET<br>
+</a>- Or upgrade to SQL Server and use an <a href=3D"#OLEDBProviderForSQLSe=
+rverIP">IP
+connection string</a><br>
+- Or use an <a href=3D"#AdoUrlConnection">ADO URL</a>  with a remote ASP we=
+b page<br>
+- Or use a <a href=3D"#RemoteOLEDBProviderConnections">MS Remote</a> or <a=
+ href=3D"#RemoteDataServiceConnections">RDS</a>=20
+connection string=A0<br>
+=A0
+  </font></p>
+
+        <p><u><b>If you don't know the path to the MDB (using ASP)</b></u><=
+/p>
+
+      <pre>&lt;%  ' ASP server-side code
+    oConn.Open "Provider=3D<font color=3D"#0000FF">Microsoft.Jet.OLEDB.4.0<=
+/font>;" &amp; _
+              "Data Source=3D" &amp; <font color=3D"#0000FF">Server.MapPath=
+</font>(".")=A0&amp; "\myDb.mdb;" &amp; _
+              "User Id=3Dadmin;" &amp; _
+              "Password=3D"
+%&gt;</pre>
+          <p>This assumes the MDB is in the
+          same directory where the ASP page is
+          running.
+          Also make sure this directory
+          has Write permissions for the
+          user account.<br>
+          =A0</p>
+
+        <p><u><b>If you don't know the path to the MDB (using VB)</b></u></=
+p>
+
+      <pre>oConn.Open "Provider=3D<font color=3D"#0000FF">Microsoft.Jet.OLE=
+DB.4.0</font>;" &amp; _
+           "Data Source=3D" &amp; <font color=3D"#0000FF">App.Path</font>=
+=A0&amp; "\myDb.mdb;" &amp; _
+           "User Id=3Dadmin;" &amp; _
+           "Password=3D"</pre>
+          <p>This assumes the MDB is in the same directory where the applic=
+ation=20
+          is running.</p>
+
+        <p>For more information, see: <a href=3D"http://msdn.microsoft.com/=
+library/en-us/ado270/htm/mdrefjetprovspec.asp">OLE
+DB Provider for Microsoft Jet</a>,=A0 <a href=3D"http://support.microsoft.c=
+om/support/kb/articles/Q191/7/54.ASP">Q191754</a>,
+        and <a href=3D"http://support.microsoft.com/support/kb/articles/Q22=
+5/0/48.ASP">
+        Q225048</a></p>
+
+        <p>Note: <font color=3D"#0000FF">Microsoft.Jet.OLEDB.3.51</font> on=
+ly gets
+        installed by MDAC 2.0.=A0 <a href=3D"http://support.microsoft.com/d=
+efault.aspx?scid=3Dkb;EN-US;Q197902">Q197902<br>
+        </a>Note: MDAC 2.6 and 2.7 do not contain any of the JET
+        components.=A0 <a href=3D"http://support.microsoft.com/support/kb/a=
+rticles/Q271/9/08.ASP">Q271908</a>=A0and=A0<a href=3D"http://support.micros=
+oft.com/support/kb/articles/Q239/1/14.ASP">Q239114</a></p>
+
+        <p>To view Microsoft KB articles related to OLE DB Provider for
+        Microsoft JET, <a href=3D"http://search.support.microsoft.com/searc=
+h/default.aspx?Catalog=3DLCID%3D1033%26CDID%3DEN-US-KB%26PRODLISTSRC%3DON&a=
+mp;Product=3Dmdac&amp;Query=3DJet%2520OLEDB&amp;Queryc=3DJet+OLEDB&amp;with=
+inResults=3Dfalse&amp;srchstep=3D0&amp;KeywordType=3DALL&amp;Titles=3Dfalse=
+&amp;numDays=3D&amp;maxResults=3D100">click
+        here</a>=A0</p>
+
+<font size=3D"2">
+
+        <p>=A0</p>
+
+        </font>
+
+<p><u><a name=3D"OLEDBProviderForMicrosoftJetExcel"><b>You can also open an
+Excel Spreadsheet using the JET OLE DB
+Provider</b></a></u>
+</p>
+
+      <pre>oConn.Open "Provider=3D<font color=3D"#0000FF">Microsoft.Jet.OLE=
+DB.4.0</font>;" &amp; _
+           "Data Source=3Dc:\somepath\mySpreadsheet.xls;" &amp; _
+           "Extended Properties=3D""<font color=3D"#0000FF">Excel 8.0</font=
+>;HDR=3DYes""" </pre>
+<p>Where "HDR=3DYes" means that there is a header row in the cell range=A0<=
+br>
+ (or named
+range), so the provider will not include the first row of the<br>
+selection into the
+recordset.=A0 If "HDR=3DNo", then the provider will include<br>
+the first
+row of the cell range (or named ranged) into the recordset. </p>
+
+<p>For more information, see:=A0 <a href=3D"http://support.microsoft.com/su=
+pport/kb/articles/Q278/9/73.ASP">Q278973</a> </p>
+
+<p>=A0 </p>
+
+<p>
+<b>
+=A0<u><a name=3D"OLEDBProviderForMicrosoftJetText">You can also open a Text
+file using the JET OLE DB Provider</a></u></b>
+</p>
+
+      <pre>oConn.Open "Provider=3D<font color=3D"#0000FF">Microsoft.Jet.OLE=
+DB.4.0</font>;" &amp; _=A0
+       "Data Source=3Dc:\somepath\;" &amp; _=A0
+       "Extended Properties=3D""<font color=3D"#0000FF">text</font>;HDR=3DY=
+es;FMT=3DDelimited"""</pre>
+<p>'Then open a recordset based on a select on the actual file</p>
+      <pre>oRs.Open "Select * From <font color=3D"#0000FF">MyTextFile.txt</=
+font>", oConn, _
+         adOpenStatic, adLockReadOnly, adCmdText </pre>
+
+<p>For more information, see:=A0 <a href=3D"http://support.microsoft.com/su=
+pport/kb/articles/Q262/5/37.ASP">Q262537</a>
+ </p>
+
+      <pre>=A0</pre>
+      <ul>
+        <li><b><a name=3D"OLEDBProviderForMicrosoftProject">OLE DB Provider=
+ for
+            Microsoft Project</a></b></li>
+      </ul>
+<pre>oConn.Open "Provider=3D<font color=3D"#0000FF">Microsoft.Project.OLEDB=
+.9.0</font>;" &amp; _
+           "<font color=3D"#0000FF">Project Name</font>=3Dc:\somepath\myPro=
+ject.mpp"</pre>
+
+<p>For more information, see:=A0 <a href=3D"http://msdn.microsoft.com/libra=
+ry/default.asp?url=3D/library/en-us/dnproject/html/projoledb.asp">Microsoft=
+ Project 2000 OLE DB Provider Information</a></p>
+
+        <p>To view Microsoft KB articles related to OLE DB Provider for
+        Microsoft Project, <a href=3D"http://search.support.microsoft.com/s=
+earch/default.aspx?Catalog=3DLCID%3D1033%26CDID%3DEN-US-KB%26PRODLISTSRC%3D=
+ON&amp;Product=3Dmdac&amp;Query=3DMicrosoft%2520Project&amp;Queryc=3DMicros=
+oft+Project&amp;withinResults=3Dfalse&amp;srchstep=3D0&amp;KeywordType=3DAL=
+L&amp;Titles=3Dfalse&amp;numDays=3D&amp;maxResults=3D100">click
+        here</a>=A0</p>
+
+        <font size=3D"2">
+
+<p>=A0</p>
+
+        </font>
+      <ul>
+        <li><b><a name=3D"OLEDBProviderForMySQL">OLE DB Provider for
+    mySQL</a></b></li>
+      </ul>
+<pre>oConn.Open "Provider=3D<font color=3D"#0000FF">MySQLProv</font>;" &amp=
+; _
+           "Data Source=3DmySQLDB;" &amp; _
+           "User Id=3DmyUsername;" &amp; _
+           "Password=3DmyPassword" </pre>
+
+<p>For more information, see:=A0=A0 <a href=3D"http://www.mysql.com/doc/S/E=
+/SEC639.html">API
+- OLE DB</a>, <a href=3D"http://old.sw.com.sg/products/oledb/">SWSoft</a>,=
+ and <a href=3D"http://www.coveryourasp.com/Snippet.asp?snip=3D16">Snippet<=
+/a></p>
+
+<p>=A0</p>
+
+      <ul>
+        <li><strong><a name=3D"OLEDBProviderForODBCDatabases">OLE DB Provid=
+er for ODBC Databases</a></strong></li>
+      </ul>
+<p><font color=3D"#FF0000"><b>WARNING</b></font>:<font color=3D"#FF0000" si=
+ze=3D"2">
+</font>This OLE DB Provider is considered <a href=3D"http://msdn.microsoft.=
+com/library/en-us/mdacsdk/htm/mdac_deprecated_components.asp">obsolete</a>
+by Microsoft<br>
+</p>
+
+<p><u><b>For Access (Jet)</b></u></p>
+
+<pre>oConn.Open "Provider=3D<font color=3D"#0000FF">MSDASQL</font>;" &amp;=
+ _=20
+           "Driver=3D{<font color=3D"#0000FF">Microsoft Access Driver (*.md=
+b)</font>};" &amp; _
+           "Dbq=3Dc:\somepath\mydb.mdb;" &amp; _
+           "Uid=3DmyUsername;" &amp; _
+           "Pwd=3DmyPassword"
+ </pre>
+
+<p><u><b>For SQL Server</b></u></p>
+
+<pre>oConn.Open "Provider=3D<font color=3D"#0000FF">MSDASQL</font>;" &amp;=
+ _ =A0
+           "Driver=3D{<font color=3D"#0000FF">SQL Server</font>};" &amp; _
+           "Server=3DmyServerName;" &amp; _
+           "Database=3DmyDatabaseName;" &amp; _
+           "Uid=3DmyUsername;" &amp; _
+           "Pwd=3DmyPassword"</pre>
+
+        <p>For more information, see:=A0 <a href=3D"http://msdn.microsoft.c=
+om/library/en-us/ado270/htm/mdrefodbcprovspec.asp">Microsoft
+        OLE DB Provider for ODBC</a></p>
+
+        <p>To view Microsoft KB articles related to OLE DB Provider for ODB=
+C, <a href=3D"http://search.support.microsoft.com/search/default.aspx?Catal=
+og=3DLCID%3D1033%26CDID%3DEN-US-KB%26PRODLISTSRC%3DON&amp;Product=3Dmdac&am=
+p;Query=3DMSDASQL&amp;Queryc=3DMSDASQL&amp;withinResults=3Dfalse&amp;srchst=
+ep=3D0&amp;KeywordType=3DPHRASE&amp;Titles=3Dfalse&amp;numDays=3D&amp;maxRe=
+sults=3D100">click
+        here</a>=A0</p>
+
+<p>
+=A0</p>
+
+      <ul>
+        <li><b><a name=3D"OLEDBProviderForOLAPServices">OLE DB Provider for=
+ OLAP
+            Services</a></b></li>
+      </ul>
+        <p>Microsoft OLE DB for Online Analytical Processing (OLAP) is a se=
+t of
+        <br>
+        objects and interfaces that extends the ability of OLE DB to provide
+        <br>
+        access to multidimensional data stores.</p>
+        <p><u><b>For ADOMD.Catalog</b></u></p>
+
+<pre>oCat.ActiveConnection =3D _
+        "Provider=3D<font color=3D"#0000FF">MSOLAP</font>;" &amp; _
+        "Data Source=3DmyOLAPServerName;" &amp; _
+        "Initial Catalog=3DmyOLAPDatabaseName"
+ </pre>
+
+        <p><u><b>For ADOMD.Catalog (with URL)</b></u></p>
+
+<pre>oCat.ActiveConnection =3D _
+        "Provider=3D<font color=3D"#0000FF">MSOLAP</font>;" &amp; _
+        "Data Source=3D<font color=3D"#0000FF">http://</font>myServerName/;=
+" &amp; _
+        "Initial Catalog=3DmyOLAPDatabaseName"
+ </pre>
+
+        <p><u><b>For Excel PivotTable</b></u></p>
+
+      <pre>With ActiveWorkbook.PivotCaches.Add(SourceType:=3DxlExternal)
+    .Connection =3D "<font color=3D"#0000FF">OLEDB</font>;" &amp; _
+                  "Provider=3D<font color=3D"#0000FF">MSOLAP</font>;" &amp;=
+ _
+                  "Location=3DmyServerDataLocation;" &amp; _
+                  "Initial Catalog=3DmyOLAPDatabaseName"
+    .MaintainConnection =3D True
+    .CreatePivotTable TableDestination:=3DRange("A1"), _
+                      TableName:=3D "MyPivotTableName"
+End With
+</pre>
+
+<p>
+For more information, see:=A0 <a href=3D"http://msdn.microsoft.com/library/=
+default.asp?url=3D/library/en-us/oledb/htm/oledbforolapoverview.asp">OLE
+DB for OLAP</a>, <a href=3D"http://msdn.microsoft.com/library/default.asp?u=
+rl=3D/library/en-us/ado270/htm/amobjaspadosimpleexamplevbscriptx.asp">Catal=
+og
+Object</a>, <a href=3D"http://msdn.microsoft.com/library/default.asp?url=3D=
+/library/en-us/off2000/html/xlmthAddPivotCachesObjX.asp">PivotTable</a>,
+<a href=3D"http://msdn.microsoft.com/library/default.asp?url=3D/library/en-=
+us/olapdmpr/pt_clien_9cog.asp">
+Connecting
+Using HTTP</a></p>
+
+        <p>To view Microsoft KB articles related to OLE DB Provider for OLAP
+        Services, <a href=3D"http://search.support.microsoft.com/search/def=
+ault.aspx?Catalog=3DLCID%3D1033%26CDID%3DEN-US-KB%26PRODLISTSRC%3DON&amp;Pr=
+oduct=3Dmdac&amp;Query=3DMSOLAP&amp;Queryc=3DMSOLAP&amp;REF=3Dfalse&amp;src=
+hstep=3D0&amp;KeywordType=3DPHRASE&amp;Titles=3Dfalse&amp;numDays=3D&amp;ma=
+xResults=3D100">click
+        here</a>=A0</p>
+
+<p>
+=A0</p>
+
+      <ul>
+        <li><strong><a name=3D"OLEDBProviderForOracleFromMicrosoft">
+          OLE DB Provider for
+            Oracle (from Microsoft)</a></strong></li>
+      </ul>
+<pre>oConn.Open "Provider=3D<font color=3D"#0000FF">msdaora</font>;" &amp; _
+           "Data Source=3DMyOracleDB;" &amp; _=20
+           "User Id=3DmyUsername;" &amp; _
+           "Password=3DmyPassword"</pre>
+
+<p>For more information, see: <a href=3D"http://msdn.microsoft.com/library/=
+default.asp?url=3D/library/en-us/ado270/htm/mdreforacleprovspec.asp">
+Microsoft
+OLE DB Provider for Oracle</a></p>
+
+        <p>To view Microsoft KB articles related to OLE DB Provider for Ora=
+cle, <a href=3D"http://search.support.microsoft.com/search/default.aspx?Cat=
+alog=3DLCID%3D1033%26CDID%3DEN-US-KB%26PRODLISTSRC%3DON&amp;Product=3Dmdac&=
+amp;Query=3Dmsdaora&amp;Queryc=3Dmsdaora&amp;REF=3Dfalse&amp;srchstep=3D0&a=
+mp;KeywordType=3DPHRASE&amp;Titles=3Dfalse&amp;numDays=3D&amp;maxResults=3D=
+100">click
+        here</a>=A0</p>
+
+<p>
+=A0</p>
+
+      <ul>
+        <li><strong><a name=3D"OLEDBProviderForOracleFromOracle">OLE DB Pro=
+vider for
+            Oracle (from Oracle)</a></strong></li>
+      </ul>
+
+<p><u><b>For Standard Security</b></u></p>
+
+<pre>oConn.Open "Provider=3D<font color=3D"#0000FF">OraOLEDB.Oracle</font>;=
+" &amp; _
+           "Data Source=3DMyOracleDB;" &amp; _=20
+           "<font color=3D"#0000FF">User Id</font>=3DmyUsername;" &amp; _
+           "<font color=3D"#0000FF">Password</font>=3DmyPassword"
+ </pre>
+
+<p><u><b>For a Trusted Connection</b></u></p>
+
+      <pre>oConn.Open "Provider=3D<font color=3D"#0000FF">OraOLEDB.Oracle</=
+font>;" &amp; _
+           "Data Source=3DMyOracleDB;" &amp; _=20
+           "User Id=3D<font color=3D"#0000FF">/</font>;" &amp; _
+           "Password=3D"
+' Or</pre><pre>oConn.Open "Provider=3D<font color=3D"#0000FF">OraOLEDB.Orac=
+le</font>;" &amp; _
+           "Data Source=3DMyOracleDB;" &amp; _=20
+           "<font color=3D"#0000FF">OSAuthent=3D1</font>"</pre>
+  <p>Note: "Data Source=3D" must be set to the
+  appropriate Net8 name which
+  is known to the=A0naming
+  method in use. For example, for Local Naming,
+  it is the alias in
+  the tnsnames.ora=A0file; for Oracle Names, it is the Net8
+  Service Name.=A0</p>
+
+        <p>For more information, see:=A0<a href=3D"http://download-west.ora=
+cle.com/otndoc/oracle9i/901_doc/win.901/a90171/using.htm">Oracle
+        Provider for OLE DB Developer's Guide
+        </a></p>
+
+        <font size=3D"2">
+
+<p>=A0</p>
+
+        </font>
+      <ul>
+        <li><b><a name=3D"OLEDBProviderForPervasive">OLE DB Provider for
+    Pervasive</a></b></li>
+      </ul>
+<pre>oConn.Open "Provider=3D<font color=3D"#0000FF">PervasiveOLEDB</font>;"=
+ &amp; _
+           "Data Source=3DC:\PervasiveEB" </pre>
+
+<p>For more information, see:=A0 <a href=3D"http://www.pervasive.com/librar=
+y/index.asp?_portal=3DOLEDB">OLE
+DB - ADO</a></p>
+
+<p>=A0</p>
+
+      <ul>
+        <li><b><a name=3D"OLEDBProviderForSimpleProvider">OLE DB Provider=
+ for
+            Simple Provider</a></b></li>
+      </ul>
+        <p>The Microsoft OLE DB Simple Provider (OSP) allows ADO to access=
+ any data for which
+        a provider has
+        been written using the
+        <a href=3D"http://msdn.microsoft.com/library/en-us/oledb/htm/oledbp=
+wk_overview.asp"> OLE DB Simple Provider
+        Toolkit</a>. Simple
+        providers are intended to access data
+        sources that require only fundamental
+        OLE DB support, such as in-memory arrays or XML documents.</p>
+        <p>OSP in MDAC 2.6 has been enhanced to support opening hierarchica=
+l ADO Recordsets
+        over arbitrary
+        XML files. These XML files may contain the ADO XML persistence
+        schema, but it is not required. This
+        has been implemented by connecting the OSP
+        to the MSXML2.DLL, therefore MSXML2.DLL or newer is
+        required.</p>
+      <pre>oConn.Open "Provider=3D<font color=3D"#0000FF">MSDAOSP</font>;"=
+ &amp; _
+           "Data Source=3D<font color=3D"#0000FF">MSXML2.DSOControl.2.6</fo=
+nt>"
+
+oRS.Open "http://WebServer/VirtualRoot/MyXMLFile.<font color=3D"#0000FF">xm=
+l</font>",oConn</pre>
+
+        <p>For more information, see: <a href=3D"http://msdn.microsoft.com/=
+library/en-us/ado270/htm/mdprvmicrosoftoledbsimpleprovider.asp">Microsoft
+        OLE DB Simple Provider</a> and <a href=3D"http://support.microsoft.=
+com/default.aspx?scid=3Dkb;EN-US;q272270">
+        Q272270</a></p>
+
+        <p>To view Microsoft KB articles related to OLE DB Provider for Sim=
+ple
+        Provider, <a href=3D"http://search.support.microsoft.com/search/def=
+ault.aspx?Catalog=3DLCID%3D1033%26CDID%3DEN-US-KB%26PRODLISTSRC%3DON&amp;Pr=
+oduct=3Dmdac&amp;Query=3DMSDAOSP&amp;Queryc=3DMSDAOSP&amp;withinResults=3Df=
+alse&amp;srchstep=3D0&amp;KeywordType=3DPHRASE&amp;Titles=3Dfalse&amp;numDa=
+ys=3D&amp;maxResults=3D100">click
+        here</a>=A0</p>
+
+        <p>
+=A0</p>
+
+      <ul>
+        <li><b><a name=3D"OLEDBProviderForSybase">OLE
+            DB Provider for SQLBase</a></b></li>
+      </ul>
+<pre>oConn.Open "Provider=3D<font color=3D"#0000FF">SQLBaseOLEDB</font>;"=
+ &amp; _
+           "Data source=3DmySybaseServer;" &amp; _
+           "Location=3DmySybaseDB;" &amp; _
+           "User Id=3DmyUserName;" &amp; _
+           "Password=3DmyUserPassword"</pre>
+        <p>For more information, see:=A0 <a href=3D"http://www.centurasoft.=
+com/tech/downloads.asp">Books
+        on-line</a>=A0=A0 There is a one-time free sign-up,=A0
+        then select "SQLBase OLE DB Data Provider User's Guide for v7.5
+        (20-6220-0001)",=A0then download the zip file and extract the docum=
+ent.</p>
+
+        <p>=A0</p>
+
+      <ul>
+        <li><strong><a name=3D"OLEDBProviderForSQLServer">OLE DB Provider=
+ for SQL Server</a></strong></li>
+      </ul>
+
+<p><u><b>For Standard Security</b></u></p>
+
+<pre>oConn.Open "Provider=3D<font color=3D"#0000FF">sqloledb</font>;" &amp;=
+ _=20
+           "Data Source=3DmyServerName;" &amp; _
+           "Initial Catalog=3DmyDatabaseName;" &amp; _
+           "<font color=3D"#0000FF">User Id</font>=3DmyUsername;" &amp; _
+           "<font color=3D"#0000FF">Password</font>=3DmyPassword"
+ </pre>
+
+<p><u><b>For a Trusted Connection</b></u></p>
+
+<pre>oConn.Open "Provider=3D<font color=3D"#0000FF">sqloledb</font>;" &amp;=
+ _
+           "Data Source=3DmyServerName;" &amp; _
+           "Initial Catalog=3DmyDatabaseName;" &amp; _
+           "<font color=3D"#0000FF">Integrated Security=3DSSPI</font>"
+ </pre>
+
+<p>
+<u><b>To connect to a "Named Instance"</b></u></p>
+
+<pre>oConn.Open "Provider=3D<font color=3D"#0000FF">sqloledb</font>;" &amp;=
+ _
+           "Data Source=3DmyServerName<font color=3D"#0000FF">\myInstanceNa=
+me</font>;" &amp; _
+           "Initial Catalog=3DmyDatabaseName;" &amp; _
+           "User Id=3DmyUsername;" &amp; _
+           "Password=3DmyPassword"</pre><p>
+Note: In order to connect to a SQL Server 2000 "named instance",=20
+you must
+have MDAC 2.6 (or greater) installed.<br>
+=A0</p>
+
+<p>
+<u><b>To Prompt user for username and password</b></u></p>
+
+<pre>oConn.Provider =3D "<font color=3D"#0000FF">sqloledb</font>"
+oConn.Properties("<font color=3D"#0000FF">Prompt</font>") =3D <font color=
+=3D"#0000FF">adPromptAlways</font>
+oConn.Open "Data Source=3DmyServerName;" &amp; _
+           "Initial Catalog=3DmyDatabaseName"=A0
+ </pre>
+
+        <p>
+        <u><b>To connect to SQL Server running on the same computer</b></u>=
+</p>
+
+<pre>oConn.Open "Provider=3D<font color=3D"#0000FF">sqloledb</font>;" &amp;=
+ _
+           "Data Source=3D<font color=3D"#0000FF">(local)</font>;" &amp; _
+           "Initial Catalog=3DmyDatabaseName;" &amp; _
+           "User ID=3DmyUsername;" &amp; _
+           "Password=3DmyPassword"
+ </pre>
+
+<p>
+<u><b>To connect to SQL Server running on a remote computer (via an <a name=
+=3D"OLEDBProviderForSQLServerIP"> IP
+address</a>)</b></u></p>
+
+<pre>oConn.Open "Provider=3D<font color=3D"#0000FF">sqloledb</font>;" &amp;=
+ _
+           "<font color=3D"#0000FF">Network Library=3DDBMSSOCN</font>;" &am=
+p; _
+           "Data Source=3D<font color=3D"#0000FF">xxx.xxx.xxx.xxx,1433</fon=
+t>;" &amp; _
+           "Initial Catalog=3DmyDatabaseName;" &amp; _
+           "User ID=3DmyUsername;" &amp; _
+           "Password=3DmyPassword"</pre>
+<p>Where:=A0<br>
+- "Network Library=3DDBMSSOCN"
+tells OLE DB to use TCP/IP rather than<br>
+=A0=A0 Named Pipes (<a href=3D"http://support.microsoft.com/support/kb/arti=
+cles/Q238/9/49.ASP">Q238949</a>)<br>
+- xxx.xxx.xxx.xxx is an IP address<br>
+- 1433 is the default port number for SQL Server.=A0 <a href=3D"http://supp=
+ort.microsoft.com/default.aspx?scid=3Dkb;en-us;Q269882">Q269882</a>
+and <a href=3D"http://support.microsoft.com/default.aspx?scid=3Dkb;EN-US;q2=
+87932">Q287932</a><br>
+- You can also add "<font color=3D"#0000FF">Encrypt=3Dyes</font>" for <a hr=
+ef=3D"http://msdn.microsoft.com/library/en-us/architec/8_ar_cs_6fu6.asp">en=
+cryption</a>=A0</p>
+
+        <p>
+For more information, see: <a href=3D"http://msdn.microsoft.com/library/en-=
+us/ado270/htm/mdrefsqlprovspec.asp">
+Microsoft
+        OLE DB Provider for SQL Server</a></p>
+
+        <p>To view Microsoft KB articles related to OLE DB Provider for SQL
+        Server, <a href=3D"http://search.support.microsoft.com/search/defau=
+lt.aspx?Catalog=3DLCID%3D1033%26CDID%3DEN-US-KB%26PRODLISTSRC%3DON&amp;Prod=
+uct=3Dmdac&amp;Query=3Dsqloledb&amp;Queryc=3Dsqloledb&amp;withinResults=3Df=
+alse&amp;srchstep=3D0&amp;KeywordType=3DPHRASE&amp;Titles=3Dfalse&amp;numDa=
+ys=3D&amp;maxResults=3D100">click
+        here</a>=A0</p>
+
+        <p>
+=A0</p>
+
+      <ul>
+        <li><a name=3D"OLEDBProviderForSQLServerViaSQLXMLOLEDB"><b>
+          OLE DB
+            Provider for SQL Server via SQLXMLOLEDB</b></a></li>
+      </ul>
+
+<p>The SQLXMLOLEDB provider is an OLE DB provider that exposes the
+        Microsoft
+        SQLXML=A0functionality through ADO. The SQLXMLOLEDB provider is not=
+ a
+        rowset=A0provider; it can only=A0execute commands in the "write to=
+ an output stream"
+        mode of
+        ADO.=A0=A0</p>
+
+<pre>oConn.Open "Provider=3D<font color=3D"#0000FF">SQLXMLOLEDB.3.0</font>;=
+" &amp; _=20
+           "Data Provider=3D<font color=3D"#0000FF">SQLOLEDB</font>;" &amp;=
+ _
+           "Data Source=3DmySqlServerName;" &amp; _
+           "Initial Catalog=3DmyDatabaseName;" &amp; _
+           "User Id=3DmyUserName;" &amp; _
+           "Password=3DmyUserPassword"</pre>
+
+        <p>
+
+For more information, see:=A0 <a href=3D"http://msdn.microsoft.com/download=
+s/default.asp?URL=3D/downloads/sample.asp?url=3D/msdn-files/027/001/602/msd=
+ncompositedoc.xml">SQLXML
+3.0</a>
+and <a href=3D"http://msdn.microsoft.com/library/default.asp?url=3D/library=
+/en-us/dnexxml/html/xml07162001.asp">
+A Survey of Microsoft SQL Server 2000 XML Features</a>=20
+
+        </p>
+
+        <p>To view Microsoft KB articles related to OLE DB Provider for SQL
+        Server via SQLXMLOLEDB, <a href=3D"http://search.support.microsoft.=
+com/search/default.aspx?Catalog=3DLCID%3D1033%26CDID%3DEN-US-KB%26PRODLISTS=
+RC%3DON&amp;Product=3Dmdac&amp;Query=3DSQLXMLOLEDB&amp;Queryc=3DSQLXMLOLEDB=
+&amp;withinResults=3Dfalse&amp;srchstep=3D0&amp;KeywordType=3DPHRASE&amp;Ti=
+tles=3Dfalse&amp;numDays=3D&amp;maxResults=3D100">click
+        here</a>=A0</p>
+
+        <p>
+=A0</p>
+
+      <ul>
+        <li><b><a name=3D"OLEDBProviderForAdaptiveServerAnywhere">OLE
+            DB Provider for Sybase Adaptive Server Anywhere (ASA)</a></b></=
+li>
+      </ul>
+<pre>oConn.Open "Provider=3D<font color=3D"#0000FF">ASAProv</font>;" &amp; _
+           "Data source=3DmyASA"</pre>
+        <p>For more information, see:=A0 <a href=3D"http://manuals.sybase.c=
+om/onlinebooks/group-sas/awg0702e/dbpien7/@Generic__BookTextView/13894">ASA
+        Programming Interfaces Guide</a> and <a href=3D"http://manuals.syba=
+se.com/onlinebooks/group-sas/awg0702e/dbugen7/@ebt-link;pt=3D13894;uf=3D0?t=
+arget=3D0;window=3Dnew;showtoc=3Dtrue;book=3Ddbugen7">
+        ASA
+        User's Guide</a></p>
+
+        <p>=A0</p>
+
+      <ul>
+        <li><b><a name=3D"OLEDBProviderForSybaseAdaptiveServerEnterprise">O=
+LE
+            DB Provider for Sybase Adaptive Server Enterprise (ASE)</a></b>=
+</li>
+      </ul>
+<pre>oConn.Open "Provider=3D<font color=3D"#0000FF">Sybase ASE OLE DB Provi=
+der</font>;" &amp; _
+           "Data source=3DmyASEServer"</pre><pre>' Or</pre><pre>oConn.Open=
+ "Provider=3D<font color=3D"#0000FF">Sybase.ASEOLEDBProvider</font>;" &amp;=
+ _
+           "Srvr=3DmyASEServer,5000;" &amp; _
+           "Catalog=3DmyDBName;" &amp; _
+           "User Id=3DmyUserName;" &amp; _
+           "Password=3DmyUserPassword"</pre><p>
+Where:<br>
+- The Sybase ASE OLE DB provider from the Sybase 12.5 client CD=A0<br>
+- 5000 is the port number for Sybase.</p><p>Note: The Open
+          Client 12 Sybase OLE DB Provider fails to work without
+          creating=A0=A0a Data Source .IDS file using the Sybase Data
+          Administrator.=A0 These .IDS files=A0resemble ODBC DSNs.</p><p>No=
+te:
+With
+          Open Client 12.5, the server port number feature finally works,=
+=A0allowing fully qualified network connection strings to be
+used
+          without defining=A0any .IDS Data Source files.</p>
+<p>For more information, see:=A0 <a href=3D"http://my.sybase.com/search_adv=
+anced">Sybase
+Advance Search</a>=A0=A0=A0</p>
+
+        <p>=A0</p>
+
+      <ul>
+        <li><b><a name=3D"OLEDBProviderForTextFiles">OLE DB Provider for Te=
+xt Files</a></b></li>
+      </ul>
+<p>Actually there is no OLE DB Provider for Text files.=A0
+However, you can use=A0the
+<a href=3D"#OLEDBProviderForMicrosoftJetText">OLE DB Provider for JET</a>=
+ to read
+and write data in Text files.=A0 Or you can=A0use the <a href=3D"#ODBCDrive=
+rForText">ODBC Driver for Text</a>.</p>
+
+        <p>
+=A0</p>
+
+      <ul>
+        <li><a name=3D"OLEDBProviderForUniDataAndUniVerse"><b>OLE DB
+    Provider for UniData and UniVerse</b></a></li>
+      </ul>
+<pre>oConn.Open "Provider=3D<font color=3D"#0000FF">Ardent.UniOLEDB</font>;=
+" &amp; _
+           "Data source=3DmyServer;" &amp; _
+           "Location=3DmyDatabase;" &amp; _
+           "User ID=3DmyUsername;" &amp; _
+           "Password=3DmyPassword" </pre>
+<p>For more information, see:=A0<a href=3D"http://puma.clunet.edu/is/Manual=
+sDocumentation/Unidata5.1/answers/english/docs/Unidata5_1/73-1005-1_0.pdf">=
+Ardent
+Using UniOLEDB 5.1</a>,=A0 <a href=3D"http://www.informix.com/answers/engli=
+sh/docs/52unidata/OLDB.pdf">Informix
+Using UniOLEDB 5.2</a></p>
+
+<p>=A0</p>
+
+      <ul>
+        <li><strong><a name=3D"OLEDBProviderForVisualFoxPro">OLE DB Provide=
+r for
+            Visual FoxPro</a></strong></li>
+      </ul>
+<pre>oConn.Open "Provider=3D<font color=3D"#0000FF">vfpoledb</font>;" &amp;=
+ _=20
+           "Data Source=3DC:\vfp7\Samples\Data\myVFPDB.<font color=3D"#0000=
+FF">dbc</font>;" &amp; _=20
+           "Mode=3DReadWrite|Share Deny None;" &amp; _=20
+           "Collating Sequence=3DMACHINE;" &amp; _=20
+           "Password=3D''" </pre>
+
+        <p>
+
+For more information, see: <a href=3D"http://msdn.microsoft.com/library/def=
+ault.asp?url=3D/library/en-us/fox7help/html/dggrfoledbproviderforvisualfoxp=
+ro.asp">Microsoft
+        OLE DB Provider for Visual FoxPro</a>=20
+
+        </p>
+
+        <p>To view Microsoft KB articles related to OLE DB Provider for Vis=
+ual
+        FoxPro, <a href=3D"http://search.support.microsoft.com/search/nlsea=
+rch.aspx?Catalog=3DLCID%3d1033%26CDID%3dEN-US-KB%26PRODLISTSRC%3dON&amp;Pro=
+duct=3Dvfp7&amp;Query=3Dvfpoledb&amp;Queryc=3Dvfpoledb&amp;REF=3Dfalse&amp;=
+srchstep=3D0&amp;KeywordType=3DALL&amp;Titles=3Dfalse&amp;numDays=3D&amp;ma=
+xResults=3D100">click
+        here</a>.</p>
+
+        <p>Note: The Visual FoxPro OLE DB Provider is <b>NOT</b> installed=
+ by
+        MDAC 2.x.=A0 You must install <a href=3D"http://msdn.microsoft.com/=
+vfoxpro/">Visual
+        FoxPro 7.0</a> in order to get it's OLE DB Provider.</p>
+
+        <p>=A0</p>
+
+        <p>=A0</p>
+
+        <p>=A0</p>
+
+    </td>
+  </tr>
+  <tr>
+    <td valign=3D"top" width=3D"500" align=3D"left">
+
+        <hr>
+
+        <h2><a name=3D"RemoteDataServiceConnections">Remote Data Service (R=
+DS)
+        Connections</a></h2>
+        <p>The following examples show how to connect to a remote database
+        using the RDS
+        Data Control.
+        When using the RDS DataControl's Server/Connect / SQL properties,
+        the RDS DataControl uses the=A0RDS DataFactory on the remote server=
+.=A0 If you use
+        the RDS DataControl's <a href=3D"http://www.codemaker.co.uk/it/tips=
+/RDS25.htm">URL property</a>,=A0then the RDS DataFactory is not used at all=
+.</p>
+
+<p><font color=3D"#FF0000"><b>WARNING</b></font>:=A0 The RDS DataFactory ca=
+n be
+a major security hole if not setup and
+configured correctly!
+ For more
+information, see <a href=3D"http://www.codemaker.co.uk/it/tips/RDS_Faq.htm#=
+Q24">RDS FAQ #24</a>=A0</p>
+
+<p><font color=3D"#FF0000"><b>WARNING</b></font>:<font color=3D"#FF0000" si=
+ze=3D"2">
+</font>RDS is considered <a href=3D"http://msdn.microsoft.com/library/en-us=
+/mdacsdk/htm/mdac_deprecated_components.asp">obsolete</a>
+by Microsoft<br>
+=A0</p>
+
+      <ul>
+        <li><a name=3D"RDSConnectProperty"><b>RDS DataControl - Connect Pro=
+perty</b></a></li>
+      </ul>
+        <p><u><b>With the RDS default handler disabled</b> </u> </p>
+        <pre>With oRdc
+    .<font color=3D"#0000FF">Server</font> =3D "http://myServerName"
+    .<font color=3D"#0000FF">Sql</font> =3D "Select * From Authors Where St=
+ate =3D 'CA'"
+    .<font color=3D"#0000FF">Connect</font> =3D "Provider=3Dsqloledb;" &amp=
+; _
+               "Data Source=3D(local);" &amp; _
+               "Initial Catalog=3Dpubs;" &amp; _
+               "User Id=3DmyUsername;" &amp; _
+               "Password=3DmyPassword"
+    .Refresh
+End With
+ </pre>
+        <p><u><b>With the RDS default handler enabled</b> </u> </p>
+      <pre>With oRdc
+    .<font color=3D"#0000FF">Server</font> =3D "http://myServerName"
+    .<font color=3D"#0000FF">Handler</font> =3D "<font color=3D"#0000FF">MS=
+DFMAP.Handler</font>"
+    .<font color=3D"#0000FF">Connect</font> =3D "Data Source=3DMyConnectTag=
+;"
+    .<font color=3D"#0000FF">Sql</font> =3D "MySQLTag(""CA"")"
+    .Refresh
+End With</pre>
+          <p>The corresponding CONNECT and SQL sections in the default hand=
+ler
+          \WINNT\<font color=3D"#0000FF">MSDFMAP.INI</font> =A0file would=
+ be:</p>
+      <pre>[<font color=3D"#0000FF">connect</font> MyConnectTag]
+Access =3D ReadWrite
+Connect =3D "Provider=3Dsqloledb;
+           Data Source=3D(local);
+           Initial Catalog=3Dpubs;
+           User Id=3Dsa;
+           Password=3D"=A0               (put all of this on single line!)
+
+[<font color=3D"#0000FF">sql</font> MySQLTag]
+Sql =3D "Select * From Authors Where State =3D '?'"</pre>
+        <p>For more <font face=3D"Trebuchet MS">information</font> about th=
+e RDS Default Handler, see:
+        <a href=3D"http://support.microsoft.com/support/kb/articles/Q243/2/=
+45.ASP"><span style=3D"FONT-FAMILY: 'Trebuchet MS'">Q243245</span></a>,
+        <a href=3D"http://support.microsoft.com/support/kb/articles/q230/6/=
+80.ASP"><span style=3D"FONT-FAMILY: 'Trebuchet MS'">Q230680</span></a>,
+        and <a href=3D"http://www.microsoft.com/data/ado/rds/custhand.htm">=
+<span style=3D"FONT-FAMILY: 'Trebuchet MS'">RDS
+        Customization Handler</span></a> Microsoft articles</p>
+
+        <p>To view Microsoft KB articles related to RDS, <a href=3D"http://=
+search.support.microsoft.com/search/default.aspx?Catalog=3DLCID%3D1033%26CD=
+ID%3DEN-US-KB%26PRODLISTSRC%3DON&amp;Product=3Dmdac&amp;Query=3DRDS&amp;Que=
+ryc=3DRDS&amp;REF=3Dfalse&amp;srchstep=3D0&amp;KeywordType=3DPHRASE&amp;Tit=
+les=3Dfalse&amp;numDays=3D&amp;maxResults=3D100">click
+        here</a>=A0</p>
+        <p>
+
+        =A0
+</p>
+      <ul>
+        <li><a name=3D"RDSURLProperty"><b>RDS DataControl - URL Property</b=
+></a></li>
+      </ul>
+        <p><u><b>To get records from a remote database</b></u></p>
+      <pre>With oRdc
+    .<font color=3D"#0000FF">URL</font> =3D "http://myServerName/AuthorsGet=
+.asp?state=3DCA"
+    .Refresh
+End With
+ </pre>
+          <p><u><b>To save, set the URL property to an ASP web page</b></u>=
+</p>
+      <pre>With oRdc
+    .<font color=3D"#0000FF">URL</font> =3D "http://myServerName/AuthorsSav=
+e.asp"
+    .SubmitChanges
+End With</pre><pre><font face=3D"Trebuchet MS">Note: You must use MDAC 2.5=
+ (or greater) for this feature</font></pre>
+          <p>For more information, see:=A0 <a href=3D"http://msdn.microsoft=
+.com/library/en-us/ado270/htm/mdprourlproperty.asp">RDS
+          URL Property</a></p>
+          <p>
+
+To view Microsoft KB articles related to RDS, <a href=3D"http://search.supp=
+ort.microsoft.com/search/default.aspx?Catalog=3DLCID%3D1033%26CDID%3DEN-US-=
+KB%26PRODLISTSRC%3DON&amp;Product=3Dmdac&amp;Query=3DRDS&amp;Queryc=3DRDS&a=
+mp;REF=3Dfalse&amp;srchstep=3D0&amp;KeywordType=3DPHRASE&amp;Titles=3Dfalse=
+&amp;numDays=3D&amp;maxResults=3D100">click
+here</a>=A0
+</p>
+          <p>
+
+        =A0
+</p>
+          <p>
+
+        =A0
+</p>
+          <p>
+
+        =A0
+</p>
+    </td>
+  </tr>
+  <tr>
+    <td valign=3D"top" width=3D"500" align=3D"left">
+
+<hr>
+
+<h2><a name=3D"RemoteOLEDBProviderConnections">MS Remote Provider Connectio=
+ns</a></h2>
+
+<p>The following connections strings use Microsoft's remote provider=A0 (MS
+Remote).=A0
+The MS Remote
+provider tells ADO to communicate=A0
+ with the=A0remote server=A0(via the RDS DataFactory) and to use=A0the=A0
+ remote provider=A0that is installed
+on=A0the remote server.</p>
+
+<p><font color=3D"#FF0000"><b>WARNING</b></font>:=A0 The RDS DataFactory ca=
+n be
+a major security hole if not setup
+and configured correctly!=A0=A0For more
+information, see <a href=3D"http://www.codemaker.co.uk/it/tips/RDS_Faq.htm#=
+Q24">RDS FAQ #24</a>=A0</p>
+
+<p><font color=3D"#FF0000"><b>WARNING</b></font>:<font color=3D"#FF0000" si=
+ze=3D"2">
+</font>RDS is considered <a href=3D"http://msdn.microsoft.com/library/en-us=
+/mdacsdk/htm/mdac_deprecated_components.asp">obsolete</a>
+by Microsoft<br>
+=A0</p>
+
+      <ul>
+        <li><strong><a name=3D"MSRemoteAccess">MS Remote - Access</a> (Jet)=
+</strong></li>
+      </ul>
+<p><u><b>If you want to use an ODBC DSN on the remote machine</b></u></p>
+
+<pre>oConn.Open "Provider=3D<font color=3D"#0000FF">MS Remote</font>;" &amp=
+; _
+           "<font color=3D"#0000FF">Remote Server</font>=3Dhttp://myServerN=
+ame;" &amp; _=20
+           "<font color=3D"#0000FF">Remote Provider</font>=3DMSDASQL;" &amp=
+; _
+           "<font color=3D"#0000FF">DSN</font>=3DAdvWorks;" &amp; _
+           "Uid=3DmyUsername;" &amp; _
+           "Pwd=3DmyPassword"=20
+ </pre>
+<p>
+<u><b>If you want to use an OLE DB Provider on the remote machine</b></u></=
+p>
+
+<pre>oConn.Open "Provider=3D<font color=3D"#0000FF">MS Remote</font>;" &amp=
+; _=20
+           "<font color=3D"#0000FF">Remote Server</font>=3Dhttp://myServerN=
+ame;" &amp; _
+           "<font color=3D"#0000FF">Remote Provider</font>=3DMicrosoft.Jet.=
+OLEDB.4.0;" &amp; _
+           "<font color=3D"#0000FF">Data Source</font>=3Dc:\somepath\mydb.m=
+db", _
+            "admin", ""
+ </pre>
+<p><u><b>If you want to use an OLE DB Provider on the remote machine</b></u=
+></p>
+
+<pre>oConn.Open "Provider=3D<font color=3D"#0000FF">MS Remote</font>;" &amp=
+; _=20
+           "<font color=3D"#0000FF">Remote Server</font>=3Dhttp://myServerN=
+ame;" &amp; _
+           "<font color=3D"#0000FF">Handler</font>=3DMSDFMAP.Handler;" &amp=
+; _
+           "Data Source=3DMyAdvworksConn"</pre>
+<p>The corresponding entry in the <a href=3D"file:///C:/WINNT/Msdfmap.ini">=
+\winnt\Msdfmap.ini</a>
+file would be:</p>
+<pre>[<font color=3D"#0000FF">connect</font> MyAdvworksConn]
+Access =3D ReadWrite
+Connect =3D "Provider=3DMicrosoft.Jet.OLEDB.4.0;
+           Data Source=3Dmydb.mdb;
+           User Id=3Dadmin;=20
+           Password=3D"               (put all of this on single line!)</pr=
+e><pre>=A0</pre>
+      <ul>
+        <li><strong><a name=3D"MSRemoteSQLServer">MS Remote - SQL Server</a=
+></strong></li>
+      </ul>
+
+        <p><u><b>If you want to use an ODBC DSN on the remote machine</b></=
+u></p>
+
+<pre>oConn.Open "Provider=3D<font color=3D"#0000FF">MS Remote</font>;" &amp=
+; _
+           "<font color=3D"#0000FF">Remote Server</font>=3Dhttp://myServerN=
+ame;" &amp; _=20
+           "<font color=3D"#0000FF">Remote Provider</font>=3DMSDASQL;" &amp=
+; _
+           "<font color=3D"#0000FF">DSN</font>=3DmyDatabaseName;" &amp; _
+           "Uid=3DmyUsername;" &amp; _
+           "Pwd=3DmyPassword"=20
+ </pre>
+        <p>
+<u><b>If you want to use an OLE DB Provider on the remote machine</b></u></=
+p>
+
+<pre>oConn.Open "Provider=3D<font color=3D"#0000FF">MS Remote</font>;" &amp=
+; _=20
+           "<font color=3D"#0000FF">Remote Server</font>=3Dhttp://myServerN=
+ame;" &amp; _
+           "<font color=3D"#0000FF">Remote Provider</font>=3DSQLOLEDB;" &am=
+p; _
+           "<font color=3D"#0000FF">Data Source</font>=3DmyServerName;" &am=
+p; _
+           "Initial Catalog=3DmyDatabaseName;" &amp; _
+           "User ID=3DmyUsername;" &amp; _
+           "Password=3DmyPassword"
+ </pre>
+        <p>
+<u><b>If you want to use an OLE DB Provider on the remote machine</b></u></=
+p>
+
+<pre>oConn.Open "Provider=3D<font color=3D"#0000FF">MS Remote</font>;" &amp=
+; _=20
+           "<font color=3D"#0000FF">Remote Server</font>=3Dhttp://myServerN=
+ame;" &amp; _=20
+           "<font color=3D"#0000FF">Handler</font>=3DMSDFMAP.Handler;" &amp=
+; _
+           "Data Source=3DMyPubsConn" </pre>
+          <p>The corresponding entry in the <a href=3D"file:///C:/WINNT/Msd=
+fmap.ini">\winnt\Msdfmap.ini</a>
+file would be:</p>
+<pre>[<font color=3D"#0000FF">connect</font> MyPubsConn]
+Access =3D ReadWrite
+Connect =3D "Provider=3DSQLOLEDB;
+          Data Source=3DmyServerName;
+          Initial Catalog=3DmyDatabaseName;
+          User ID=3DmyUsername;
+          Password=3DmyPassword"        (put all of this on single line!)</=
+pre>
+
+<p>For more information, see:=A0 <a href=3D"http://msdn.microsoft.com/libra=
+ry/en-us/ado270/htm/mdrefmsremote.asp">Microsoft
+OLE DB Remoting Provider</a>=A0=A0 and=A0 <a href=3D"http://support.microso=
+ft.com/support/kb/articles/q240/8/38.asp">Q240838</a></p>
+
+<p>
+
+To view Microsoft KB articles related to MS Remote, <a href=3D"http://searc=
+h.support.microsoft.com/search/default.aspx?Catalog=3DLCID%3D1033%26CDID%3D=
+EN-US-KB%26PRODLISTSRC%3DON&amp;Product=3Dmdac&amp;Query=3D%2522MSRemote%25=
+22%2520or%2520%2522MS%2520Remote%2522&amp;Queryc=3D%22MS%20Remote%22+or+%22=
+MS%20Remote%22&amp;REF=3Dfalse&amp;srchstep=3D0&amp;KeywordType=3DBOOLEAN&a=
+mp;Titles=3Dfalse&amp;numDays=3D&amp;maxResults=3D100">click
+here</a>=A0<br>
+To view Microsoft KB articles related to RDS, <a href=3D"http://search.supp=
+ort.microsoft.com/search/default.aspx?Catalog=3DLCID%3D1033%26CDID%3DEN-US-=
+KB%26PRODLISTSRC%3DON&amp;Product=3Dmdac&amp;Query=3DRDS&amp;Queryc=3DRDS&a=
+mp;REF=3Dfalse&amp;srchstep=3D0&amp;KeywordType=3DPHRASE&amp;Titles=3Dfalse=
+&amp;numDays=3D&amp;maxResults=3D100">click
+here</a>=A0
+</p>
+
+<p>
+
+        =A0
+</p>
+
+      <p>=A0</p></td>
+  </tr>
+  <tr>
+    <td valign=3D"top" width=3D"500" align=3D"left">
+
+        <hr>
+
+        <h2><b><a name=3D"AdoUrlConnection">ADO URL Connections</a></b></h2>
+        <p>ADO 2.5+ allows you to open up a Recordset based on XML returned=
+ from
+        an ASP
+        file over HTTP.=A0=A0This feature doesn't use RDS at all.</p>
+      <ul>
+        <li><b><a name=3D"AdoUrlConnectionADORecordset">ADO Recordset</a></=
+b></li>
+      </ul>
+        <p><u><b>To get records from a remote database</b></u></p>
+      <pre>oRs.Open "<font color=3D"#0000FF">http://</font>myServer/Authors=
+GetByState.asp?state=3DCA",, _
+          adOpenStatic, adLockBatchOptimistic</pre>
+
+<p><u><b>To save changes</b></u></p>
+
+      <pre>' Save Recordset into Stream
+Set oStm =3D New ADODB.Stream
+oRs.Save  oStm, <font color=3D"#0000FF">adPersistXML</font>
+
+' Use MSXML's XMLHTTP object to open ASP=20
+Set oXMLHTTP =3D New MSXML2.XMLHTTP30
+oXMLHTTP.Open "POST", "http://myServerName/AuthorsSave.asp"
+oXMLHTTP.<font color=3D"#0000FF">Send</font>  oStm.ReadText
+
+' If an error occurred
+If oXMLHTTP.Status =3D 500 Then
+    Debug.Print  oXMLHTTP.statusText
+End If</pre>
+
+<p>For more information, see:=A0 <a href=3D"http://msdn.microsoft.com/libra=
+ry/en-us/ado270/htm/mdmthrstopen.asp">ADO
+Recordset's Open Method</a></p>
+
+<p>=A0</p>
+
+<p>=A0</p>
+
+    </td>
+  </tr>
+  <tr>
+    <td valign=3D"top" width=3D"500" align=3D"left">
+
+        <hr>
+
+        <h2><b><a name=3D"DOTNETManagedProviderConnections">.NET Data Provi=
+der
+        Connections</a></b></h2>
+      <ul>
+        <li><b><a name=3D"SQLClientManagedProvider">SQL Server .NET Data Pr=
+ovider (System.Data.SqlClient)</a></b></li>
+      </ul>
+        <p>The SQL Server .NET Data Provide allows you to connect to a Micr=
+osoft
+        SQL Server
+        7.0=A0or 2000 databases.=A0=A0</p>
+        <p> For Microsoft SQL Server 6.5 or earlier, use the
+        <a href=3D"#OLEDBManagedProvider">OLE DB .NET Data Provider</a>=A0w=
+ith=A0
+        the "SQL Server OLE DB Provider" (SQLOLEDB).</p>
+        <p>Note: The SQL Server .NET Data Provider knows which Provider it
+        is.=A0 Hence the "provider=3D" part of the connection string
+        is not needed.=A0</p>
+<p><u><b>Using C#:</b></u></p>
+        <pre>using System.Data.<font color=3D"#0000FF"><b>SqlClient</b></fo=
+nt>;
+...
+<font color=3D"#0000FF"><b>SqlConnection</b></font> oSQLConn =3D new <b>Sql=
+Connection</b>();
+oSQLConn.ConnectionString =3D "Data Source=3D(local);" +
+                            "Initial Catalog=3DmySQLServerDBName;" +
+                            "Integrated Security=3Dyes";
+oSQLConn.Open();
+ </pre>
+<p><u><b>Using VB.NET:</b></u></p>
+      <pre>Imports System.Data.<font color=3D"#0000FF"><b>SqlClient
+...
+</b></font>Dim oSQLConn As <font color=3D"#0000FF"><b>SqlConnection</b></fo=
+nt> =3D New <b>SqlConnection</b>()
+oSQLConn.ConnectionString =3D "Data Source=3D(local);" &amp; _
+                            "Initial Catalog=3DmySQLServerDBName;" &amp; _
+                            "Integrated Security=3Dyes"
+oSQLConn.Open()
+ </pre>
+<p><u><b>If connection to a remote server (via IP address):</b></u></p>
+        <pre>oSQLConn.ConnectionString =3D "Network Library=3D<font color=
+=3D"#0000FF">DBMSSOCN</font>;" &amp; _
+                            "Data Source=3D<font color=3D"#0000FF">xxx.xxx.=
+xxx.xxx,1433</font>;" &amp; _
+                            "Initial Catalog=3DmySQLServerDBName;" &amp; _
+                            "User ID=3DmyUsername;" &amp; _
+                            "Password=3DmyPassword"</pre>
+        <p>Where:=A0<br>
+- "Network Library=3DDBMSSOCN"
+tells SqlConnection to use TCP/IP <a href=3D"http://support.microsoft.com/s=
+upport/kb/articles/Q238/9/49.ASP">Q238949</a><br>
+- xxx.xxx.xxx.xxx is an IP address.=A0=A0<br>
+- 1433 is the default port number for SQL Server.=A0 <a href=3D"http://supp=
+ort.microsoft.com/default.aspx?scid=3Dkb;en-us;Q269882">Q269882</a>
+        and <a href=3D"http://support.microsoft.com/default.aspx?scid=3Dkb;=
+EN-US;q287932">Q287932</a><br>
+- You can also add "<font color=3D"#0000FF">Encrypt=3Dyes</font>" for <a hr=
+ef=3D"http://msdn.microsoft.com/library/en-us/architec/8_ar_cs_6fu6.asp">en=
+cryption</a>=A0<br>
+=A0</p>
+
+        <p>For more information, see:=A0 <a href=3D"http://msdn.microsoft.c=
+om/library/en-us/cpref/html/frlrfSystemDataSqlClient.asp">System.Data.SQL=
+ Namespace</a>,
+        <a href=3D"http://support.microsoft.com/default.aspx?scid=3Dkb;EN-U=
+S;q308656">Q308656</a>,=A0and <a href=3D"http://msdn.microsoft.com/library/=
+default.asp?url=3D/library/en-us/cpguide/html/cpconusingadonetproviderstoac=
+cessdata.asp">.NET
+        Data Providers</a></p>
+        <p>Note: Microsoft <a href=3D"http://www.codemaker.co.uk/it/tips/ms=
+dn.microsoft.com/downloads/default.asp?URL=3D/downloads/sample.asp?url=3D/m=
+sdn-files/027/001/602/msdncompositedoc.xml">SQLXML Managed Classes</a> expo=
+ses the functionality of
+        SQLXML=A0inside the Microsoft .NET Framework.</p>
+        <p>To view Microsoft KB articles related to SQLClient, <a href=3D"h=
+ttp://search.support.microsoft.com/search/default.aspx?Catalog=3DLCID%3D103=
+3%26CDID%3DEN-US-KB%26PRODLISTSRC%3DON&amp;Product=3DNETFrame&amp;Query=3DS=
+qlClient&amp;Queryc=3DSqlClient&amp;REF=3Dfalse&amp;srchstep=3D0&amp;Keywor=
+dType=3DALL&amp;Titles=3Dfalse&amp;numDays=3D&amp;maxResults=3D100">click
+        here</a>=A0</p>
+        <p>=A0</p>
+      <ul>
+        <li><b><a name=3D"OLEDBManagedProvider">OLE DB .NET Data Provider=
+ (System.Data.OleDb)</a></b></li>
+      </ul>
+        <p>The OLE DB .NET Data Provider uses native OLE DB through COM int=
+erop
+        to enable
+        data access.=A0=A0</p>
+        <p>To use the OLE DB .NET Data Provider, you
+        must also use an OLE DB
+        provider (e.g.=A0 SQLOLEDB,
+        MSDAORA, or
+        Microsoft.JET.OLEDB.4.0).</p>
+        <p><u><b>For IBM AS/400 OLE DB Provider</b></u></p>
+        <pre>' VB.NET
+Dim oOleDbConnection As <font color=3D"#0000FF">OleDb.OleDbConnection</font>
+Dim sConnString As String =3D _
+           "Provider=3D<font color=3D"#0000FF">IBMDA400.DataSource.1</font>=
+;" &amp; _
+           "Data source=3DmyAS400DbName;" &amp; _
+           "User Id=3DmyUsername;" &amp; _
+           "Password=3DmyPassword"
+oOleDbConnection =3D New OleDb.OleDbConnection(sConnString)
+oOleDbConnection.Open()
+ </pre>
+        <p><u><b>For JET OLE DB Provider</b></u></p>
+        <pre>' VB.NET
+Dim oOleDbConnection As <font color=3D"#0000FF">OleDb.OleDbConnection</font>
+Dim sConnString As String =3D _
+         "Provider=3D<font color=3D"#0000FF">Microsoft.Jet.OLEDB.4.0</font>=
+;" &amp; _
+         "Data Source=3DC:\myPath\myJet.mdb;" &amp; _
+         "User ID=3DAdmin;" &amp; _
+         "Password=3D"=A0
+oOleDbConnection =3D New OleDb.OleDbConnection(sConnString)
+oOleDbConnection.Open()
+ </pre>
+        <p><u><b>For Oracle OLE DB Provider</b></u></p>
+        <pre>' VB.NET
+Dim oOleDbConnection As <font color=3D"#0000FF">OleDb.OleDbConnection</font>
+Dim sConnString As String =3D _
+         "Provider=3D<font color=3D"#0000FF" size=3D"2">OraOLEDB.Oracle</fo=
+nt>;" &amp; _
+         "Data Source=3DMyOracleDB;" &amp; _
+         "User ID=3DmyUsername;" &amp; _
+         "Password=3DmyPassword"=A0
+oOleDbConnection =3D New OleDb.OleDbConnection(sConnString)
+oOleDbConnection.Open()
+ </pre>
+        <p><u><b>For SQL Server OLE DB Provider</b></u></p>
+        <pre>' VB.NET
+Dim oOleDbConnection As <font color=3D"#0000FF">OleDb.OleDbConnection</font>
+Dim sConnString As String =3D _
+         "Provider=3D<font color=3D"#0000FF">sqloledb</font>;" &amp; _=20
+         "Data Source=3DmyServerName;" &amp; _
+         "Initial Catalog=3DmyDatabaseName;" &amp; _
+         "User Id=3DmyUsername;" &amp; _
+         "Password=3DmyPassword"=A0
+oOleDbConnection =3D New OleDb.OleDbConnection(sConnString)
+oOleDbConnection.Open()
+ </pre>
+        <p><u><b>For </b></u><b><u>Sybase ASE OLE DB Provider</u></b></p>
+        <pre>' VB.NET
+Dim oOleDbConnection As <font color=3D"#0000FF">OleDb.OleDbConnection</font>
+Dim sConnString As String =3D _
+         "Provider=3D<font color=3D"#0000FF">Sybase ASE OLE DB Provider</fo=
+nt>;" &amp; _
+         "Data Source=3DMyDataSourceName;" &amp; _
+         "Server Name=3DMyServerName;" &amp; _
+         "Database=3DMyDatabaseName;" &amp; _
+         "User ID=3DmyUsername;" &amp; _
+         "Password=3DmyPassword"=A0
+oOleDbConnection =3D New OleDb.OleDbConnection(sConnString)
+oOleDbConnection.Open()</pre>
+        <p>For more information, see:=A0 <a href=3D"http://msdn.microsoft.c=
+om/library/en-us/cpref/html/frlrfSystemDataOleDb.asp">System.Data.OleDb Nam=
+espace</a>=A0and
+        <a href=3D"http://msdn.microsoft.com/library/default.asp?url=3D/lib=
+rary/en-us/cpguide/html/cpconusingadonetproviderstoaccessdata.asp">.NET
+        Data Providers</a></p>
+        <p>To view Microsoft KB articles related to
+        OleDbConnection, <a href=3D"http://search.support.microsoft.com/sea=
+rch/default.aspx?Catalog=3DLCID%3D1033%26CDID%3DEN-US-KB%26PRODLISTSRC%3DON=
+&amp;Product=3DNETFrame&amp;Query=3DOleDbConnection&amp;Queryc=3DOleDbConne=
+ction&amp;REF=3Dfalse&amp;srchstep=3D0&amp;KeywordType=3DALL&amp;Titles=3Df=
+alse&amp;numDays=3D&amp;maxResults=3D100">click
+        here</a>=A0</p>
+        <p>=A0</p>
+      <ul>
+        <li><a name=3D"ODBCManagedProvider"><b>ODBC .NET Data Provider (Sys=
+tem.Data.ODBC)</b></a></li>
+      </ul>
+        <p>The ODBC .NET Data Provider is an <a href=3D"http://msdn.microso=
+ft.com/downloads/default.asp?url=3D/downloads/sample.asp?url=3D/msdn-files/=
+027/001/668/msdncompositedoc.xml"> add-on component
+        </a> to the .NET
+        Framework SDK.=A0It provides access to native ODBC drivers the same
+        way the OLE DB .NET Data Provider=A0provides access to native OLE DB
+        providers.</p>
+        <p><u><b>For SQL Server ODBC Driver</b></u></p>
+        <pre>' VB.NET
+Dim oODBCConnection As <font color=3D"#0000FF">Odbc.OdbcConnection</font>
+Dim sConnString As String =3D _
+          "Driver=3D<font color=3D"#0000FF">{SQL Server}</font>;" &amp; _
+          "<font color=3D"#0000FF">Server</font>=3DMySQLServerName;" &amp; _
+          "<font color=3D"#0000FF">Database</font>=3DMyDatabaseName;" &amp;=
+ _
+          "Uid=3DMyUsername;" &amp; _
+          "Pwd=3DMyPassword"
+oODBCConnection =3D New Odbc.OdbcConnection(sConnString)
+oODBCConnection.Open()
+ </pre>
+        <p><u><b>For Oracle ODBC Driver</b></u></p>
+        <pre>' VB.NET
+Dim oODBCConnection As <font color=3D"#0000FF">Odbc.OdbcConnection</font>
+Dim sConnString As String =3D _
+         "Driver=3D{<font color=3D"#0000FF">Microsoft ODBC for Oracle</font=
+>};" &amp; _
+         "<font color=3D"#0000FF">Server</font>=3DOracleServer.world;" &amp=
+; _
+         "Uid=3DmyUsername;" &amp; _
+         "Pwd=3DmyPassword"
+oODBCConnection =3D New Odbc.OdbcConnection(sConnString)
+oODBCConnection.Open()
+ </pre>
+        <p><u><b>For Access (JET) ODBC Driver</b></u></p>
+      <pre>' VB.NET
+Dim oODBCConnection As <font color=3D"#0000FF">Odbc.OdbcConnection</font>
+Dim sConnString As String =3D _
+         "Driver=3D{<font color=3D"#0000FF">Microsoft Access Driver (*.mdb)=
+</font>};" &amp; _
+         "<font color=3D"#0000FF">Dbq</font>=3Dc:\somepath\mydb.mdb;" &amp;=
+ _
+         "Uid=3DAdmin;" &amp; _
+         "Pwd=3D"
+oODBCConnection =3D New Odbc.OdbcConnection(sConnString)
+oODBCConnection.Open()
+ </pre>
+        <p><b><u>For Sybase System 11 ODBC Driver</u></b>
+ </p>
+        <pre>// C#
+string myConnStr =3D "Driver=3D{<font color=3D"#0000FF">Sybase System 11}</=
+font>;" +=20
+                   "SRVR=3DmySybaseServerName;" +=20
+                   "DB=3DmyDatabaseName;" +=20
+                   "UID=3DmyUsername;" +=20
+                   "PWD=3DmyPassword";
+OdbcConnection myConnection =3D new OdbcConnection(myConnStr);
+myConnection.Open();
+ </pre>
+          <p>            <u><b>For all other ODBC Drivers</b></u></p>
+        <pre>' VB.NET
+Dim oODBCConnection As <font color=3D"#0000FF">Odbc.OdbcConnection</font>
+Dim sConnString As String =3D "<font color=3D"#0000FF">Dsn</font>=3DmyDsn;"=
+ &amp; _<font color=3D"#0000FF">
+=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0=A0</font>   =
+    <font color=3D"#0000FF">"Uid</font>=3DmyUsername;" &amp; _
+                            "<font color=3D"#0000FF">Pwd</font>=3DmyPasswor=
+d"
+oODBCConnection =3D New Odbc.OdbcConnection(sConnString)
+oODBCConnection.Open()</pre>
+        <p>            For more information, see:=A0 <a href=3D"http://msdn=
+.microsoft.com/downloads/default.asp?url=3D/downloads/sample.asp?url=3D/msd=
+n-files/027/001/668/msdncompositedoc.xml">ODBC .Net Data Provider</a>
+        </p>
+
+        <p>To view Microsoft KB articles related to
+        OdbcConnection, <a href=3D"http://search.support.microsoft.com/sear=
+ch/default.aspx?Catalog=3DLCID%3D1033%26CDID%3DEN-US-KB%26PRODLISTSRC%3DON&=
+amp;Product=3DNETFrame&amp;Query=3DOdbcConnection&amp;Queryc=3DOdbcConnecti=
+on&amp;REF=3Dfalse&amp;srchstep=3D0&amp;KeywordType=3DALL&amp;Titles=3Dfals=
+e&amp;numDays=3D&amp;maxResults=3D100">click
+        here</a>=A0</p>
+        <p>
+=A0</p>
+
+      <ul>
+        <li><b><a name=3D"OracleNETDataProvider">.NET Framework Data Provid=
+er for Oracle</a> (System.Data.OracleClient)</b></li>
+      </ul>
+        <p>
+        The .NET Framework Data Provider for Oracle is an <a href=3D"http:/=
+/www.microsoft.com/downloads/release.asp?ReleaseID=3D40032&amp;area=3Dsearc=
+h&amp;ordinal=3D1"> add-on component</a>
+        to
+        the .NET=A0Framework that provides access to an Oracle database usi=
+ng
+        the Oracle Call Interface (OCI)=A0as provided by Oracle Client soft=
+ware.=A0=A0</p>
+<p><u><b>Using C#:</b></u></p>
+      <pre>using System.Data.<font color=3D"#0000FF">OracleClient</font>;
+=20
+<font color=3D"#0000FF">OracleConnection</font> oOracleConn =3D new OracleC=
+onnection();
+oOracleConn.ConnectionString =3D "Data Source=3DOracle8i;" +
+                               "Integrated Security=3Dyes";
+oOracleConn.Open();
+ </pre>
+<p><u><b>Using VB.NET:</b></u></p>
+      <pre>Imports System.Data.<font color=3D"#0000FF">OracleClient
+ </font>
+Dim oOracleConn As <font color=3D"#0000FF">OracleConnection</font> =3D New=
+ OracleConnection()
+oOracleConn.ConnectionString =3D "Data Source=3DOracle8i;" &amp; _
+                               "Integrated Security=3Dyes";
+oOracleConn.Open()</pre>
+        <p>Note: You must have the Oracle 8i Release 3 (8.1.7)
+        Client or later installed in order for this=A0provider to work corr=
+ectly.</p>
+<p>Note: You must have the RTM version of the .NET Framework
+installed in order for this provider to work correctly.</p>
+        Note:=A0There are known Oracle 7.3, Oracle 8.0, and Oracle9i client
+        and server problems in this=A0beta release. The server-side issues
+        should be resolved in the final release of the product.=A0 However,
+        Oracle 7.3 client will not be supported.
+<p>For more information, see:=A0=A0 <a href=3D"http://www.microsoft.com/dow=
+nloads/release.asp?ReleaseID=3D37805">.NET
+Data Provider for Oracle Beta 1</a></p>
+
+        <p>To view Microsoft KB articles related to
+        OracleConnection, <a href=3D"http://search.support.microsoft.com/se=
+arch/default.aspx?Catalog=3DLCID%3D1033%26CDID%3DEN-US-KB%26PRODLISTSRC%3DO=
+N&amp;Product=3DNETFrame&amp;Query=3DOracleConnection&amp;Queryc=3DOracleCo=
+nnection&amp;REF=3Dfalse&amp;srchstep=3D0&amp;KeywordType=3DALL&amp;Titles=
+=3Dfalse&amp;numDays=3D&amp;maxResults=3D100">click
+        here</a>=A0</p>
+
+        <p>=A0</p>
+
+      <ul>
+        <li><b><a name=3D"MySQLNETNativeProvider">MySQL .NET Native Provide=
+r</a></b></li>
+      </ul>
+        <p>
+        The MySQL .NET Native Provider is an <a href=3D"http://www.einfodes=
+igns.com/shop.aspx"> add-on component</a>
+        to
+        the .NET=A0Framework=A0that allows you to access the MySQL database=
+ through the native
+        protocol, without going=A0through OLE DB.</p>
+      <p><u><b>Using C#</b></u></p><pre>using <font color=3D"#0000FF">EID.M=
+ySqlClient</font>;
+=20
+<font color=3D"#0000FF">MySqlConnection</font> oMySqlConn =3D new MySqlConn=
+ection();
+oMySqlConn.ConnectionString =3D "Data Source=3Dlocalhost;" +
+                              "Database=3DmySQLDatabase;" +
+                              "User ID=3DmyUsername;" +
+                              "Password=3DmyPassword;" +
+                              "Command Logging=3Dfalse";
+oMySqlConn.Open();
+ </pre><p><u><b>Using VB.NET</b></u></p><pre>Imports <font color=3D"#0000FF=
+">EID.MySqlClient
+ </font>
+Dim oMySqlConn As <font color=3D"#0000FF">MySqlConnection</font> =3D New My=
+SqlConnection()
+oMySqlConn.ConnectionString =3D "Data Source=3Dlocalhost;"  &amp; _
+                              "Database=3DmySQLDatabase;"  &amp; _
+                              "User ID=3DmyUsername;"  &amp; _
+                              "Password=3DmyPassword;"  &amp; _
+                              "Command Logging=3Dfalse"
+oMySqlConn.Open()
+ </pre>
+        <p>For more information, see:=A0=A0 <a href=3D"http://www.einfodesi=
+gns.com/dbProvider_info.aspx">EID's
+        MySQL ADO.NET native provider<br>
+        </a>=A0</p>
+
+    </td>
+  </tr>
+</tbody></table>=A0</body></html>

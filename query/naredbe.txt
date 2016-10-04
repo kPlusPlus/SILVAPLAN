@@ -1,0 +1,2 @@
+--- napuni tablicu dis.dbf sa distribucijama
+--- pitanje da li je tablica vis.dbf tablica za visine

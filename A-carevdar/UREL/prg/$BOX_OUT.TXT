@@ -1,0 +1,10 @@
+\a\urel\ptt\ods_E06.dbf
+\a\urel\ptt\ovr_E06.dbf
+\a\urel\ptt\uro_E06.dbf
+\a\urel\ptt\tar_E06.dbf
+\a\urel\ptt\uto_E06.dbf
+\a\urel\ptt\urg_E06.dbf
+\a\urel\ptt\utg_E06.dbf
+\a\urel\ptt\pre_E06.dbf
+\a\urel\ptt\osn_E06.dbf
+

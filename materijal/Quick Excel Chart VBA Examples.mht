@@ -1,0 +1,3203 @@
+From: <Saved by Mozilla 5.0 (Windows)>
+Subject: Quick Excel Chart VBA Examples
+Date: Thu, 14 Jul 2011 22:12:05 +0200
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_DAEBEB24.5AAF3E47"
+X-MAF-Information: Produced By MAF V1.0.0
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_DAEBEB24.5AAF3E47
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://peltiertech.com/Excel/ChartsHowTo/QuickChartVBA.html
+
+<html><head>
+<meta http-equiv=3D"content-type" content=3D"text/html; charset=3DISO-8859-=
+1">
+<title>Quick Excel Chart VBA Examples</title>
+
+<meta name=3D"keywords" content=3D"Microsoft, Excel, chart, graph, data, ut=
+ility, add-in, tutorial, plot, vba, programming, mvp, custom, help">
+<meta name=3D"robots" content=3D"ALL">
+<meta name=3D"distribution" content=3D"Global">
+<meta name=3D"rating" content=3D"General">
+<meta name=3D"author" content=3D"Jon Peltier">
+<meta http-equiv=3D"reply-to" content=3D"jon@peltiertech.com">
+<meta http-equiv=3D"Content-Language" content=3D"English">
+<meta name=3D"y_key" content=3D"8f08dad2e6581a95">
+
+<link rel=3D"stylesheet" type=3D"text/css" href=3D"urn:snapshot-E50F07CA:ht=
+tp://peltiertech.com/Common/jpStyles.css">
+<link rel=3D"shortcut icon" type=3D"image/x-icon" href=3D"http://peltiertec=
+h.com/Common/PTS.ico">
+
+
+<meta name=3D"description" content=3D"Here are code samples for creating an=
+d manipulating Excel charts">
+
+<style media=3D"print" type=3D"text/css"><!--
+
+/* Effective stylesheet produced by snapshot save */
+
+#tyntPrint { background-image: url("http://ic.tynt.com/b/h?id=3Dd7J6f6pJar3=
+Rmgab7jrHtB&ts=3D1310673565055"); }
+
+--></style></head>
+<body bgcolor=3D"#FFFFFF" link=3D"#0000FF" text=3D"#000000" vlink=3D"#66009=
+9"><div id=3D"tyntPrint"></div>
+
+<a name=3D"top"></a>
+
+<table width=3D"100%"><tbody><tr>
+
+<td valign=3D"top" width=3D"60%"><p>
+<a href=3D"http://peltiertech.com/index.html" title=3D"Jon's Excel Charts=
+ and Tutorials"><img src=3D"http://peltiertech.com/Common/PTSlogo464.gif"=
+ alt=3D"Peltier Technical Services, Inc." title=3D"Excel Charts and Tutoria=
+ls" border=3D"0" height=3D"94" width=3D"466"></a>
+<br>=A0</p></td>
+<td></td>
+
+<td align=3D"right" valign=3D"middle" width=3D"40%">
+<form action=3D"http://www.google.com/cse" id=3D"cse-search-box" target=3D"=
+_blank">
+  <div>
+    <input name=3D"cx" value=3D"partner-pub-1975943359936598:3rfphr06tf2"=
+ type=3D"hidden">
+    <input name=3D"ie" value=3D"ISO-8859-1" type=3D"hidden">
+    <input style=3D"border: 1px solid rgb(126, 157, 185); padding: 2px; bac=
+kground: url(&quot;http://www.google.com/cse/intl/en/images/google_custom_s=
+earch_watermark.gif&quot;) no-repeat scroll left center rgb(255, 255, 255);=
+" name=3D"q" size=3D"31" type=3D"text">
+    <input name=3D"sa" value=3D"Search" type=3D"submit">
+  </div>
+<input value=3D"peltiertech.com/Excel/ChartsHowTo/QuickChartVBA.html" name=
+=3D"siteurl" type=3D"hidden"></form>
+<script type=3D"text/javascript" src=3D"urn:snapshot-92BFC8EE:http://www.go=
+ogle.com/coop/cse/brand?form=3Dcse-search-box&amp;lang=3Den"></script>
+
+</td>
+
+</tr></tbody></table>
+
+<h3 class=3D"class3" align=3D"center">
+<a href=3D"http://peltiertech.com/Utility/" title=3D"Excel Chart Add-Ins by=
+ Peltier Technical Services">Excel Chart Add-Ins</a>
+|
+<a href=3D"http://peltiertech.com/Training/" title=3D"Advanced Excel Traini=
+ng by Peltier Technical Services">Training</a>
+|
+<!--
+<a href=3D"http://peltiertech.com/Excel/CustomSolutions.html" title=3D"Cust=
+om Excel Development Solutions by Peltier Technical Services">Custom Soluti=
+ons</a>
+|
+-->
+<a href=3D"http://peltiertech.com/Excel/Charts/index.html" title=3D"PTS Exc=
+el Charting Pages">Charts</a> and <a href=3D"http://peltiertech.com/Excel/C=
+hartsHowTo/index.html" title=3D"PTS Excel Chart Tutorials">Tutorials</a>
+|
+<a href=3D"http://peltiertech.com/WordPress/" title=3D"Excel Charts and Tut=
+orials Blog by Peltier Technical Services">Peltier Tech Blog</a>
+</h3>
+
+<hr>
+
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"100%">
+<tbody><tr valign=3D"top"><td width=3D"160">
+
+<!-- Peltier Tech<br />Advanced Training -->=20
+<!--p align=3D"center"><b>Peltier Tech<br />Chart Add-Ins</b></p-->
+<p align=3D"center">
+<img src=3D"http://peltiertech.com/Utility/pix/pts_tower_map.png" usemap=3D=
+"#ptstower" height=3D"884" width=3D"142">
+<map name=3D"ptstower">
+<area shape=3D"rect" coords=3D"11,4,131,72" href=3D"http://peltiertech.com/=
+Utility/index.html" alt=3D"Peltier Tech Chart Utilities for Excel" title=3D=
+"Peltier Tech Chart Utilities for Excel">
+<area shape=3D"rect" coords=3D"11,74,131,182" href=3D"http://peltiertech.co=
+m/Utility/PanelChartUtility.html" alt=3D"Peltier Tech Panel Chart Utility"=
+ title=3D"Peltier Tech Panel Chart Utility">
+<area shape=3D"rect" coords=3D"11,183,131,291" href=3D"http://peltiertech.c=
+om/Utility/WaterfallUtility.html" alt=3D"Peltier Tech Waterfall Chart Utili=
+ty" title=3D"Peltier Tech Waterfall Chart Utility">
+<area shape=3D"rect" coords=3D"11,292,131,419" href=3D"http://peltiertech.c=
+om/Utility/ClusterStackUtility.html" alt=3D"Peltier Tech Cluster-Stack Char=
+t Utility" title=3D"Peltier Tech Cluster-Stack Chart Utility">
+<area shape=3D"rect" coords=3D"11,420,131,528" href=3D"http://peltiertech.c=
+om/Utility/BoxPlotUtility.html" alt=3D"Peltier Tech Box and Whisker Chart=
+ Utility" title=3D"Peltier Tech Box and Whisker Chart Utility">
+<area shape=3D"rect" coords=3D"11,529,131,656" href=3D"http://peltiertech.c=
+om/Utility/MarimekkoUtility.html" alt=3D"Peltier Tech Marimekko Chart Utili=
+ty" title=3D"Peltier Tech Marimekko Chart Utility">
+<area shape=3D"rect" coords=3D"11,657,131,765" href=3D"http://peltiertech.c=
+om/Utility/DotPlotUtility.html" alt=3D"Peltier Tech Dot Plot Utility" title=
+=3D"Peltier Tech Dot Plot Utility">
+<area shape=3D"rect" coords=3D"11,767,131,875" href=3D"http://peltiertech.c=
+om/Utility/CascadeUtility.html" alt=3D"Peltier Tech Cascade Chart Utility"=
+ title=3D"Peltier Tech Cascade Chart Utility">
+</map>
+</p><p>=A0</p>
+<p align=3D"center"><b>Excel Dashboards</b></p>
+<p align=3D"center">
+
+<a href=3D"http://www.exceluser.com/cmd.php?af=3D371285" title=3D"Learn how=
+ to create Excel dashboards." rel=3D"nofollow"><img src=3D"http://www.excel=
+user.com/images/info/info_dash_g04.gif" border=3D"0" height=3D"110" width=
+=3D"130"></a>
+</p><p>=A0</p>
+<p align=3D"center"><b>Books at Amazon.com</b></p>
+<p align=3D"center">
+<a href=3D"http://www.amazon.com/gp/product/0470474874?ie=3DUTF8&amp;tag=3D=
+peltiertechni-20&amp;linkCode=3Das2&amp;camp=3D1789&amp;creative=3D9325&amp=
+;creativeASIN=3D0470474874" title=3D"John Walkenbach - Excel 2010 Bible" re=
+l=3D"nofollow"><img src=3D"http://peltiertech.com/Excel/books/Excel2010Bibl=
+e.jpg" border=3D"0"></a><img src=3D"http://www.assoc-amazon.com/e/ir?t=3Dpe=
+ltiertechni-20&amp;l=3Das2&amp;o=3D1&amp;a=3D0470474874" alt=3D"" style=3D"=
+border:none !important; margin:0px !important;" border=3D"0" height=3D"1"=
+ width=3D"1">
+</p><p align=3D"center">
+
+<a href=3D"http://www.amazon.com/gp/product/0470228148?ie=3DUTF8&amp;tag=3D=
+peltiertechni-20&amp;linkCode=3Das2&amp;camp=3D1789&amp;creative=3D9325&amp=
+;creativeASIN=3D0470228148" title=3D"Mike Alexander - Excel 2007 Dashboards=
+ and Reports for Dummies" rel=3D"nofollow"><img src=3D"http://peltiertech.c=
+om/Excel/books/Excel2007DashboardsDummies.jpg" border=3D"0"></a><img src=3D=
+"http://www.assoc-amazon.com/e/ir?t=3Dpeltiertechni-20&amp;l=3Das2&amp;o=3D=
+1&amp;a=3D0470228148" alt=3D"" style=3D"border:none !important; margin:0px=
+ !important;" border=3D"0" height=3D"1" width=3D"1">
+</p>
+</td>
+<td width=3D"2%">=A0
+</td><td>
+
+<!-- CONTENT START -->
+
+<h1>Quick Excel Chart VBA Examples</h1>
+
+<!-- AdSense Rectangle -->
+<p align=3D"center">
+<script type=3D"text/javascript"><!--
+
+/* Script removed by snapshot save */
+
+--></script>
+<script type=3D"text/javascript" src=3D"urn:snapshot-546141B0:http://pagead=
+2.googlesyndication.com/pagead/show_ads.js">
+</script><ins style=3D"display:inline-table;border:none;height:280px;margin=
+:0;padding:0;position:relative;visibility:visible;width:336px"><ins id=3D"a=
+swift_0_anchor" style=3D"display:block;border:none;height:280px;margin:0;pa=
+dding:0;position:relative;visibility:visible;width:336px"><iframe allowtran=
+sparency=3D"true" hspace=3D"0" marginwidth=3D"0" marginheight=3D"0" onload=
+=3D"var i=3Dthis.id,s=3Dwindow.google_iframe_oncopy,H=3Ds&amp;&amp;s.handle=
+rs,h=3DH&amp;&amp;H[i],w=3Dthis.contentWindow,d;try{d=3Dw.document}catch(e)=
+{}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){i+=3D'=
+.call';setTimeout(h,0)}else if(h.match){i+=3D'.nav';w.location.replace(h)}s=
+.log&amp;&amp;s.log.push(i)}" vspace=3D"0" id=3D"aswift_0" name=3D"aswift_0=
+" style=3D"left:0;position:absolute;top:0;" frameborder=3D"0" height=3D"280=
+" scrolling=3D"no" width=3D"336"></iframe></ins></ins>
+<br>=A0</p>
+<!-- End AdSense Banner Rectangle -->
+<p>The use of VBA in Microsoft Excel charting is a topic that would fill a=
+ large volume. The examples here are straightforward illustrations of easy=
+ techniques to create charts, add and remove series, and move and resize ch=
+arts using VBA.</p><p>
+
+</p><p><b>Outline: Quick Chart VBA Examples</b></p>
+<ul>
+<li><a href=3D"#VBAcharts">VBA Code to Add Chart Objects and Series</a></li>
+    <ul>
+    <li><a href=3D"#addchart">Add a Chart</a></li>
+    <li><a href=3D"#addseries">Add a Series</a></li>
+    <li><a href=3D"#deleteseries">Too Many Series?</a></li>
+    <li><a href=3D"#altogether">Putting It All Together</a></li>
+    <li><i>Further examples: <a href=3D"http://peltiertech.com/Excel/Charts=
+HowTo/VBAExcelXYCharts.html" title=3D"Excel XY Chart Variations with VBA">E=
+xcel XY Chart Variations with VBA</a></i></li>
+    </ul>
+=A0
+<li><a href=3D"#resizechart">VBA Code to Resize and Reposition Chart Object=
+s</a></li>
+    <ul>
+    <li><a href=3D"#resizechart">Chart Object Size and Position</a></li>
+    <li><a href=3D"#coverrange">Cover a Range with a Chart</a></li>
+    <li><a href=3D"#arraycharts">Create an Array of Charts</a></li>
+    </ul>
+=A0
+<li><a href=3D"#ErrFreeVBA">Error Free VBA</a><br>
+<i>Basic techniques to reduce errors in the use of your code</i></li>
+</ul>
+
+<a name=3D"VBAcharts"></a><a name=3D"addchart"></a><hr>
+<h3>VBA Code to Add Chart Objects and Series</h3>
+
+<h4>Add a Chart</h4>
+
+<p>When you record a macro to add a chart object to a worksheet, Excel come=
+s up with the following code:</p>
+
+<pre>Sub RecordedAddChartObject()
+<span style=3D"color: rgb(0,192,0);">'</span>
+<span style=3D"color: rgb(0,192,0);">' RecordedAddChartObject Macro</span>
+<span style=3D"color: rgb(0,192,0);">' Macro recorded 5/2/02 by Jon Peltier=
+</span>
+<span style=3D"color: rgb(0,192,0);">'</span>
+    Charts.Add
+    ActiveChart.ChartType =3D xlXYScatterLines
+    ActiveChart.SetSourceData Source:=3DSheets("Sheet1").Range("A3:G14")
+    ActiveChart.Location Where:=3DxlLocationAsObject, Name:=3D"Sheet1"
+End Sub
+</pre>
+
+<p>Excel uses <tt>Charts.Add</tt> followed later by <tt>ActiveChart.Locatio=
+n</tt> to create a chart object, and uses <tt>ActiveChart.SetSourceData</tt=
+> to set all the series data in one shot.  The coding is efficient in terms=
+ of the small length of the code, but inflexxible in terms of your control=
+ over the output.</p>
+
+<p>In my examples I use <tt>ChartObjects.Add</tt>, which also requires (or=
+ <b><i>allows</i></b>) me to state the position and size of the chart. This=
+ example does almost exactly what the recorded macro above does:</p>
+
+<pre>Sub AddChartObject()
+<span style=3D"color: rgb(0,192,0);">'</span>
+    With ActiveSheet.ChartObjects.Add _
+            (Left:=3D100, Width:=3D375, Top:=3D75, Height:=3D225)
+        .Chart.SetSourceData Source:=3DSheets("Sheet1").Range("A3:G14")
+        .Chart.ChartType =3D xlXYScatterLines
+    End With
+End Sub
+</pre>
+
+<p>The difference in the charts produced by the recorded macro and by the=
+ amended code are slight. The amended code positions and sizes the chart ac=
+cording to <tt>(Left:=3D100, Width:=3D375, Top:=3D75, Height:=3D225)</tt>,=
+ where these dimensions are in pixels. The Chart Wizard creates a chart rou=
+ghly half as wide and half as tall as the visible part of the worksheet win=
+dow, centered within the window (if you have frozen panes in the sheet, the=
+ chart is half the size of the active pane, subject to certain minimum dime=
+nsions). </p>
+
+<table align=3D"center" bgcolor=3D"#ffffff" border=3D"1" width=3D"90%"><tbo=
+dy><tr><td>=A0
+<table><tbody><tr><td>=A0=A0</td><td>
+
+<p><b>Errors in recorded macros</b></p>
+
+<p>There are some instances when a recorded macro will contain code that wi=
+ll not work properly. For example, a recorded macro always puts <tt>ActiveC=
+hart.ChartType</tt> ahead of <tt>ActiveChart.SetSourceData</tt>, but I have=
+ reversed them in the code above. The steps given by the recorder work fine=
+ for most chart types, but a few chart types cannot be correctly assigned=
+ until the chart has been populated with sufficient data. In particular, co=
+de which creates <b>stock charts</b> and <b>bubble charts</b> will fail if=
+ you do not reverse the order of the steps.</p>
+
+<p>When working with a <b>surface</b> or <b>contour chart</b>, Excel will=
+ let you manually delete a series in the chart (via the Source Data dialog,=
+ because you cannot select a single series in such a chart). You can record=
+ a macro to see the steps you took. When you try to run the macro, however,=
+ it will crash on the <tt>.Delete</tt> line in the macro. In most chart typ=
+es the series can be independently formatted, and they don't even have to=
+ be the same type, leading to the ability to create custom combination char=
+ts. The problem with surface or contour charts is that their series are not=
+ treated by VBA as independent series. The trick in this case is to tempora=
+rily convert the surface chart to another chart type, say, a line chart, de=
+lete the series, then convert back to a surface chart.</p>
+
+<p>In what I think of as "Marker charts", that is, <b>XY</b> and <b>Line ch=
+arts</b>, VBA cannot access certain series properties, including <tt>.Value=
+s</tt>, <tt>.XValues</tt>, and <tt>.Formula</tt> if the source range of the=
+ series contains no chartable data (i.e., it consists of blanks or errors).=
+ This severe inconvenience can be avoided if you change the series type to=
+ an area or column chart type before accessing the forbidden properties, th=
+en change it back to a Line or XY chart series.</p>
+
+<p><b>Inefficiencies in recorded macros</b></p>
+
+<p>Aside from error-raising macro problems, a recorded macro is less effici=
+ent, because it mimics all the mouseclicks and keystrokes (every cough and=
+ camera flash) that occurred while the recording was taking place. A record=
+ed macro clicks on every object to select it, then performs an action on th=
+e selection:</p>
+
+<pre>    ActiveChart.Axes(xlValue).Select
+    Selection.TickLabels.Font.Bold =3D True
+    Selection.TickLabels.NumberFormat =3D "0.0"
+</pre>
+
+<p>Streamline your code by replacing all the <tt>Object.Select</tt> plus <t=
+t>Select.Property</tt> sequences with shorter <tt>Object.Property</tt> stat=
+ements:</p>
+
+<pre>    ActiveChart.Axes(xlValue).TickLabels.Font.Bold =3D True
+    ActiveChart.Axes(xlValue).TickLabels.NumberFormat =3D "0.0"
+</pre>
+
+<p>If you have two or more property or method statements that work on the=
+ same object, wrap them in a <tt>With/End With</tt> block:</p>
+
+<pre>    With ActiveChart.Axes(xlValue).TickLabels
+        .Font.Bold =3D True
+        .NumberFormat =3D "0.0"
+    End With
+</pre>
+
+<p>There are other inefficiencies specific to charting, such as the <tt>Cha=
+rts.Add . . . ActiveChart.Location</tt> sequence which can be shortened to=
+ a single <tt>ChartObjects.Add</tt> command, as discussed earlier in this=
+ page.</p>
+
+</td><td>=A0=A0</td></tr></tbody></table>=A0</td></tr></tbody></table>
+
+<p>You may find it more convenient, in a longer procedure, to define some=
+ object variables.  The next procedure does the same as the two above, but=
+ it uses a ChartObject variable for the new chart object that we create. =
+ If we need to refer to this chart object later in the procedure, we can co=
+nveniently use the variable <tt>myChtObj</tt>.</p>
+
+<pre>Sub AddChartObject()
+Dim myChtObj As ChartObject
+<span style=3D"color: rgb(0,192,0);">'</span>
+    Set myChtObj =3D ActiveSheet.ChartObjects.Add _
+        (Left:=3D100, Width:=3D375, Top:=3D75, Height:=3D225)
+    myChtObj.Chart.SetSourceData Source:=3DSheets("Sheet1").Range("A3:G14")
+    myChtObj.Chart.ChartType =3D xlXYScatterLines
+End Sub
+</pre>
+
+<p>You are not limited to using <tt>SetSourceData</tt> to define the data=
+ being charted.  You can add the series one-by-one, selecting the precise=
+ data you want, not what Excel will assume you want.</p>
+
+<a name=3D"addseries"></a>
+<p align=3D"right"><font size=3D"1"><a href=3D"#topofpage">Top of Page</a><=
+/font></p>
+<h4>Add a Series</h4>
+
+<p>The following is a macro I recorded while adding a series using the Add=
+ command in the Source Data dialog:</p>
+
+<pre>Sub RecordedAddSeries()
+<span style=3D"color: rgb(0,192,0);">'</span>
+<span style=3D"color: rgb(0,192,0);">' RecordedAddSeries Macro</span>
+<span style=3D"color: rgb(0,192,0);">' Macro recorded 5/2/02 by Jon Peltier=
+</span>
+<span style=3D"color: rgb(0,192,0);">'</span>
+    ActiveChart.SeriesCollection.NewSeries
+    ActiveChart.SeriesCollection(6).XValues =3D "=3DSheet1!R4C1:R14C1"
+    ActiveChart.SeriesCollection(6).Values =3D "=3DSheet1!R4C7:R14C7"
+    ActiveChart.SeriesCollection(6).Name =3D "=3DSheet1!R3C7"
+End Sub
+</pre>
+
+<p>This is basically my preferred syntax, although the following has been=
+ neatened up in a few ways.  First, the index of the series is not mentione=
+d in the code, so it's more readily reused.  Second, I can use the familiar=
+ A1 cell address notation, or any VBA range reference technique.</p>
+
+<pre>Sub AddNewSeries()
+    With ActiveChart.SeriesCollection.NewSeries
+        .Name =3D ActiveSheet.Range("G3")
+        .Values =3D ActiveSheet.Range("G4:G14")
+        .XValues =3D ActiveSheet.Range("A4:A14")
+    End With
+End Sub
+</pre>
+
+<p>And as shown below, this is very flexible.  For example, you can adjust=
+ the code to insert a string for the series name, a VBA array for X or Y va=
+lues (X values in the following code), or a reference to a defined range na=
+me (<tt>Y_Range</tt> for Y values).</p>
+
+<pre>Sub AddNewSeries()
+    With ActiveChart.SeriesCollection.NewSeries
+        .Name =3D "Fred"
+        .Values =3D "=3DSheet1!Y_Range"
+        .XValues =3D Array(1, 2, 3)
+    End With
+End Sub
+</pre>
+
+<p>As with the chart object variable above, you can define an object variab=
+le for the new chart series being added.  The following procedure assigns=
+ the variable <tt>MyNewSrs</tt> to the new chart series it creates.</p>
+
+<pre>Sub AddNewSeries()
+    Dim MyNewSrs As Series
+    Set MyNewSrs =3D ActiveChart.SeriesCollection.NewSeries
+    With MyNewSrs
+        .Name =3D "Fred"
+        .Values =3D "=3DSheet1!Y_Range"
+        .XValues =3D Array(1, 2, 3)
+    End With
+End Sub
+</pre>
+
+<a name=3D"deleteseries"></a>
+<p align=3D"right"><font size=3D"1"><a href=3D"#topofpage">Top of Page</a><=
+/font></p>
+<h4>Too Many Series?</h4>
+
+<p>When you create a chart, Excel looks at the selection, and tries to dete=
+rmine how many series you want in the chart. In the Chart Wizard, you see=
+ this behavior in step 2, where the Data Range is tentatively filled in for=
+ you. When creating a chart in code, you don't get this chance to make it=
+ right, and your chart may have any number of series. It is best to clear=
+ out all of these initial series, and start from scratch with the series yo=
+u intend to add. This macro clears the chart:</p>
+
+<pre>Sub RemoveUnwantedSeries()
+    With ActiveChart
+        Do Until .SeriesCollection.Count =3D 0
+            .SeriesCollection(1).Delete
+        Loop
+    End With
+End Sub
+</pre>
+
+<p>The chart now appears completely blank, and the only object you can curr=
+ently access is the chart area. But you can now add series as shown above.<=
+/p>
+
+<a name=3D"altogether"></a>
+<p align=3D"right"><font size=3D"1"><a href=3D"#topofpage">Top of Page</a><=
+/font></p>
+<h4>Putting It All Together</h4>
+
+<p>Let's put the last few steps together, to produce a robust little proced=
+ure that will create a chart sheet with exactly the right number of series=
+ in the right place, using the selected range as the chart's data source.=
+ The first row contains the series labels, the first column contains the X=
+ values, and the rest of the columns contain the Y values for each series.<=
+/p>
+
+<pre>Sub EmbeddedChartFromScratch()
+    Dim myChtObj As ChartObject
+    Dim rngChtData As Range
+    Dim rngChtXVal As Range
+    Dim iColumn As Long
+
+    <span style=3D"color: rgb(0,192,0);">' make sure a range is selected</s=
+pan>
+    If TypeName(Selection) &lt;&gt; "Range" Then Exit Sub
+
+    <span style=3D"color: rgb(0,192,0);">' define chart data</span>
+    Set rngChtData =3D Selection
+
+    <span style=3D"color: rgb(0,192,0);">' define chart's X values</span>
+    With rngChtData
+        Set rngChtXVal =3D .Columns(1).Offset(1).Resize(.Rows.Count - 1)
+    End With
+
+    <span style=3D"color: rgb(0,192,0);">' add the chart</span>
+    Set myChtObj =3D ActiveSheet.ChartObjects.Add _
+        (Left:=3D250, Width:=3D375, Top:=3D75, Height:=3D225)
+    With myChtObj.Chart
+
+        <span style=3D"color: rgb(0,192,0);">' make an XY chart</span>
+        .ChartType =3D xlXYScatterLines
+
+        <span style=3D"color: rgb(0,192,0);">' remove extra series</span>
+        Do Until .SeriesCollection.Count =3D 0
+            .SeriesCollection(1).Delete
+        Loop
+
+        <span style=3D"color: rgb(0,192,0);">' add series from selected ran=
+ge, column by column</span>
+        For iColumn =3D 2 To rngChtData.Columns.Count
+            With .SeriesCollection.NewSeries
+                .Values =3D rngChtXVal.Offset(, iCOlumn - 1)
+                .XValues =3D rngChtXVal
+                .Name =3D rngChtData(1, iColumn)
+            End With
+        Next
+
+    End With
+
+End Sub
+</pre>
+<p>A similar approach is used in <a href=3D"http://peltiertech.com/Excel/Ch=
+arts/InteractiveChartCreation.html" title=3D"Interactive Chart Creation">In=
+teractive Chart Creation</a>, which provides dialogs for the user to select=
+ the range which will be covered by the chart and the range containing the=
+ data to be charted. The series-by-series definition of X and Y ranges is=
+ described in <a href=3D"http://peltiertech.com/Excel/ChartsHowTo/VBAExcelX=
+YCharts.html" title=3D"Excel XY Chart Variations with VBA">Excel XY Chart=
+ Variations with VBA</a> to allow much more flexibility in the arrangement=
+ of the chart's source data range. The <a href=3D"http://peltiertech.com/Ex=
+cel/ChartsHowTo/QuickChartUtility.html" title=3D"Quick Chart Utility">Quick=
+ Chart Utility</a> is based on this approach. </p>
+
+<p align=3D"right"><font size=3D"1"><a href=3D"#topofpage">Top of Page</a><=
+/font></p>
+
+<a name=3D"resizechart"></a><hr>
+<h3>VBA Code to Resize and Reposition Chart Objects</h3>
+
+<h4>Chart Object Size and Position</h4>
+
+<p>We learned above that it is easy to define the size and position of a ch=
+art at the time of its creation:</p>
+
+<pre>    Set myChtObj =3D ActiveSheet.ChartObjects.Add _
+        (Left:=3D100, Width:=3D375, Top:=3D75, Height:=3D225)
+</pre>
+
+<p>In the same way, we can position or size the chart, by changing the appr=
+opriate properties of the ChartObject:</p>
+
+<pre>Sub ResizeAndRepositionChart()
+    <span style=3D"color: rgb(0,192,0);">' The ChartObject is the Chart's=
+ parent</span>
+    With ActiveChart.Parent
+        .Left =3D 100
+        .Width =3D 375
+        .Top =3D 75
+        .Height =3D 225
+    End With
+End Sub
+</pre>
+
+<p>To adjust a particular chart on the sheet, use <tt>With ActiveSheet.Char=
+tObjects(1)</tt> in place of <tt>With ActiveChart.Parent</tt> in the proced=
+ure above.</p>
+
+<p align=3D"right"><font size=3D"1"><a href=3D"#topofpage">Top of Page</a><=
+/font></p>
+
+<a name=3D"coverrange"></a>
+<h4>Cover a Range with a Chart</h4>
+
+<p>You can easily configure the chart to cover a specific range of cells on=
+ the worksheet. To cover the range D5:K25 with the active chart, run this=
+ procedure:</p>
+
+<pre>Sub CoverRangeWithChart()
+    Dim cht As Chart Object
+    Dim rng As Range
+
+    Set cht =3D ActiveChart.Parent
+    Set rng =3D ActiveSheet.Range("D5:K25")
+
+    cht.Left =3D rng.Left
+    cht.Width =3D rng.Width
+    cht.Top =3D rng.Top
+    cht.Height =3D rng.Height
+End Sub
+</pre>
+
+<p align=3D"right"><font size=3D"1"><a href=3D"#topofpage">Top of Page</a><=
+/font></p>
+
+<a name=3D"arraycharts"></a>
+<h4>Create an Array of Charts</h4>
+
+<p>Suppose you have a lot of charts on a worksheet, and you'd like to arran=
+ge them neatly. The following procedure loops through the charts, resizes=
+ them to consistent dimensions, and arranges them in systematic rows and co=
+lumns:</p>
+
+<pre>Sub ArrangeMyCharts()
+    Dim iChart As Long
+    Dim nCharts As Long
+    Dim dTop As Double
+    Dim dLeft As Double
+    Dim dHeight As Double
+    Dim dWidth As Double
+    Dim nColumns As Long
+
+    dTop =3D 75      <span style=3D"color: rgb(0,192,0);">' top of first ro=
+w of charts</span>
+    dLeft =3D 100    <span style=3D"color: rgb(0,192,0);">' left of first=
+ column of charts</span>
+    dHeight =3D 225  <span style=3D"color: rgb(0,192,0);">' height of all=
+ charts</span>
+    dWidth =3D 375   <span style=3D"color: rgb(0,192,0);">' width of all ch=
+arts</span>
+    nColumns =3D 3   <span style=3D"color: rgb(0,192,0);">' number of colum=
+ns of charts</span>
+    nCharts =3D ActiveSheet.ChartObjects.Count
+
+    For iChart =3D 1 To nCharts
+        With ActiveSheet.ChartObjects(iChart)
+            .Height =3D dHeight
+            .Width =3D dWidth
+            .Top =3D dTop + Int((iChart - 1) / nColumns) * dHeight
+            .Left =3D dLeft + ((iChart - 1) Mod nColumns) * dWidth
+        End With
+    Next
+End Sub
+</pre>
+
+<p align=3D"right"><font size=3D"1"><a href=3D"#topofpage">Top of Page</a><=
+/font></p>
+
+<a name=3D"ErrFreeVBA"></a><hr>
+<h4><a href=3D"http://peltiertech.com/Excel/ChartsHowTo/ErrorFreeVBA.html"=
+ title=3D"Error Free VBA">Error Free VBA</a></h4>
+<p>Although you cannot make your VBA code error-free, you can at least try=
+ to make it error-resistant.  In several pages on this site, I've presented=
+ some VBA procedures to help create and modify your charts.  Here I outline=
+ a few basic techniques to reduce the effects of errors in the use of your=
+ code.  Replace an inscrutable VBA error message with a more descriptive me=
+ssage of your own:</p>
+<p align=3D"center"><a href=3D"http://peltiertech.com/Excel/ChartsHowTo/Err=
+orFreeVBA.html"><img src=3D"http://peltiertech.com/Excel/pix4/ErrorFree00.g=
+if" border=3D"0" height=3D"201" width=3D"371"></a></p>
+
+<p align=3D"right"><font size=3D"1"><a href=3D"#topofpage">Top of Page</a><=
+/font></p>
+
+<!-- CONTENT END -->
+
+</td><td width=3D"5%">=A0
+</td>
+</tr>
+</tbody></table>
+
+<p>=A0</p>
+<p align=3D"center"><a href=3D"http://www.copyscape.com/"><img src=3D"http:=
+//banners.copyscape.com/images/cs-wh-234x16.gif" alt=3D"Page copy protected=
+ against web site content infringement by Copyscape" title=3D"Do not copy=
+ content from the page. Plagiarism will be detected by Copyscape." border=
+=3D"0" height=3D"16" width=3D"234"></a></p>
+
+<!--PTS Utilities Footer Banner Begin--->
+<p>=A0</p>
+<p align=3D"center">
+<img src=3D"http://peltiertech.com/Utility/pix/pts_banner_map.png" usemap=
+=3D"#ptsbanner" height=3D"173" width=3D"817">
+<map name=3D"ptsbanner">
+<area shape=3D"rect" coords=3D"256,7,557,28" href=3D"http://peltiertech.com=
+/Utility/index.html" alt=3D"Peltier Tech Chart Utilities for Excel" title=
+=3D"Peltier Tech Chart Utilities for Excel">
+<area shape=3D"rect" coords=3D"2,35,117,155" href=3D"http://peltiertech.com=
+/Utility/WaterfallUtility.html" alt=3D"Peltier Tech Waterfall Chart Utility=
+" title=3D"Peltier Tech Waterfall Chart Utility">
+<area shape=3D"rect" coords=3D"118,35,233,155" href=3D"http://peltiertech.c=
+om/Utility/BoxPlotUtility.html" alt=3D"Peltier Tech Box and Whisker Chart=
+ Utility" title=3D"Peltier Tech Box and Whisker Chart Utility">
+<area shape=3D"rect" coords=3D"234,35,349,169" href=3D"http://peltiertech.c=
+om/Utility/ClusterStackUtility.html" alt=3D"Peltier Tech Cluster-Stack Char=
+t Utility" title=3D"Peltier Tech Cluster-Stack Chart Utility">
+<area shape=3D"rect" coords=3D"350,35,464,155" href=3D"http://peltiertech.c=
+om/Utility/PanelChartUtility.html" alt=3D"Peltier Tech Panel Chart Utility"=
+ title=3D"Peltier Tech Panel Chart Utility">
+<area shape=3D"rect" coords=3D"465,35,580,169" href=3D"http://peltiertech.c=
+om/Utility/MarimekkoUtility.html" alt=3D"Peltier Tech Marimekko Chart Utili=
+ty" title=3D"Peltier Tech Marimekko Chart Utility">
+<area shape=3D"rect" coords=3D"581,35,697,155" href=3D"http://peltiertech.c=
+om/Utility/DotPlotUtility.html" alt=3D"Peltier Tech Dot Plot Utility" title=
+=3D"Peltier Tech Dot Plot Utility">
+<area shape=3D"rect" coords=3D"698,35,813,155" href=3D"http://peltiertech.c=
+om/Utility/CascadeUtility.html" alt=3D"Peltier Tech Cascade Chart Utility"=
+ title=3D"Peltier Tech Cascade Chart Utility">
+</map>
+</p><!--PTS Utilities Footer Banner End--->
+
+<!--Excel User Footer Banner Begin--->
+<p>=A0</p>
+<p align=3D"center">
+<a href=3D"http://www.exceluser.com/cmd.php?Clk=3D2474004" rel=3D"nofollow"=
+><img src=3D"http://www.exceluser.com/images/info/pub/pnp728_01.jpg" alt=3D=
+"Create Excel dashboards quickly with Plug-N-Play reports." border=3D"0" he=
+ight=3D"90" width=3D"728"></a>
+<br><img src=3D"http://www.exceluser.com/cmd.php?Imp=3D2474004" border=3D"0=
+" height=3D"0" width=3D"0">
+</p>
+<!--Excel User Footer Banner End--->
+
+<table align=3D"center"><tbody><tr><td>
+
+</td></tr></tbody></table>
+
+<hr><table width=3D"100%"><tbody><tr><td>
+
+<!-- PTS -->
+<h4 class=3D"class3"><a href=3D"http://peltiertech.com/">Peltier Technical=
+ Services, Inc.</a></h4>
+
+<h5 class=3D"class3" align=3D"center">
+<a href=3D"http://peltiertech.com/Utility/" title=3D"Excel Chart Add-Ins by=
+ Peltier Technical Services">Excel Chart Add-Ins</a>
+|
+<a href=3D"http://peltiertech.com/Training/" title=3D"Advanced Excel Traini=
+ng by Peltier Technical Services">Training</a>
+|
+<!--
+<a href=3D"http://peltiertech.com/Excel/CustomSolutions.html" title=3D"Cust=
+om Excel Development Solutions by Peltier Technical Services">Custom Soluti=
+ons</a>
+|
+-->
+<a href=3D"http://peltiertech.com/Excel/Charts/index.html" title=3D"PTS Exc=
+el Charting Pages">Charts</a> and <a href=3D"http://peltiertech.com/Excel/C=
+hartsHowTo/index.html" title=3D"PTS Excel Chart Utilities">Tutorials</a>
+|
+<a href=3D"http://peltiertech.com/WordPress/" title=3D"Excel Charts and Tut=
+orials Blog by Peltier Technical Services">PTS Blog</a>
+</h5>
+
+<!-- copyright -->
+<p style=3D"font-size: 8pt">Peltier Technical Services, Inc., Copyright =A9=
+ 2011. All rights reserved.<br>
+You may link to this article or portions of it on your site, but copying is=
+ prohibited without permission of Peltier Technical Services.</p>
+
+<!-- mvp logo -->
+</td><td width=3D"24"></td><td valign=3D"middle"><p align=3D"center"><a hre=
+f=3D"http://support.microsoft.com/support/mvp/program.asp" rel=3D"nofollow">
+<img src=3D"http://peltiertech.com/Common/MVP_H_Blue.png" alt=3D"Microsoft=
+ Most Valuable Professional" border=3D"0" height=3D"74" width=3D"182"><br><=
+br>
+Microsoft Most Valuable Professional</a></p>
+<p align=3D"center"><a href=3D"https://mvp.support.microsoft.com/profile/Jo=
+n.Peltier" rel=3D"nofollow">My MVP Profile</a></p>
+</td></tr></tbody></table><hr>
+
+<!-- Google Analytics -->
+<script type=3D"text/javascript"><!--
+
+/* Script removed by snapshot save */
+
+--></script><script src=3D"urn:snapshot-CE7DBCF7:http://www.google-analytic=
+s.com/ga.js" type=3D"text/javascript"></script>
+<script type=3D"text/javascript"><!--
+
+/* Script removed by snapshot save */
+
+--></script>
+
+<!-- Start Quantcast tag -->
+<script type=3D"text/javascript"><!--
+
+/* Script removed by snapshot save */
+
+--></script>
+<script type=3D"text/javascript" src=3D"urn:snapshot-CD7464C8:http://edge.q=
+uantserve.com/quant.js"></script>
+<noscript>
+<a href=3D"http://www.quantcast.com/p-ddXNr1u5hoc_M" target=3D"_blank"><img=
+ src=3D"http://pixel.quantserve.com/pixel/p-ddXNr1u5hoc_M.gif" style=3D"dis=
+play: none;" border=3D"0" height=3D"1" width=3D"1" alt=3D"Quantcast"/></a>
+</noscript>
+<!-- End Quantcast tag -->
+
+<script type=3D"text/javascript"><!--
+
+/* Script removed by snapshot save */
+
+--></script> <script type=3D"text/javascript" src=3D"urn:snapshot-9B52B3D8:=
+http://tcr.tynt.com/javascripts/Tracer.js?user=3Dd7J6f6pJar3Rmgab7jrHtB&amp=
+;st=3D1"></script>
+
+
+</body></html>
+------=_NextPart_000_0000_DAEBEB24.5AAF3E47
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://peltiertech.com/Common/PTSlogo464.gif
+
+R0lGODlh0gFeAPcAAAAAAIAAAACAAICAAAAAgIAAgACAgMDAwMDcwKbK8ACd6AGZ4gKV2wOMzgWE
+wQd8tAh0pwlvoAprmgtolgxehg1agA5Xeg9TdBBKZhM9UxQ1RhQ5TBUyQBYxPxcpMhgkKxoYGBoY
+GRoZGRsYGBsZGBsZGRsaGRwaGB0bGR0cGR4cGCAYGCAZGSAdGCAeGCAeGSAfGSEeGCEfHyQZGSQi
+GSUZGSUjGSYZGSYkGScZGCclGSgZGSgnJyklGSknJy4ZGS8sGTAuLjMZGTQZGTQaGTQyMjUZGTUx
+GTcyGTczGTc1NTgZGTk2Gj45GT48PEQ/GkVAGUVBGkVEREZAGkdFRUkbGklEGklHR0xGGkxLS04a
+GU5MTE8aGVAbGlBLG1NNGlRNGlRSUltUGltUG1tZWWFaGmJbG2JhYWloaHAdG3BoG3Bvb3YcG3dv
+HHd2dnp5eX11G392HH9+foQdG4Z9HYaFhYyCHIyLi5OSkpWLHZqQHpqampuamqKWHqKhoaaaHqal
+pamdHqmoqLCjHrCkHrCvr7GxsbMgHberH7e3t7yuH7yvH76xH76+vsHAwMa4H8bFxcchHc3MzM/P
+z9QiHdTFINTU1Nvb2+LSIOLi4unZIOnp6e8jHvHgIfHx8fj4+P/tIf///wAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAP/78KCgpICAgP8AAAD/AP//AAAA//8A/wD//////yH5BAEAAKEALAAAAADSAV4A
+Bwj/AD0B4lMIksGDCBMqXLhwYEGGECMudERQokWLFPkYCsWxo8ePIEOKHEmypMmTKFN2vCRRksqX
+Ji1ZdAmzps2bOHPq9AgJhM+fQIMKHUrU54iiSJMqXcq0qI+dUKNKfbkmqZKpKsMovYq1q9evO3s2
+HSv0KNmzaNP+fAq2rVuqVt+K1BpXrt27YMVWUMC3r9+/gAMH3gBir+DDiAM3KJy4cePFIMLczKQW
+BI8wmO/ggeQJL9aqSLl6DkU39OjTqG3qdcxaMGHDrWPzXQxbdmvIkm1SrjyUBxpBnVPbBF1UNMmL
+NUsXF868ucjVtmO/jh6bNvXbPnPX3M276BlLzlMS/ydqfOTS5FvDq28O/Xrj6e4fM46fGPfk7krP
+BF8vcvzQ8iKdB5Ny5PFn4Gjt0efafAoKZl2DDmZ3H35JOZHJgSD5JxSAIQn4EoH/YSjiWwlC6Bd8
+Jv71YIp+2acbhUoFAd6IoWgYFIcgeZhVejT2iFWJLKLI4mwMDqmAi9vBqBQPF45oI1A4fqRjSiBu
+6OOVUQGZopBDrmgkkjBxp2RR2mH45E9RejQlSjK1hOWbOWlpIpcsetmlhC+OmdQdTtZV0ppwBpqa
+nBDSmaKddeKZpJ5IyfCJiGf6lGZHgApqKV6ENmioiYgeqmiYS63B0B5onFUIpH6SVOmlrLqVqYKb
+Qv/YKaefviRmUXyO5MkePDSFBqqmmbRqq8R2JRajQZmF7LJJsbXoniZtIgVTjk4mCBqYBSVFGGfs
+QVNNkYIwKUfDCnfJHmdgJgNQToSBxh4zFksis0ApS++9QDkLqlK5luSJE0zFm5IlbgBMLRoCoxQu
+h7d2x7BSgtyUCBpBNCXDGpfAtFSTH3mSyB1hTOtTvyOKhcEDKKes8sost9xyByCc7PLMNLccQcw1
+55zzzSBcMSG0JwnCVCMqNVIlU9+ptHBIDfP2cFIRv/SJH0qolXRKG38kydEki/gqfbE2OKustarU
+tFBdj/TJukr5gZIkIlcmg9sKp9rR2Wo9jVTUKQn/0mt3eGCtFMeeyIFU2gd+HV/YCo4tdtkp4Q0U
+4iLFffhJeLCNnxuPmrQ0SJKjpXdRfEdLhpJk7Kfq4Bw1UvHlPSruHuP0Od445CiFPnJKpfLr79GV
+/eq53RzpTtboRJVOkiSvK5nFSVnXsRTl/Ml+He3x2V477icZT32GSyn/0SenMxp4SZ9/ZPxYyA8l
+PtN/6/k9uUpJkgVT84dnPXXYu6e9YwuAwAU+MAEVcc8k3kvJGZZCtJH0bimXIUsDR5I+j6yvKe0T
+yvvGZ7mkyCAMmlOKDBKWIxE2JX/O2V90+ned/x3GARTIAFA8YMDI/Ax2JvlE/JCSMZFITylSAE5H
+/zwhiOYhRQroI14oLsiUDAZlgx4Jl0+CuJ9NCMJgSTnDn5SEQvb4pDZDYiF1XOgXBkQAAx8YCgZq
+WCZbTQ8le4DgSCyxlUSIxBMPRIodKahEJi7FiUCBIkfomJQg0C0kd1gKCdXERR+p0DZijA4ZYaiB
+pESAjTfE1Uk8YcSikGEkC0TKGkySyKQgkY/B2mJSnkW6koSyKFJQXUjimBQ5rA5GXWTOI2UTSdu4
+UAJKOQoDMJknoLkSfyIhJCxR8sqiQAKVyxGWUliZPJJsIoRCCULnSlK+ovDglhTKpXB2KZ0i3QmM
+h6GAUkLAAcCAyY2+s+b9liKDTYikmUM51UkkEf/PkFTQPNPc195IYjg9vk0pPexQI2P3RSP1pZey
+ISMGlGIBdx6wJAkEiSQEIQfgDcWWIVlbUmSpK6W0MYpKLOEqBdrKkVTNm9s0yQ7dB9ClBCEMd0iE
+PT+yiUbc4ZkMxZe98IUfETQrk/Sq53NMqZKZCqVa/kyplAIKz4GKJHTCQ0kehzLKAClFDou81LHo
+NVSiMsWoQ0GrU5DKrPMh0pgn6eBQOPaRf3p1pVVtaUiEhhQ3qMQNSTkppVgnL46IRQ2PSKxiF8vY
+xjrWsVMAAWIfS9nKOpYQkrWsYvOgArUOxQuX9YnPinkvwXbEoyBoF2ZWy9rWhsGpQgmrXRWKV7P/
+QQya5HGtblf70mXeFSl0LZZY7ACK4hr3uMhNrnKVCwYQEHe50I2ucjHhXOkWlxEtKEFS9DDdi5LE
+j2qJJUk6eS+ggi+V4CwKNWk6F7OKq6bALaxhffJc69p3uc2t7333a1zq6ne5iMiuUirRXRuSdlmp
+U6VZ9XneaCpYvSytpkjmSVQZwLcowSXWcPnL4eLmt8Mc9q90savdoZDAJycAwnKpa+D16smv/nKv
+TzY4W5UixcVPdKmML0yUDLdqwyDe74eDfF8RQ5fERDGDDk4s2RV7dyTgHUsQBHk3GYOAxlJlZG0j
+d1uRwJZZPJ6rfEMBZCJbd8hBRgQYCAxdIysX/8lDUQMoKqEDnwTCyS2OMIxkcAeSiuQSVsYyesMs
+FBwHktBg/i2Gx1xmM0cXzR3GLgh0wObu/te4cBaKnItLZx10As+m7Z6elOCGnaJkE4HuT5YHu+Xc
+dTkk5KUXooHiY1Y12tH4rS6IkUwCSjv50qDIdFA2bdxPt/nJV6UQD8iwh4S+RCmq3a20pz3Buq6a
+fq0WNdRGgkWi3HTa4NbtrH9Sa7HSF9fShfR+M93rSh/XzcYNcIk1HWJkMy1UEQnrS2INFBi7pcZT
+zTYCXw0S1D7vLVmT763RjVx121fYIGh3cuENikCA4AREIfZ+WRzqgffzK3INShDkAnAt31jPGv8E
+JWHbkvDCLpzhxnX4iAUsFIm/W9fFtTiT6d1hjrMVbW7Z6lC+BZaSs/rkeZVwSAqKFLeCpeXyejnM
+QSFz6D6C5ib2dX9xrnOhmAAEcQiyzw9MFHHahK9IAWlbjI5tpNt22yJJBBARvvKo+wQJYMi73vfO
+97773e89AAHe/953K6DAs0RJgRX0jgXB570JICirUQdP+Mo3HgRF+HlQzF4TVHuw3Cn5BGdwGyJp
+ChyjBB8fNvO5E0mY2saLVjhRy5oUxCPF9reHkb6SXva3hDwoYYgpTCABMPM2uEAyVYq+oZz6j6AW
+BEEAvUnsd+Vx+0T6gRLLF+zA/e57//vgD3//+JMAgu2L3/tteAFZYNAGO8Ch/GWIvFCMav7z25/7
+70+t5if3FlomhQzCd2oPZHzWNmgi0VtF0VVvZ1Ui4X+hgX1M80BQBHXCdW5Tl1xVd1yVgAM7BxS9
+5gId6BPtRl3xF4Ig8HXAVm95xntDwXk18Qn8FhROUG0IJAchRIAoZYAhQWHeBIEW1HweAYM2RYMY
+5R8TWHcViHP3VQlgEANigAj2lYHFhQkcmHWVwAguUFa9tggi6HVKSGRjZ2j89xZyxxRO8FMByBGS
+4AduwIM/gYMdwXY1YlNEFwo+JQWA9BNUVoZLIQWbkYahsIYdxV60FV+y94XSRYWRh4Jnhojv/3YE
+RGFzg3BxNWcD8hcUjIhuYYhyQCcXv4cUl7FaMQgUcMgRcoh2WyGKaHJvcEcSn1gUH8Rb4WN9IOCD
+WCJ1ufYTRpWCMeeIUwiJVnhcFodxQWGCJ+iLILaJLNiJb5EJCIgspTiHOggSgFYZeThjCPSMjHKE
+SWGLV4KLygUCnrWLj+aLmACMNad1whhxSpGJDKeMC4hDzTiK+BGNchgKr8gj6gOEoKONY8KNhuhy
+FnhfLjB/yChz5xiJ6ohcXVcU7viO9gY6b3QXlkCPvGGP18YRfCg6rMiAGNVtegKQsSeQyKhcaiCO
+QUGOzIWICRmM0NUHxzgUDwmRKxiPmoQXnv/QTXqCkdMYVWlxjdWHEp8gRWohkj3GaANpX50QBWnl
+iOqmCehYjAu5XHaAkphYkmAYkfv4cXfhN4zCkw52EqV0FkBJZSAhCKuHH0YpZofIi8vVCU/QlJcG
+aXCpkO4WXVV5lW5pZvDIZVx5F5vgBl92FhdThwUYlidRCIOJmMXDj9/lBmmZFmiwR4p2lG3ZYXVp
+kP+FZpmZjncpXXQAFCp5gVOolT/4l3jxCYLghmQRBkKURD05EpsgB/7oSR2pVy/hCX4AkmQhBXvw
+epXJliS5l28Zl5p5XEPWmVL5mdZ1kihJnHxpmh0hehbhjWDhCZBwB2dQm0BxU2fwmifBEhH/YZgp
+IQmFoJ3SJgd4UGvUGRHAGSYf81pLEgZk4Ae2eBGAaG6ZpVmOpQhM0JST9QiRhVj+GYk08Af86Vhj
+4BNQkKAO2liY1TNjlhLiiRATOigKcaFtMVZj4lm0Z5BWpha7p6EkWqImahJiwQVzsKIs2qIu+qJz
+wAY50JQqagQgoAVLUBQskAYw2qM9ygYgoKI+OqRE2qJAqn8nmqRKuqRiMQec8KRQGqVSOqVPSglD
+0JRz0AUgkKNDMQI3EAlUGqZiSgkg4KRieqZoGqVkWpNL2qZumoRmmqZnSglC0JREUBReCqZyiqZk
+Gqd7+qdQuqYd96aEWqhB5aeAKqV02pRE/5GniTqmZfqoiSqohlqplupIPoGoklqlN/ChZfGlm0ql
+fRqqe0qpl3qqqKoeTUqqUhoJnRpMoMqqahqpsjqn0pmquJqrYZGptQqlruqpPvEDetqrnDCqxCqq
+t6qryrqsKbGqxxoJNeCpQ0AJx1qltFqts8qmzLqt3FoTzvqs0ToU04qtxXqt5Fqu2tqt6rquI/Gt
+z7oC8+YT40quxnqu6DqoHmEJd7Cv/Nqv/ppTX4GA0XgT4+GCzUqKZoMQy+cZYzUu/CEI/9qvA2ss
+vEquhwCvPzGv9GquG5uuZzkWCogVAvsZY+gVYzWxHPEJe6CNH1QH9jlOUAInHmWwN+Gu1f96sUY1
+A9Rqr/V6rqYaNCAbsAg7FQWbF0NLEl4JVwgSs28ys5hSsed6CCMgAmlgr9aqqdX6syaBikoRslMx
+slPxMfyKsjhxsiXBtTeJGpnQr3sgs/I4L0IVovQyonPkrwh4Bv5KmSJ7tNnHtxoVFHLwTNi5B5C5
+O+x6lvsKuPtKtlIhFkbQBZAbuZI7uZRbuZW7AyDwuJa7uZxbuVWQuZ0buqH7uZh3E8qxh3ewBphR
+B3fgbDxVCHXALT+1HyN7CXdABnibMG1iEPaUCXugum6gt6FQoZCQYZvwMeniBn4gMNgJCbGLGWhw
+B4IQXGbrQEAhWLPJZzwFsdiCU34QU83/axDfkgmQMAkKCzoIcQnhCwmGKXp44AZhsAbewjR4QAbQ
+ewdEmLJ7ADJhoJ6jhxNBEVwVShOSgJ53QJ4c4TH8m1Pv2RE2i61airXH2rMdi68jcbojUQj8lgXB
+VQhHM4OhILB4IBRte1qBpJhB4W/SaLiGVbhCwQNE0wiR6RNZRWZ++xFGFGqbQFc2+B8T1LBktgbr
+8gZAwQPCpxyJAMQrIZhDIQNqN5REQQaumwi1+Uk3EcCHqQSfwHQ/UQcaJXQ+4QRLxbEQTMZZa8YT
+nKwY/FZIoUUdMZbVhIC1OUHKwZs+4W9FO18DhbZC4VbVWzmbt7Ar3MQ71bAj/BMgAxTV/+Z5kmLD
+q5jAo5gbmfCKpxQKnuBRDnthwUUcPFCbJdw6MwwCYyzBxBrBVluupNyrWvshhwYSjVDEjbAJexBC
+M4K2OBU/EcOdQGHFpMEUPZTHnwCSWVAHcRMxfMUDbrCvW/VNeuwTA/tDQSED0ctgHgHNIOAGlpAJ
+1gxSHLp5qBiyfgAUbavEocDFICAFbvBAkvEJvTU3m2AJzbRH/pHMdfBSmaxom9yHHSEJIfRBdxA3
+o3zKpmy1FIytq7wjeggS7PwTZ2BqhQAUv7IJOxQGrwdYuQwlTWLNB9fLP8EDM7KRIEA3eXzIPpEF
+ApNIEdMIdUCAm6CTPfTHIaFM5IEHpv9mCZpzSKFA0jLQGd08OTrU0dtUGkqlxDIdBMYnCZcRCv4X
+BM7WTVa8Q3QlCWtwz4VYi4eZWjSxkRbGEd1WB/vhCQsU0FY70DyLxsR60FTSyh7xygltcmK8kdrU
+MWtANAg4QZuARaKhHIf0CcoBUnkMth4hCPm7RNk5tDAdEiQNi+fjf8zcETJNNGPFZwhxIYD1Ew3E
+yNfczO9VzuIMOl7cTV6LdiPnCUGBBwnjus9Ga4cZ1x2BgBdCztNJOQ9crWTts2atymqs1h1R2WHc
+WkBhYYntxTr2hjm42RyNjW8MFF1VtJgNAvnJEbJ8B3Jgx0B12CEBCfkIAi7BdKHIWkD/4Tawvc/K
+zRHh/BMzosTdlp/NowStld74KBTojNNXrNrFXR7lfX05DdEqMdvHWtsbm8q1itYoscYegU/AlUfy
+/RGAvcJ5rdtwvNz8dyslkTlJUd03LBJSzZ2/opOXE94dETdGfNzaocS9VckK3RQX8tBEIQNkgMAo
+gcX1/RGoeCEPvt9Qe67+bdC3HeC53dYeweHA1UyCtODE0eA+Hgo1Psh8IuEq99trkLqGfeEYJQdu
+OHLPtzsezhEOWAiYTZkk/hMbLZFM0SR+EMrWaXJWHeOBrdpJjhL8Xco7LqsFfcYeWxIEHodAEbgQ
+8QmJ7XQgQeSPfNxByRFJXrRMft1Q//LDUU7cI+HioXDfPnHcRg0Rr820IHFNP4EG9z1yDsy0WNTY
+hXgGEbFNsxkyQ+HnKgHjeN7Ia05uSD7eBxvnrJrjZwzgct7jyN3q3HMhG+nGH2EJ9gTorC7opVPo
+Y2hEGfYJVgTrmm3hjB4gUiC8KxGzXBxWn1DpgQ4SDyQDFOZ0SszbIACHGdNbQdDAobAJn6DsWkN8
+Y/i8mOHoR5fmq27cHDHjdggUJn43HNFRq9UIb96rtJ7Gts6qAn4Sd57AO1RqPIW3SxRCchBT4XzR
+z87gJnzkxo7I+w4U+hGEWSAI3+wRDujsznxLvikwm8CDXszWkkKEiXCGjjzsrkzIPP/BtGPlBAnT
+UYMMwx1zB0ySCTIg7TIdNeT+3PGezzAfCvYuhD9BBq+H1BxxuilapFI/pDYqpFN/9UYapFi/9St6
+pGJsEwc/SDskA3i7r6GUKw4oLnJwBxIYwnxb5BWf66/+ExCO8ZZsRMh8B9AsCDLNA/y6VSIf7umF
+FFnQOQTiBMms9y/FJ1ne2kLhteTsH2Swr68jGT4fFMO8r2vwN5mwG2fYr3kEHmLyye11k3Cv62mu
+4h2dzD0sysTe04wCrHLbHXQ74Lqdr6EMAv2ClgMl7MZ95xfPwpawmBHzJDfY7INPHqaWk77T+IQe
+Wx9Bzp/wirmB1IOjO12l+kpFEk7/S/GozzFwPBRPH0iWUAQ+EG3hlv66Zf7or/7ujxlbcP7vP//w
+7wM+QAWme/trvZgkkwgxKPEAAQIEpFAFQ60RCEKJwTAJQQgyGOqOwzUFESa8E9FSQ4cOIYaq01Gh
+IIcEQ0EqGVGlxCAiO0rJtDKkS4wnHS5caTBTxywrUSbEWdDTRZdhDG7iSBNEpp1Kg+wxKCehnJwq
+k7rMeBCoSpIJYxrcw0Npwasfq55Fm1btWrZt3b5dK+jO3DuW0Hryc0YJ0DqNvkb0tCdLwiB1IG0q
+uIfunb+hEtGFWlAuXbsGIS1OVPAxXZMRIblpKZCMoEsR/YSRASILxEyLv7am27gquCQ8Z8QKzBJG
+Tuaqm/CgCRP6jCBInwrCnhv5rJ/FklYiv6Nc5x0pCZ3s6WxQ0h0yHGWc8eO84KdGdaoLDAPeuMHz
+IEqnnbx4scnN0VVaWuxJ5ae8qUHIcKMR/UKJry64DkQwQQUXZLBBBx+EMEIJJ6QQwU8SOqNCDTfk
+sEMPPwQxRBFHHPEnEBohMUUVV2SxRRdfhDHCiUCQIkYbb8QxRx135BGtMwQyq0chhySySCOPTEux
+O9YrMiAAOw==
+------=_NextPart_000_0000_DAEBEB24.5AAF3E47
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://peltiertech.com/Utility/pix/pts_tower_map.png
+
+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
+------=_NextPart_000_0000_DAEBEB24.5AAF3E47
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.exceluser.com/images/info/info_dash_g04.gif
+
+R0lGODlhggBuAPcAAChljv///+/v7/f39+Pr99vb2/Pz8+Pr8+fv9+Pv99LS0ufv++fr7+Pj4/v7
+++vr65ayxtfX19vj68rb49/n69/b3+fn8+Pj6+fn4+Pz++fn912Kqu/3+9/j5+Pr69/b4+Pj59/f
+6+fv7+Pv+9vn69LX39vf31l9nrrCxsbO12WKqsbGzjFZktvj76q+zsbK0u/z99Ln99vj5+Pv777O
+39fX3+vr7yRdmr7Gztff59LX566+10FxnsrO2zFZjtvj38rO0tvr87LCztvr97K2tp6uwq7G16Ki
+ora+xs7X18LG0sLGxtLj687OyqqyttLb67K2wuvv88K+vrq+vtvf5+/z7+/396qyvs7S3+fn+87O
+1zVVedvX301xmvv7/6K2wsrb7zFplkFVbaK6ysrKxnmeum2SsvP7+6q6xlF1puvn4+/v87Kyss7b
+41GCouvv656yylF9qtfb18LO38rS39vn8+vv9+vz++Pr+5qenqqqrmF9njFZhkFVZb7G11Vxmll9
+pr7O17K2vs7f47q+xrLG27q6tqKqrll5qt/b10lZbWWCquPj312CqoaGiufj37q+ztff3y1djtLn
+/4amvu/v64aatpKSjsbK15auytLn76KuwtfX26q+13l5gpqamvfz++fz9+vv+46Ojs7S45qiqpqi
+roKGjqaqtm2Kqqqqptvf62lpcZ6qtpaWksbO22FlbWWKstLj96K60lFtko6ivs7O0rLG16qywoKO
+noKCgm2Gnsrf99fSztvX15aqwtvb111dYZKWnrrC0pKepu/n66Kmrq6+xnFxeefr61F5ov/7+4qW
+pp6yzll1ouPn80l1oqqqtvfz88LX7+Pf3+fv/8bOzkVZcY6itnFxcaq6ztvv93l9ioaOkm11hrbO
+43mWtvv7922Suu/z+01NUe/r9yBZktvj8///+/vz98LCxkVpjvPv71F9ppqyxi1hmvfz99LOzuP3
++/P389fX0srf51mKtuPn45ayvvPz7+Pz99vf2/v/+9LSzsrb5////yH5BAEAAP8ALAAAAACCAG4A
+AAj/AAO00uZnDhoXvywxiRIAV6dOczbBmVbrVpscASTgesUvSSBtdG5Z+tXsF5ooSEZgozOniA4D
+/DyYalVwzqsA6ALo3Mmzp8+fQIP25Cd0JzqiPf8FwDYrVadahZqB0wQjwJcyzeDsAMfL0o5W9fj5
+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
+------=_NextPart_000_0000_DAEBEB24.5AAF3E47
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: http://peltiertech.com/Excel/books/Excel2010Bible.jpg
+
+/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEP
+ERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4e
+Hh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCACgAH8DASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwB37QXg
+34pa58RNI1LwhcXZsIokWBobwQrZzZO52GQeQR8wByBjsBXpnirR49a13wjo96i3N2k0tzcOq4xE
+kDK7ewMjxDHqRXznYfHnx9pNqNNjnsbyOIbI5ryEyTBRwMsGG4+7Ak96+mvgrJaalp39vS3Mt7qm
+pQRyTXUxG4qBxGoACoqkn5VA5JJySTXHmmOjTw0lHd6G0MLKhXtPozr9J0GysY1itoEjVR0Arwb9
+tnR5NTXwbpdo0STyy3speQkKkccSO7HAJwFBOACTjgE4FfS8C/NyK+IP2svHUXiT4xrY6ddrJZeH
+4HtonWUxgXOC0jq453BgqjsTH6GvmeHcM54pVeqv/kdGPrfu2n1PPtF+G2s61q9hYaXfafdLerIV
+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
+------=_NextPart_000_0000_DAEBEB24.5AAF3E47
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.assoc-amazon.com/e/ir?t=peltiertechni-20&l=as2&o=1&a=0470474874
+
+R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAQAIBRAA7
+------=_NextPart_000_0000_DAEBEB24.5AAF3E47
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: http://peltiertech.com/Excel/books/Excel2007DashboardsDummies.jpg
+
+/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEP
+ERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4e
+Hh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCACgAH8DASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3fRNL
+01tGsWbTrRma2jJJhXJO0e1XP7K0v/oG2f8A34X/AAqmpI8H27CZ4cWkRLp94AKCce5HH41itqEb
+RsR4kvGjAB+W25VcMfQHkAnPoK/mShgcTjZTqRqNWbWzf5HqYnHQw8lBxvpfdL8zpjpeljrptn/3
+4X/CkGl6X/0DbP8A78L/AIVykl/p0kTxvf6xKcxyNjGeFdwME/09O1K8SRykR2erXMU0AZz5uWIY
+L0wMZ6d+efSu1ZFX2lVafpbt3aOT+2IvWME163/JM6ZbPQ237bTT22HD4jQ7T7+lRPH4dSLzWh0w
+J6+WnNYcllHGI5oPDU8kjxCQ5lI2sT904HX5R+fNOtrSZJYhNoFvCokXfPJLghSCSRznI4/GtI5O
+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
+4SvHG0m4P4l0fcKs48r1P//Z
+------=_NextPart_000_0000_DAEBEB24.5AAF3E47
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.assoc-amazon.com/e/ir?t=peltiertechni-20&l=as2&o=1&a=0470228148
+
+R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAQAIBRAA7
+------=_NextPart_000_0000_DAEBEB24.5AAF3E47
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://peltiertech.com/Excel/pix4/ErrorFree00.gif
+
+R0lGODlhcwHJAPcAAAQCBISChMTCxPz+/IQCBNze3AAAWAAACwAAWAAAC/8AIBUAAAD8RAD/C1//
+AAH/APBoAZHuAGQCAF8AAk8OAAGAAIAAAAEAAACAAgAAAAAAuwAAw3byAAGCAADVBgAkAK9/jFkX
+LS+A31cAFv8A2RUAFAAA9wAAvwBoZwDuAQACvwAAFhB/+JMXwwkSdlKDAADSbwEoAQB/AgAXAL8A
+RxMAFQAX9wAbv4SAvMQA8XaQdgCDANwGILMAAEt2AAAAAGaQRACDCwBfAAABAJwsWMSDC3YPAAAo
+AHD3JMS/RXa2RQBRAJ5sAYKTAE4oAAAAALqfWP8BC/8AAP8AAABvAAA0AAAAAAABAP0AILIAAEu/
+AAATANwARO4AC3aHAAARAEYAtgAABAD3/ABBAJyPAsSxf3b5dgC/AHAASMQAlHYXiAAbD9wAAO4A
+AHYMAgAAf39kAAgOAPoGz78AF7J2/IAAAFeQLwCDV+AAb+8AAXa/RwAWAENc9DqD/1wrvl8EFkR2
+z2EwF2Qwlic2FHNzXFyxlEP5O2+/C20AQHAwgHV2AHQAAGW/AHIWACAsAEbvAGkCB2wAAGUUAHN3
+AFx/vlcXFmUwdWIEASB2AFODAGlJAHQ/AGUAAFwAAFAAAGEAAGd/AGUIAHP6ACC/AFQAAG8iACBQ
+AEEAAGSYlmTDFFx2b0UAAXJWRnKrAG/4AHK/ACBg/1CF/3IA/2+A/2/wRmZxAGkAAG6AAGeA3FxB
+7gAAdj2AAN+4ABZDAP8AAP+AAPcAvEEBxAAAdgAAAABoCABkgPcAS0GAAE59nG8ExHQAdiAAAGF/
+nyAIgmb6Tmm/AGyy0GWAxABXdv4AAGe4f4HECMV2+gEAv+/rRha2xU75djy/AIAwuADR/wBO/wAA
+fwA0AADRxQdOdkkAAGTc3A6b7gD8dgC/ABq4fxXDCM12+gAAvwAA3AAB7pcAdhIAAHcAAGgiAPdQ
+AP8AAIMAt7ADGfjoR/+DAH9HABc4xWTfdg4WAAAAAAAAxQABdgAAACH5BAAAAAAALAAAAABzAckA
+Bwj/AAsIHEiwoMGDCBMqXMiwocOHECNKnEixosWLGDNqnBigwICPIEOKHEmypMmTKFOqXMmypcuX
+MGPKnEmzps2bLgV0HLCxp8+fQIMKHUq0qNGHOj0WAMG0qdOnUKNKnUq1qtWrWLNq3cq1q9evYMOK
+HUsWa4GkPMuqXcu2rdu3cOPKnXv17M6ldPPq3cu3r9+/bu0qBUy4sOHDiBODFZyW6Uenj0FEbjv5
+aeXHlbdmFqk1s+LPoEMvRotX8gDIp+NG3pzaceuvrF2Lnk27tlrGpUG6fu12NW/TssXGBm67uPHj
+VXE31W06te/nu1szb+4c83Dfu4M/r26Ze/Tl2Kkj/x9Pfq/y6CFlYw9vHfh676i1n24fHjxx8NPj
+058Pv7z//7eRhh9n7vHGHnzvBdfdZPUdqNt10qV3X3sAVmjhWOcVSByF9m0YoXweRiXhhN5RyCGI
+IYLo2YUstpicgOrxF+OMIe5H44r3abifjBrGl6KNJv7m4pAuZnhZicwxON2SSX4I1ZHZoScla/kR
+2OR3RGZJZIZadunll4HBCOaYZJa5FZdmpqmmmmiu6eabWrYJ55x0AojbUXjmqeeefPbp51Ck/Sno
+oIQWauihFwWK6KKMNuroo0EpCumklFZqKaSSXqrpppx2KlSmnoYq6qikHgRqqaimqiqmd63q6quw
+Dv96aqy01mqrRrPequuuvCaUa6/ABmvrr8IWayyqxB6r7LKaJsvss9Ay6my01Fbr57TWZqstUdhu
+6+23GXUL7rjkItVqrR1JlG657PrkbADwrgvRuvLqKS+98A4Ur0D1tuuvRe/qqy6h+PIrML0F9Pvv
+whEFbHDCB+9b0L4dUYxvvxJXDHG6GUNskMYTeyzyyAyXzJDDHiOMMEEqPwzyyCpzzHHEB82s78Uh
+m6zzQu9KLPLLFefbcsoJx3uv0T8LbLDCRfu8tNI7R83zuQrZnPTKUIM8M9P1Yj10QhgnLfXYCKFs
+NdA5b+yy2A+r3fbXCJ3NNslk74xyyhRDfbPbNjv/zW++c3dc9c04s1w32eIerjiviS/ueK2NPy65
+q5FPbnmplV+uuaeZb+75pZ1/rjkAlYaeJ06op6766qy3nnoApFNqOp4DCGD77bjnrvvuvPfu++/A
+By/88MQXb/zxyCe/O+ylUz1p7QREL/301Fdv/fXYZ6/99tx37/334Icv/vjkU69T7JPOfhT05bfv
+/vvwxy///PQTcH7zSlnKfv389+///wD0HksAEL37yc55kNpfABfIwAY6cHw8EYgABjJBCSaMgPZj
+3gHzV6n9fUR6H+SeSKIXwvaFJHsljF8KH8hCE57ld7AroAbTh8BHeTCEK7xeCT+YQxQOoHo4/KEO
+/4UoQiL6sIVIdKHt4IU7Jp5PhuhjFQcpdUMh9hCIRiRhFrWXwytSz4tYLGISxyg+ntzOifD6yBMz
+GMVHqc8oVfzhDkESxi+eUItBlOMKe3jHPBKxj34E4R3JSEgRvnCJ8VLjGg1IwylGhGkWgaRA4kiA
+IGrRjljUIyYtmck/WlGTlgzlJy/JyUKaEntmbGIAFLnIGUoxgg3xWdgWIklJekQAgqwkHXV5yel1
+cZS6pGMpredHHurxhHv8JDKBecpmfvGQOolXEzHIyFc6ZGW2jNvgFHJDPPYymXU0JimZSUxy8hKc
+vjTnMJ3pzFRG8yNObGUbHXW3jWVMZjjzG9Katv+3bgbzm1mcIy/POcp1DpST4hTlOAF60C2y05Sp
+TGPtorlEarrSjTX8WMiweTXDpQ1t6/LnQIPp0BE2FI/i7GU6UwhIlApSoCR9KRgfmkR3slIAaowh
+G/EHy20eTGlBy5ve3na1fCmQpkhNagPd2TudVhOjjtSm4TjaNY9aFaQDOapSt8pV+g3AaGAFq0Xn
+2ahpcXRtcJul29aq1a669a3jA4Bc50rXuo6Vpw+RpSz/VjjAEQ6f/cQlXAdLWP89lZ4ZpUg2L9LW
+wjr2seI7bFkTOzCiTFR5mM2sZjfL2c569rMVxav+QEva0pr2tKhN7UURG1Ubpva1sI2tbGcrWWn/
+UXZRl6WtbnfL2976brWTba2jcuvb4hr3uKgFrm2F2yjiIve50I3u8ZS7qDcWxbnSza52txvaDfb0
+edwNr3ijS11EWdey402venlb3kOddyjYXa985/vZ9hrqvUKJL333y1/k2bdQ+A2KfvtL4AL/lqzL
+/W4CNeuFBhv4wdv9L6ECDJQBC88L2MCGAAAA4Q5DV8Kyui2iLAw8DGdYwwAIgIdX7FsQC4rCPyHx
+70x84hSrmMU4nq2L/wRjn8i4dzQ+8YbjmeMin3bH1xLxoX7MuyDXmMhGjnJ9EVxdJRuKybpzspBt
+LOUuexbJfepxT7CcOy0/+cZeTjNmwcwnMW+E/8y3M/OWoazmOg+PzXtys0bgbDsab1iuAjiznQdN
+PDzrSc8Z4XOQ6zpnNBP60bwzdJ4QjRFFnxgbjBZ0ZutqOw6n1tOkBXVpRR3q5EkaT5RmrPGcnOkM
+D9nRyBM1h0k96uDRWni33l2ubY27Xev21EdJtUXgzGq6XhrTdDaerDf8Wl/fztm9g3ank7ds5ALb
+KMKuCJm13GpXc1l5y/b0XJ8N6E6Dety5K/efxW3uc5db3e3WHbpn7W5x0zvd7/4zueEN6H5Pu9fq
+pmu8mX3vO1PZvFYu1LaPjQ0vzJXbySYepwn+7HQzm+L//vesK77xaZ/74rruNcfZLXKShzzfH/+v
++MVNbvGUc1zfIAfetYuSbYpg2czrDvSxXw1uea/73fPeN7xBzml6j5vUtBa4ypdub3/HvN0dx3jM
+Sc7ynxMd6lKXdncbqWDXDk/Oc2V4hr8da58jnekZD/nTo572tS/d7R5/OdyzfnWVU13kcc87xV0u
+84O7N+GEYrKcGw4AOfO87C2XO8ajXm3G0/3jZ0875BXf8cg//u0mH/rk9b5xvsPQ7/cF/KAEL3Zv
+61zsZFe2z3OOdZizHuD71njAA45vzedb9k5f+9Htjm7K63rewPf35j8v2g5euPQ1Rj6KIw7p3Wq9
+7ZmdObdEL6gfD175l05983k7dN4pvbPSBxT/9f8k4+ujmMPIP/z2CR3+T43fT+XHvrGRr/31q7n9
+kXp/n0hsfkyHPf31Z39dhn9AUXMTwX/Yd36nV3oBKIBRRoA/YYASgYAJWIHIxnwOiGMQ6C76xycU
+aIHK92qwloFGtoE9IYEREX8gWHoiOIIkmGMmuBEoCBHWZ1c2eINzBVYvOICgB2AduCdYFlZCOIRh
+tYM8WHxUVDxEuIRFaIRSFoO48oN6wmdOWIVQGC5SeDpVuIVK2IMTloW0w4ViGDxXiBEz+BBUOIYZ
+WIaJAobro4ZwuDxeGGLMxShpGIfrx4YA44ZwhId+WFtVVoe49Yd4qIcVcYYOcYeEyH5z+GJ8/3hd
+iwiHhkgRiNgQihiJdTaJE1GJDHGJmJhmmigRnLgQnviJR+hdl1KKpviAjchjj4heq2iFrZhkgjhi
+sSiLSAhet2iEodgwrwhfLIaDwjiMxFiMxmhXGjiLYfaL+RWMrvOMINF9D9aLEDGK3OSMoQI7zydf
+1Ggutbhk2Ehf2piMubhgKwYAqdR5e7eO6tiO7PiO7hiPFbWN69WNDmGNCaGK0IWOZ0GPvsVh48hi
+9tgQ+IgQ+vhc/OhZ3+d5ayaNBjaQJ8OMAhaO/uh9eFd1PReQKwaRU/ONVxaOnNV4T6dZGulhHKkQ
+BXkQB4lcCVmRaid7Cnk+LileJ+krEllhIP+5WY03kwfGk9xVk2VzkzFGkTp5kSOZkQ5ZYEBpKkLp
+YzmpWSJ5lMpTkh22lAaRkgaxksfVkkVpd2+HlD4ZYcrYZk05Zk8Jlb1XbSSZlARmlQWBlQWhlcbF
+lekFkGzZX25JEHBJEHJZXAk5X1QJYXlJQWX5ZkRZlzJJjqg4WueYjvD4mPIYmZD5mIkpkGOZZ4W5
+Z2eZXoE5jZd5aJmZaM7IhKRZmqZ5mmF1l/w1mBIUmpUWjMcYm7I5mzeomFyXirBJm7q5m8Vom9bE
+mLv4gqx5J8YXnML5mZPmmqpmnCQ4nHuZVczZnMiJaso5bNG5htMZbNWpbdfpgM4pYtDIErf/1J32
+BzvhaRKL1Zq12HX7R57lmZ2UmJ7EmY8f6Z7bF4pJcY/gWZ/2CWn4KZ/Jwp4e2J/N95/eKKBZxZ8E
+OmgGqp/raSioGaESOqEUWqEWeqEYmqEaSoSgJ5++eKCd2DC3Q5AUtBC8eaIomqIquqIs2qIueoNW
+FaMnCKD7iRQNg22LhaCPlFczek06CjZDFaQR6FfcpBH3UjP5B6KkaKNXaTsSNKKHdBbQZEFUCqUO
+GqJGOjF6RaRmmJ6r1DbX5FH3BDjY5DexZBc5mqVARaZN46Ed6aA/+qMl+pYlWkFSaqcThKdSakF6
+eqVLaqSCs1Zu+qYM8aUcMVU/9TSKSjf6/5mmGRFWHYU1baikRXqPV1mnmMqnmXqnuOONWPqoHzU3
+XeqjYHqmESNUgiqqZxpNlqimS4M0aIOFlEqflkqnmnqrd7qpebqJjgqqV6Wqe0iqh5qoWdNRpWou
+vXoRR1pVkhqscPqpJKqXurqnuYqru0qlBJmsyhqqzTqpsRRBbnpWqfo1g9oRrAqtkYSoT9Ot8Tmr
+BimiThql1FpBTnqte9qp8uqnlfqosLqmXOqthSqnNeM0Y3ox+DSoramtFXGk/GRP/3qINPqgopKf
+fxoqFEtL4Pon5YqmrZonCEuoESmxBKk7Ptix/LpPOCqs6gKpK/uxHIuuC8uyGsWB7qqSo81ysbRq
+sV6asZdirg+blTcbsXEatCbLOTv7UxqTtGqjtEy7tE7btFDrNudasUZbs0A7sQq7KTgLNgI7WVnb
+LEILs1r7taCzs6tJtpaytTa5nm1piW0bSxsatxPqtnhptVoqt3hrmnCbt3y7hNfUt4ArhHsbuIQb
+tqJzuJSznYi7uEnatYz7uKzluJA7uX/nkZR7uSUruZi7uWRpuZz7uaDpuaA7ujSnuKR7uoQpuqi7
+ujJouqw7ukmxoLJbZIVbu7Z7u7ibu7q7u7wbLwEBADs=
+------=_NextPart_000_0000_DAEBEB24.5AAF3E47
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://banners.copyscape.com/images/cs-wh-234x16.gif
+
+R0lGODlh6gAQANUAAAAAmRAQnyAgpjAwrEBAs1BQuWBgv3BwxoCAzI+P0p+f2a+v37+/5c/P7N/f
+8u/v+f///+/v79/f38/Pz7+/v7W1ta+vr5+fn4+Pj39/f3d3d3BwcG9vb2BgYF9fX1BQUE9PT0BA
+QD8/PzAwMC8vLyAgIB8fHxAQEA8PDwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwAAAAA6gAQAAAG/0CKcEgsGo/IpHLJ
+bDqf0Kh0Sq0SIdisdsvter/gsHhMLpvP6LR6DRGy3/C4fE6v0932fPphCAAECFkIAgAAAwuCBIoG
+DBAOBAVZBQQOfH4DDYKEAQYPWQYEB1oLipAKWI+lBKd6rWF4WBcpKSIYEBOzIh4RWBkkKSQXECCz
+xRMmxbYRICgoHhrFsxTEsxkQyCYiFlu/JiATEikUWCTWWA8DAAQIBgBY7YAHfogQBIb2AI32pwrq
+EAUACgwKBAEeAnmNHBUC4EDQHwJ+AjEAEKAUKywhMn4QhiVCh1kjtmWxEMLchQ1YJoSY9WEChIww
+Q2i5UCLFCJceQYr8kLHDhP8IIZQFzQILgi8KGcRREHcBha0MKC4gFTeBggelEVJgECIBAgkSFCyI
+qEABA1ZdXCFotapVy1oSIiCIiCurKxYEAbM0nDggy0QBWOw1SpCXb718EArphfDXE4QHjvG2S+Aw
+UAOKjP11SVFyJUoII0pYoPBBXJakKbpmkCnhRIiwI05EyJChRAnaI1N8QGot9OjS4zhniO3xBIS6
+RMedjqs2w1Jy1lCYk8s8aRbTWJbaJZoii4jpapV7QOF2HAcSbcSZ8KAlXSYtBwBQzkIok+DMBAID
+WKDZT6cs8c23hQACOGBIZVgoNlF+m5nzUQQWYAfBCR2cFkIJMq0GwQaypZT/AkcZbUFcbspNWGEK
+1ixFQTg0VZicFhnQlUJVKF5FQVYlxthLd1gAM5dRJnDxHBYiZCNCV9gN2aMH45kjAgqpaaHYFvdl
+cZ9gDwBE0ER+JNQPRQRVqcVlohDSEAR4BYJXfhMt5I5b5qhoXRYh9hKCLBZoWGeP5uzZo0yn8YiR
+TCl0QEEIHX5wwoxaFIUaiulxgAIIEISTY3WCpuABbhkEuYWSc9HGS5KCqrXpk10txcEWU2oh5mH6
+uDmAYxCk05df+IjyKhbxZRLgXW4GkMlfCBS7BaTpTaXFnnreJpOfyPqpFqA7LkuoTtlx9mmJRjGX
+bbJqcSQXpUZlWmKE231L/yR42HVaHgQ49sgtBPVt0c5FEPjhiT0GIEAPglt8WZB8XBAiK7DrKODY
+gl4g+6AsLsF7wmdGybQUhhB0YFy2IklbwsaxMCoxSsjCuS2M3qZHDnvjWSCBWcrNqdZWN0aAAlhW
+uQSqB2mtZZYt121lVsQSvgOAKKhA0A+DEPDH4K7AEgTZOZj1c+tjDzhd7CAMoQkAQX5pxoVwK1kT
+wQkhHXrCdhpmrO1Su1lQwgh0UrvjbhdccHbaiCIJHp8nL9coj7LAe1UKJoiLAXlYQFnNLb+kAAIv
+oBbDHpQoiCAuFsggPl3RjvixTjuPpTM6Re9B7fWWnCCQDtLpxBMAA+38O33Z6ltwaZG1IXQg0i2l
+cRZxLJ9JUBIWFowwSwe8YLEBxactKhrws4QQ8Z1cYN/ovK5030UDAP0hdR+FFPAeBAcQcL4WCqxy
+DvmAZGEJRZ0YEAmuorSPryOquO/9/y8CoAAHSMAC5qEoBkygAhfIwORY4YEQjKAEJ0jBClYwCAA7
+
+------=_NextPart_000_0000_DAEBEB24.5AAF3E47
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://peltiertech.com/Utility/pix/pts_banner_map.png
+
+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
+AAAAAAAAAH7CNEyvzpJVKAAAAABJRU5ErkJggg==
+------=_NextPart_000_0000_DAEBEB24.5AAF3E47
+Content-Type: image/jpeg
+Content-Transfer-Encoding: base64
+Content-Location: http://www.exceluser.com/images/info/pub/pnp728_01.jpg
+
+/9j/4AAQSkZJRgABAQEAlgCWAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcU
+FhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgo
+KCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCABaAtgDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDjqKK6
+nwJ4KvfGUt5HY3NvAbZVZjNu53ZxjAPpX0UpKKvLY+ajFzfLHc5aivV2+B+ubTt1LTC3YEyD/wBl
+rkvGPgPW/CaRy6lHFJaudouLdiybvQ5AIP1FZxr05uyZpLD1IK8onK0V2nh/4eahrfhS4163u7WO
+2hWRjG+7edgyegxXF1cZxk2l0M5QlFJtbhRRRVEhRRRQAUUVLZwNdXcFuhAaV1jBPQEnFAEVFd74
+x+GGseGNHbUp57a6t0YLJ5G7KA8BjkDjOB+IrmPCmhz+JNftdJtZY4prjfteTO0bULHOPZaiNSMo
+8yehpKlOMuVrUyaK3vGvhi58J6wunXs0M0piWXdFnGCSMcgelYNVGSkroiUXF2YUV3Xgr4a6l4s0
+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
+------=_NextPart_000_0000_DAEBEB24.5AAF3E47
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.exceluser.com/cmd.php?Imp=2474004
+
+<html>
+
+<head>
+<title>IncSight=AE DB...Create Professional Excel Dashboard Reports Linked=
+ To a Flexible Excel Database</title>
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dwindows-1=
+252">
+<meta name=3D"date" content=3D"20070101">
+<meta name=3D"description" content=3D"Create Excel dashboard reports quickl=
+y and inexpensively using tools developed by the inventor of dashboard repo=
+rting with spreadsheets.">
+<meta name=3D"keywords" content=3D"microsoft, excel, dashboard, olap, sprea=
+dsheet, workbook, report, business, analysis, forecast, budget, accountant,=
+ management, finance, worksheet">
+<meta name=3D"copyright" content=3D"Copyright =A9 2004-2010 ExcelUser - All=
+ Rights Reserved.">
+<meta http-equiv=3D"Content-Language" content=3D"en-us">
+<meta name=3D"robots" content=3D"index, all">
+<meta NAME=3D"revisit-after" content=3D"7 days">
+
+<!-- ExcelUser is the online resource for business users of Microsoft Excel=
+. -->
+
+<link rel=3D"stylesheet" type=3D"text/css" href=3D"../../stylenew.css">
+<style>
+.head1 {
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 250%;
+	font-weight: bold;
+	color: #2A6456;
+}
+
+.subhead1 {
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 150%;=09
+	font-weight: bold;
+	font: italic;
+	color: #000000;
+	line-height: 120%;
+	margin: 15,0,0,0;
+}
+
+.head4 {
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 150%;
+	font-weight: bold;
+	color: #2A6456;
+}
+
+
+.standard {
+	font-family:  Arial, Helvetica, Sans-Serif;
+	font-size: 120%;
+	line-height: 130%;	=20
+	}
+
+.quotes{
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 90%;
+	font-weight: normal;
+	font: italic;
+	color: #2A6456;
+}
+
+.testimonials {
+	font-family:  Arial, Helvetica, Sans-Serif;
+	font-size: 75%;=09
+	color: #ffffff;	=20
+	}
+
+.products{
+	font-size: 97%;
+}
+
+.title{
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 120%;
+	font-weight: bold;
+	font: normal;
+	color: #2A6456;
+	text-decoration: none;
+}
+
+:link.title {=09
+	text-decoration: none;
+	font-weight: bold;
+	color: #2A6456;
+}
+:hover.title {	=09
+	text-decoration: none;
+	font-weight: underline;=09
+	color: #2A6456;
+}
+:visited.title {=09
+	text-decoration: none;
+	font-weight: bold;
+	color: #2A6456;
+}
+=09
+.more{
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 100%;
+	font-weight: bold;
+	color: #2A6456;
+	text-decoration: underline;
+}
+:link.more {
+	text-decoration: underline;=09
+	color: #2A6456;
+}
+:hover.more {	=09
+	text-decoration: underline;=09
+	color: #2A6456;
+}
+:visited.more {=09
+	text-decoration: underline;
+	color: #2A6456;
+}
+
+
+.productpic{border: 0;}
+
+.author{
+	font-family: Arial, Helvetica, Sans-Serif;
+	font-size: 16px;
+	font-size: 75%;
+	color: #000000;
+	font-weight: normal;
+}
+
+.subtitle{
+	font-weight: 400;=20
+	font-style: italic;
+	font-size: 75%;
+}
+
+.linetitle{
+	font-weight: bold;
+	color: #E57C11;
+	font-size: 100%;
+}
+
+.linetitle{
+	font-weight: bold;
+	color: #E57C11;
+	font-size: 100%;
+}
+
+
+</style>
+
+<script type=3D"text/javascript" src=3D"../../main.js"></script>
+</head>
+
+<body>
+<!-- ClickTale Top part -->
+<script type=3D"text/javascript">
+var WRInitTime=3D(new Date()).getTime();
+</script>
+<!-- ClickTale end of Top part -->
+
+
+<table id=3DtbMain border=3D"0" width=3D"1040" cellspacing=3D"0" cellpaddin=
+g=3D"0">
+  <tr>
+    <td id=3DtdMain width=3D"880" align=3D"left" valign=3D"top">
+    <table id=3D"tbHead" border=3D"0" width=3D"100%" cellspacing=3D"0" cell=
+padding=3D"0">
+    <tr>
+   =20
+    <!-- tbHead Column A -->
+        <td id=3DtdHeadA1 width=3D"100%">
+		<img border=3D"0" src=3D"../../images/tools/pipclear.gif" width=3D"1" hei=
+ght=3D"1"></td>
+      </tr>
+      <tr>
+        <td id=3DtdHeadA2 width=3D"100%">
+		<img border=3D"0" src=3D"../../images/headverylong01.jpg" width=3D"880"=20
+          height=3D"50" alt=3D"For business users of Microsoft Excel."><br>
+          <img border=3D"0" src=3D"../../images/headbizverylong1.gif" width=
+=3D"880" height=3D"22"></td>
+      </tr> =20
+    </table>
+   =20
+    <table class=3DaInherit id=3D"tbBody" border=3D"0" width=3D"880" cellsp=
+acing=3D"0" cellpadding=3D"0">
+      <tr>
+     =20
+        <!-- Table Body Column A -->
+        <!-- tbBody Column B Top -->
+        <td id=3D"tdBodyB1" width=3D"5" align=3D"left" valign=3D"top"></td>
+       =20
+        <!-- Table Body Column C -->
+        <td id=3DtdBodyC1 class=3DaBody width=3D"875" align=3D"left" valign=
+=3D"top">
+        	<p id=3D"pTopLinkPath" class=3D"topLinkPath">
+			<a class=3D"topLinkPath" id=3D"aPath" href=3D"../index.htm">Catalog&nbsp=
+;</a>>&nbsp;&nbsp;</p>
+        =09
+        =09
+            <h3 class=3DSubHeadBrown15 >Plug-n-Play Excel Dashboard Reporti=
+ng...</h3>
+			<h1 class=3Dhead1 >How to Quickly Create &amp; Update<br>
+			Professional Excel
+            Dashboard Reports</h1>
+			<br>
+            <h2 class=3DSubHeadBrown>Excel dashboard reports provide more=20
+			information with less reading time and effort than standard reports=20
+			or BI displays. <br>
+			And they offer much greater flexibility at a <u>much</u>=20
+			lower=20
+			cost!</h2>  <br>              =20
+            <!-- Top -->
+            =09
+            by Charley Kyd, Excel MVP<br>
+            <table class=3DaInherit border=3D"0" width=3D"280" id=3D"table3=
+47" align=3D"right" cellspacing=3D"0" cellpadding=3D"5">
+				<tr>
+					<td align=3D"center" colspan=3D"2">=20
+				<img border=3D"0" src=3D"images/grayreports.jpg" align=3D"center" width=
+=3D"236" height=3D"210"></td>
+				</tr>
+				<tr>
+					<td align=3D"center" colspan=3D"2">=20
+					<img border=3D"0" src=3D"../samples/Rpt15_AmandasChoice_275x405.jpg"=
+ width=3D"275" height=3D"405"></td>
+				</tr>
+				<tr>
+					<td align=3D"center">=20
+				<img border=3D"0" src=3D"images/pnp01_a2.jpg" width=3D"130" height=3D"1=
+84"></td>
+					<td align=3D"center">=20
+				<img border=3D"0" src=3D"images/pnp01_b2.jpg" width=3D"130" height=3D"1=
+84"></td>
+				</tr>
+				<tr>
+					<td align=3D"center">=20
+				<img border=3D"0" src=3D"images/pnp01_c2.jpg" width=3D"131" height=3D"1=
+84"></td>
+					<td align=3D"center">=20
+				<img border=3D"0" src=3D"images/pnp01_d2.jpg" width=3D"131" height=3D"1=
+84"></td>
+				</tr>
+				<tr>
+					<td align=3D"center">=20
+				<img border=3D"0" src=3D"images/pnp01_e2.jpg" width=3D"131" height=3D"1=
+84"></td>
+					<td align=3D"center">=20
+				<img border=3D"0" src=3D"images/pnp01_f2.jpg" width=3D"131" height=3D"1=
+84"></td>
+				</tr>
+				</table>
+           =20
+            <p>
+				Do most of your Excel reports look somewhat like these gray=20
+				examples? <br>
+				<br>
+				If so, your managers and other readers must work <b>hard</b><i> </i>to=
+=20
+				transform those numbers into useful insight. But your Excel=20
+				reports don't have to be that way. They could be <b>easy</b> to read=20
+				and understand. <br>
+				<br>
+				The figures below show dashboard reports created entirely with=20
+				Excel. These professional-quality reports work somewhat like the=20
+				dashboard of your car. At a glance, your readers can easily review a=20
+				<b>massive</b> amount of data, quickly discover <b>patterns of=20
+				performance</b> in the data, and easily <b>remember</b> what they've se=
+en. </p><div align=3D"center">
+		=09
+		</div>
+			<p>
+				Excel users in more than half the countries in the world use Excel=20
+				templates like these to create reports for their clients,=20
+				co-workers, managers, or investors.=20
+				You can do the same, using <b>any version of Excel</b> on either a=20
+				PC or a Mac.<br>
+				<br>
+				Of course, if there's something you want to change about these=20
+				reports, you can do so easily. This isn't complex software. <b>It's=20
+				only Excel.<br>
+&nbsp;</b></p>
+			<h3>
+				High-Quality Reports</h3>
+			<p>
+				These reports look like they came from the pages of a business=20
+				magazine, or from the business graphics department of a=20
+				high-priced consulting firm. Unless you tell your managers, they=20
+				probably won't guess that you created the reports in Excel.</p>
+			<p>
+				I created these reports with one primary thought in mind: As=20
+				Excel users, our purpose is to <b>communicate business=20
+				information</b> clearly and quickly; our purpose is not to=20
+				impress our audience with pretty pictures. <br>
+				<br>
+				Therefore, these reports avoid chart junk...the distracting eye=20
+				candy that many commercial dashboard companies add to their=20
+				expensive dashboard systems. This is why my reports don't=20
+				include gauges, 3D images, or other visual toys that act as a=20
+				barrier to communication. Instead, these reports are designed to
+				<b>clearly</b> show information that your co-workers and=20
+				managers need.<br>
+&nbsp;</p>
+			<h3>
+				Fast-Updating Reports</h3>
+			<p>
+				<i>Well-designed </i>Excel dashboard reports combine two=20
+				important features; one is obvious, one is not.</p>
+			<p>
+				The obvious feature is illustrated at the right: <b>
+				professional-quality report pages</b>. This feature is important=20
+				because the reports will delight your managers and other=20
+				readers, as the testimonials in the right-most column=20
+				illustrate.</p>
+			<p>
+				Even so, the other feature probably is more important to Excel=20
+				users, <b>Dynamic Updating</b>. Here's what this is all about:</p>
+			<p>If you want to update your reports quickly each period, <b>your=20
+			report workbooks should contain no data.</b> Instead, they should=20
+			contain only a few settings, along with formulas that return data=20
+			from a simple database workbook. </p>
+			<p>Then, when it's time to update your reports, you take three=20
+			steps:</p>
+			<ol>
+				<li>You add new data to a column in your database workbook. <br>
+&nbsp;</li>
+				<li>You change a date value in one cell of your report. <br>
+&nbsp;</li>
+				<li>You recalculate your workbook. (If Automatic Calculation is=20
+				set, this happens automatically. Otherwise, you press F9.)</li>
+		</ol>
+		<p><b>Any number of reports</b> can link to the same database workbook.=20
+		This means that you update your database workbook once and then use it=20
+		in any number of dynamically updated reports. This reporting strategy=20
+		can... </p>
+			<ul>
+				<li>save you many hours of work each month, because you merely=20
+				change a date cell then recalculate to update any report.<br>
+&nbsp;</li>
+				<li>&nbsp;improve the accuracy of your reports, because all=20
+				reports get their data from the same database workbook.</li>
+			</ul>
+			<p>From a personal standpoint, here's why dynamic-updating is more impor=
+tant to most Excel users=20
+			than having popular reports: We Excel users never want to distribute=20
+			popular reports that take a long to time create. That situation=20
+			traps us in Worksheet Hell.</p>
+			<p>I designed these reports to <b>avoid Worksheet Hell</b>. The reports=
+ all=20
+			link to two simple database workbooks. One workbook contains actual=20
+			performance data, the other contains target data. (If you don't need=20
+			target data, just enter zeros for your targets.)</p>
+			<p>In short, <b>formulas are dynamic; data is static</b>. Your=20
+			reports should be dynamic if you want to update them quickly. And=20
+			that's exactly how I designed IncSight DB.</p>
+			<h3><br>
+			Inexpensive Reports</h3>
+			<p>
+				Because these templates offer such great value, I originally planned=20
+				to charge hundreds of dollars for them. But I decided to lower the=20
+				price. I want as many people as possible to be able to generate=20
+				their own Excel dashboard reports, and even $100 is beyond the=20
+				reach of many budgets.<br>
+				<br>
+				But $100 would have been a bargain: </p>
+			<ul>
+				<li>Commercial dashboard software typically costs tens of=20
+				thousands of dollars and takes many days to set up. But my=20
+				reports provide more information per report than the expensive=20
+				systems, and my reports are easier to read.<br>
+&nbsp;</li>
+				<li>Custom Excel dashboard reports of this quality could cost thousands=
+ of=20
+				dollars for just a few reports. But IncSight DB includes twenty=20
+				report designs and twenty color themes, for a total of 400=20
+				report-and-color combinations.<br>
+&nbsp;</li>
+				<li>None of the expensive solutions would allow you to generate=20
+				your first reports in a few hours, and modify them easily. But=20
+				you can do that with my reports.<br>
+&nbsp;</li>
+				<li>None of the expensive solutions would teach you Excel=20
+				techniques that you could use with your other Excel reports. But=20
+				that's exactly what IncSight DB allows.</li>
+			</ul>
+			<p>This package offers significant benefits that the expensive=20
+			systems lack. However, instead of thousands of dollars, or even=20
+			hundreds of dollars, I've set the price at $49. This is about $2.50=20
+			per report page, or less than $.13 per report if you factor in the=20
+			20 color schemes available for each report page. <br>
+			<br>
+			Get started today and distribute your first Excel dashboard report by=20
+		tomorrow!</p>
+			<table class=3DaInherit border=3D"0" width=3D"100%" id=3D"table344" cell=
+spacing=3D"0" cellpadding=3D"0">
+			<tr>
+				<td colspan=3D"2"><HR color=3D#D0D7D6 SIZE=3D1></td>
+			</tr>
+			<tr>
+				<td colspan=3D"2" height=3D"25"><p class=3D"head4">Compare IncSight QnE=
+ and IncSight DB</p>Two
+				sets of Excel dashboard templates are available, IncSight DB and
+				<a href=3D"is-qne.htm">IncSight QnE</a>. This table compares them.</td>
+			</tr>
+			<tr>
+				<td width=3D"30" valign=3D"top">&nbsp;</td>
+				<td width=3D"100%" valign=3D"top">
+				<table class=3DaInherit border=3D"1" width=3D"100%" id=3D"table345" cel=
+lspacing=3D"0" style=3D"border-collapse: collapse" bordercolor=3D"#999999">
+					<tr>
+						<td bgcolor=3D"#37695D" width=3D"33%">
+						<font color=3D"#FFFFFF"><b>Information</b></font></td>
+						<td bgcolor=3D"#37695D" width=3D"33%">
+						<b><font color=3D"#FFFFFF">IncSight DB</font></b></td>
+						<td bgcolor=3D"#37695D" width=3D"33%">
+						<b><font color=3D"#FFFFFF">IncSight QnE</font></b></td>
+					</tr>
+					<tr>
+						<td width=3D"33%" bgcolor=3D"#FBF4E8">Link to description=20
+						page</td>
+						<td width=3D"33%"><b><a href=3D"is_db.htm">IncSight DB</a> </b>
+						(this page)</td>
+						<td width=3D"33%"><b><a href=3D"is-qne.htm">IncSight QnE</a></b></td>
+					</tr>
+					<tr>
+						<td width=3D"33%" bgcolor=3D"#FBF4E8">Short description</td>
+						<td width=3D"33%">More powerful</td>
+						<td width=3D"33%">Fastest updating</td>
+					</tr>
+					<tr>
+						<td width=3D"33%" bgcolor=3D"#FBF4E8">Number of report templates</td>
+						<td width=3D"33%">20 templates</td>
+						<td width=3D"33%">34 templates</td>
+					</tr>
+					<tr>
+						<td width=3D"33%" bgcolor=3D"#FBF4E8">Number of color schemes</td>
+						<td width=3D"33%">20 color schemes</td>
+						<td width=3D"33%">2 color schemes</td>
+					</tr>
+					<tr>
+						<td width=3D"33%" bgcolor=3D"#FBF4E8">Report Styles</td>
+						<td width=3D"33%">Reports use a mixture of charts of=20
+						various sizes, and many include tables.</td>
+						<td width=3D"33%">Each report uses a matrix of same-size=20
+						charts, from 2x2 through 7x4.</td>
+					</tr>
+					<tr>
+						<td width=3D"33%" bgcolor=3D"#FBF4E8">Reports can calculate=20
+						ratios and other values </td>
+						<td width=3D"33%">Yes, using up to four values from the=20
+						Excel database workbook per=20
+						calculation</td>
+						<td width=3D"33%">No</td>
+					</tr>
+					<tr>
+						<td width=3D"33%" bgcolor=3D"#FBF4E8">Data management method</td>
+						<td width=3D"33%">Links to an Excel database</td>
+						<td width=3D"33%">Links to an Excel database</td>
+					</tr>
+					<tr>
+						<td width=3D"33%" bgcolor=3D"#FBF4E8" height=3D"19">Typical setup tim=
+e=20
+						</td>
+						<td width=3D"33%" height=3D"19">Less than an hour</td>
+						<td width=3D"33%" height=3D"19">Less than ten minutes</td>
+					</tr>
+					<tr>
+						<td width=3D"33%" bgcolor=3D"#FBF4E8">Typical update time</td>
+						<td width=3D"33%">A few seconds</td>
+						<td width=3D"33%">A few seconds</td>
+					</tr>
+					<tr>
+						<td width=3D"33%" bgcolor=3D"#FBF4E8">Y-axis (value-axis) scaling</td>
+						<td width=3D"33%">Automatic</td>
+						<td width=3D"33%">Automatic</td>
+					</tr>
+					<tr>
+						<td width=3D"33%" bgcolor=3D"#FBF4E8">The Y axes of selected=20
+						charts can be synchronized automatically</td>
+						<td width=3D"33%">Yes</td>
+						<td width=3D"33%">No</td>
+					</tr>
+					<tr>
+						<td width=3D"33%" bgcolor=3D"#FBF4E8">Default time periods</td>
+						<td width=3D"33%">Month</td>
+						<td width=3D"33%">Week, Month, Quarter, Year</td>
+					</tr>
+					<tr>
+						<td width=3D"33%" bgcolor=3D"#FBF4E8">Display number-format settings=
+ for=20
+						dates</td>
+						<td width=3D"33%">Manually adjustable</td>
+						<td width=3D"33%">Three quick-click options</td>
+					</tr>
+					<tr>
+						<td width=3D"33%" bgcolor=3D"#FBF4E8">Price</td>
+						<td width=3D"33%"><span class=3D"linetitle"><strike>
+						<font color=3D"#666666">$69.00</font></strike> $59.00</span> </td>
+						<td width=3D"33%"><span class=3D"linetitle"><strike>
+						<font color=3D"#666666">$59.00</font></strike> $49.00</span> </td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+			</table>
+			<br>
+			<table class=3DaInherit border=3D"0" width=3D"100%" id=3D"table337" cell=
+spacing=3D"0" cellpadding=3D"0">
+			<tr>
+				<td valign=3D"top" colspan=3D"5">
+				<HR color=3D#D0D7D6 SIZE=3D1>
+				</td>
+			</tr>
+			<tr>
+				<td width=3D"19" valign=3D"top">&nbsp;</td>
+				<td width=3D"250" valign=3D"top">		=09
+		<img class=3D"pic" src=3D"../images/products/is-db-250.jpg" width=3D"250"=
+ height=3D"325" ></td>
+				<td width=3D"19" valign=3D"top">&nbsp;</td>
+				<td valign=3D"top">
+				<table class=3DaInherit border=3D"0" width=3D"100%" id=3D"table338" cel=
+lspacing=3D"0" cellpadding=3D"0">
+					<tr>
+						<td>Set up your first Excel dashboard report in less=20
+						than an hour. Add any number of reports. You can update=20
+						your reports in seconds because they're linked to an=20
+						Excel database.<br><br>Choose from 20 Excel templates, plus=20
+						20 color schemes.&nbsp;These dashboards (shown below) use=20
+						only Excel workbooks. Nothing is hidden or protected,=20
+						and there's nothing to install.=20
+							<br>
+&nbsp;<table class=3DaInherit border=3D"0" width=3D"400" id=3D"table339" ce=
+llspacing=3D"0" cellpadding=3D"3" align=3D"right">
+								<tr>
+									<td width=3D"265"><b>New Excel version:<br>
+									=97</b>PC Excel 2007-2010:<br>=97Mac=20
+									Excel 2008-2011:</td>
+									<td width=3D"80">
+									<p align=3D"center"><b>$59 USD</b></td>
+									<td>
+									<p align=3D"center"  width=3D"90">
+									<a href=3D"http://www.1shoppingcart.com/SecureCart/SecureCart.aspx=
+?mid=3DA249A724-AE39-444E-8A9A-0C175D1360FF&pid=3D3d9d62855f414b5f90bbd258c=
+10c7b7a&qa=3D1">
+									<img border=3D"0" src=3D"../images/buttons/carts03.jpg" width=3D"9=
+0" height=3D"21" ></a></td>
+								</tr>
+								<tr>
+									<td colspan=3D"3"><HR color=3D#D0D7D6 SIZE=3D1></td>
+								</tr>
+								<tr>
+									<td width=3D"265"><b>Classic Excel version:<br>
+									=97</b>PC Excel '97-2003:<br>
+									=97Mac Excel 2004:</td>
+									<td width=3D"80">
+									<p align=3D"center"><b>$59 USD</b></td>
+									<td>
+									<p align=3D"center"  width=3D"90">
+									<a href=3D"http://www.1shoppingcart.com/SecureCart/SecureCart.aspx=
+?mid=3DA249A724-AE39-444E-8A9A-0C175D1360FF&pid=3D0fdc018afdfc4ac1a5c53501e=
+420e3f2&qa=3D1">
+									<img border=3D"0" src=3D"../images/buttons/carts03.jpg" width=3D"9=
+0" height=3D"21" ></a></td>
+								</tr>
+							</table>
+							</td>
+					</tr>
+					<tr>
+						<td width=3D"100%">
+				<table class=3DaInherit border=3D"0" width=3D"100%" id=3D"table340" cel=
+lspacing=3D"0">
+					<tr>
+						<td valign=3D"top" colspan=3D"2">
+						</td>
+					</tr>
+					<tr>
+						<td valign=3D"top" colspan=3D"2">
+				<HR color=3D#D0D7D6 SIZE=3D1></td>
+					</tr>
+					<tr>
+						<td width=3D"90" valign=3D"top">
+				<span class=3D"linetitle">Availability:<br>
+						Guarantee:<br>
+				Licensing:<br>
+						File Format:<br>
+				<br>
+				Quantity<br>
+				Discounts:</span></td>
+						<td valign=3D"top">Instant download.<br>
+						One-year, unconditional.
+				<span class=3D"linetitle"><br>
+						</span>One work copy plus one personal copy.<br>
+						Adobe PDF.<br><br>
+					=09
+							<div align=3D"center">
+							<table class=3DaInherit border=3D"1" width=3D"150" id=3D"table346"=
+ cellspacing=3D"0" style=3D"border-collapse: collapse" bordercolor=3D"#0000=
+00" cellpadding=3D"2" align=3D"right">
+								<tr>
+									<td width=3D"49%" bgcolor=3D"#FF870F" align=3D"center">
+									<b>Minimum<br>
+									Amount</b></td>
+									<td bgcolor=3D"#FF870F" align=3D"center" width=3D"43%">
+									<b>Discount</b></td>
+								</tr>
+								<tr>
+									<td width=3D"49%" align=3D"center">$125</td>
+									<td align=3D"center" width=3D"43%">10%</td>
+								</tr>
+								<tr>
+									<td width=3D"49%" align=3D"center">$200</td>
+									<td align=3D"center" width=3D"43%">15%</td>
+								</tr>
+								<tr>
+									<td width=3D"49%" align=3D"center">$300</td>
+									<td align=3D"center" width=3D"43%">20%</td>
+								</tr>
+								<tr>
+									<td width=3D"49%" align=3D"center">$500</td>
+									<td align=3D"center" width=3D"43%">25%</td>
+								</tr>
+								</table>
+							</div>
+						These percentage discounts are automatically applied to=20
+						your order.</td>
+					</tr>
+				</table>
+				</td>
+					</tr>
+				</table>
+				</td>
+				<td width=3D"176" valign=3D"top">
+				<table class=3DaInherit border=3D"0" width=3D"100%" id=3D"table342" cel=
+lpadding=3D"0" style=3D"border-collapse: collapse" height=3D"272">
+					<tr>
+						<td align=3D"center" height=3D"45" valign=3D"top">=20
+						<a href=3D"http://www.1shoppingcart.com/SecureCart/SecureCart.aspx?mi=
+d=3DA249A724-AE39-444E-8A9A-0C175D1360FF">=20
+						<img border=3D"0" src=3D"../images/buttons/viewcart01.jpg" width=3D"8=
+7" height=3D"25"></a></td>
+					</tr>
+					<tr>
+						<td align=3D"center" height=3D"105">
+							<img border=3D"0" src=3D"../../images/tools/guarantee01.gif" width=
+=3D"100" height=3D"100"></td>
+					</tr>
+					<tr>
+						<td align=3D"center" height=3D"122">
+							<!-- (c) 2005, 2010. Authorize.Net is a registered trademark of Cybe=
+rSource Corporation --> <div class=3D"AuthorizeNetSeal"> <script type=3D"te=
+xt/javascript" language=3D"javascript">var ANS_customer_id=3D"a675a097-7602=
+-4b10-b8fd-0b68c826ca99";</script> <script type=3D"text/javascript" languag=
+e=3D"javascript" src=3D"//verify.authorize.net/anetseal/seal.js" ></script>=
+ <a href=3D"http://www.authorize.net/" id=3D"AuthorizeNetText" target=3D"_b=
+lank">Credit Card Processing</a> </div>					=09
+
+						</td>
+					</tr>				=09
+					<tr>
+						<td align=3D"center" height=3D"122">
+							<img border=3D"0" src=3D"../../catalog/images/creditcards5.gif" widt=
+h=3D"100" height=3D"95">
+						=09
+							<br>
+						=09
+							&nbsp;</td>
+					</tr>				=09
+				</table>
+				</td>
+			</tr>
+		</table>
+        =09
+			</td>
+      </tr>
+     =20
+     =20
+      <!-- Footer -->
+      <tr>
+        <td id=3DtdBodyB2 width=3D"5" align=3D"left" valign=3D"top">
+		<img border=3D"0" src=3D"../../images/tools/pipclear.gif" width=3D"5" hei=
+ght=3D"1"></td>
+        <td id=3DtdBodyC2 width=3D"875" align=3D"left" valign=3D"top">
+		<img border=3D"0" src=3D"../../images/tools/pipclear.gif" width=3D"615"=
+ height=3D"1"></td>       =20
+      </tr>
+      <tr>
+        <td id=3DtdBodyB3 width=3D"5" align=3D"left" valign=3D"top" height=
+=3D"100">
+		</td>
+        <td id=3DtdBodyC3  width=3D"875" align=3D"left" valign=3D"top" heig=
+ht=3D"100">
+            <P>           =20
+            <HR color=3D#35655B SIZE=3D3>                       =20
+            <CENTER>
+            <div class=3DbtmExcelUser>ExcelUser, Inc.</div>
+            <div class=3DbtmURL>http:///www.ExcelUser.com<img border=3D"0"=
+ src=3D"http://www.on2url.com/app/adtrack.asp?MerchantID=3D63816&AdID=3D533=
+597" width=3D"1" height=3D"1"></div>
+            </CENTER>           =20
+            <!-- BottomCopyright -->
+            <P class=3DbtmLegal>Copyright =A9 2004 - 2009 by Charles W. Kyd=
+, all rights=20
+            reserved. Content, graphics, and HTML code are protected by
+            <a href=3D"../../copyright/index.htm" rel=3D"nofollow">US and=
+ International Copyright Laws</a>, and may not be copied,=20
+            <a href=3D"../../copyright/reprints.htm" rel=3D"nofollow">repri=
+nted</a>, published, translated, hosted,
+            or otherwise distributed by any means without explicit permissi=
+on.
+            <a href=3D"../../copyright/terms_privacy_earnings.htm" rel=3D"n=
+ofollow">Terms of Use | Privacy Policy | Earnings Policy</a>. </P>
+          </td>
+      </tr>
+     =20
+    </table>
+   =20
+    <!--Column F -->
+    <td id=3Dtable1_2 width=3D"5" align=3D"left" valign=3D"top">
+    <!--Column F Data Top -->
+    <!--Column F Data Bottom -->
+    </td>
+   =20
+    <!--Column G -->
+   =20
+    <!--Column H -->
+   =20
+    <!--Column I -->
+    <td id=3Dtable1_5 width=3D"155" align=3D"left" valign=3D"top">
+       =20
+  =20
+    <table border=3D"0" width=3D"100%" id=3D"table343" cellpadding=3D"0" al=
+ign=3D"right" cellspacing=3D"0">
+
+    =09
+		<tr>
+			<td class=3DaBody id=3D"tdRightSide0" width=3D"130" align=3D"center" bgc=
+olor=3D"#35655B" height=3D"21">
+			<p align=3D"center"><b><font color=3D"#FFFFFF">Testimonials</font></b></=
+td>
+=09
+		</tr>
+
+    =09
+		<tr>
+			<td class=3DaBody id=3D"tdRightSide" width=3D"100%" align=3D"left" valig=
+n=3D"top">
+			<font color=3D"#37695D">
+		=09
+			<i><br>
+			&quot;You made me look like a <span style=3D"background-color: #F0E7DD">=
+superstar</span> with this. Nice work.&quot;</i><br><br>
+	Bill Lalor<br>
+	National Mgr of Technical Support<br>
+	COSCO Container Lines Americas
+=09
+	<br><HR color=3D#51887B SIZE=3D2>
+			<i>&quot;I purchased the Dashbord Kit and I think=20
+	<span style=3D"background-color: #F0E7DD">it=92s brilliant</span>. It offe=
+rs clear and precise advice for practical purposes.&quot;</i><br><br>
+	Sami J=E4rvensivu<br>
+	Business Controller<br>
+	Fl=E4kt Woods Ltd.<br>
+	Finland
+=09
+	<br></p>
+			<HR color=3D#51887B SIZE=3D2>
+	<i>&quot;...one of the most useful tools in my Excel tool belt. I have bui=
+lt several&nbsp; dashboards that had a=20
+	<span style=3D"background-color: #F0E7DD">positive=20
+	impact on my career</span>.  Thank you!&quot;</i><br><br>
+	George Bryant<br>
+	Acuren North Slope Project Manager<br>
+	BP plc=09
+=09
+	<br>
+			<HR color=3D#51887B SIZE=3D2>    			=09
+		<i><p class=3DSingleSpace>&quot;<span style=3D"background-color: #F0E7DD"=
+>I=20
+	bought the Plug N Play this morning and printed out my first scorecard thi=
+s afternoon</span>. </p>
+	<p class=3DSingleSpace>&quot;The product works flawlessly! Thanks so much=
+ for developing this wonderful file. </p>
+	<p class=3DSingleSpace>&quot;<span style=3D"background-color: #F0E7DD">It=
+ makes my heart sing</span>!&quot;</i><br><br>
+	Meg Wright<br>
+	Company withheld
+	<HR color=3D#51887B SIZE=3D2>
+	<i>&quot;<span style=3D"background-color: #F0E7DD">EXCELLENT!</span>=09
+	<p>Thank you for putting together a fabulous tool.=20
+	<span style=3D"background-color: #F0E7DD">Wow! Wow!</span>&quot;</i><br><b=
+r>
+	John Wright<br>
+	Systems Analyst<br>
+	One Washington Financial
+=09
+	<br><HR color=3D#51887B SIZE=3D2>
+	<i>&quot;Thank god I found this great tool on the web.=20
+	<span style=3D"background-color: #F0E7DD">Definitely a must have!</span>&q=
+uot;</i><br>
+	<br>
+	Ralph Pollandt<br>
+	Financial Planning Manager<br>
+	LAN Airlines (Peru)=09
+=09
+	<br><HR color=3D#51887B SIZE=3D2>
+	<i>&quot;<span style=3D"background-color: #F0E7DD">Fabulous. Simply fabulo=
+us.</span><br><br>
+=09
+	&quot;Having built large systems with Excel,=20
+	including significant VBA code, I was already very familiar with most of=
+ the topics. But it's your implementation of all of it combined that is=20
+	<span style=3D"background-color: #F0E7DD">truly stellar</span>.&quot;</i><=
+br>
+	<br>
+	Alexander Cavalaris<br>
+	Fin'l Rptg Analyst<br>
+	Earth Tech Canada		=09
+=09
+	<br><HR color=3D#51887B SIZE=3D2>
+	<i>&quot;All I can say is <span style=3D"background-color: #F0E7DD">Wow!=
+ This is amazing!</span> I have done dashboards before but never like these=
+.&quot;</i><br><br>
+	Jerry Kohl<br>
+	Owner<br>
+	Brighton<br>=20
+	Collections=09
+=09
+	<br>
+			<HR color=3D#51887B SIZE=3D2>    			=09
+				<i><p class=3DSingleSpace>&quot;The dashboard software I purchased from=
+ you is=20
+			<span style=3D"background-color: #F0E7DD">awesome</span>! Easy to use an=
+d the manual is easy to follow, nice work.&quot;</i><br><br>
+			Name and Company Withheld</p><HR color=3D#51887B SIZE=3D2>
+	<i>&quot;I think <span style=3D"background-color: #F0E7DD">it's brilliant!=
+</span> It is unique in unleashing some real power from Excel=20
+	<span style=3D"background-color: #F0E7DD">without programming</span>.&quot=
+;</i><br><br>
+	Martyn Healey<br>
+	Managing Director<br>
+	Strategic Leadership Consulting Pty Ltd=20
+=09
+	<br><HR color=3D#51887B SIZE=3D2>
+			<i>&quot;I purchased your product and have found it=20
+	<span style=3D"background-color: #F0E7DD">immensely=20
+valuable</span>.&quot;</i><br><br>
+	Dr. Paul Eykamp<br>
+	Academic Strategic Planning and Analysis,<br>
+	Univ. of Calif, Office of the President
+=09
+	<br></p>
+			<HR color=3D#51887B SIZE=3D2>
+    <i>&quot;I recently acquired your Dashboard kit and find it loaded with=
+ useful tips.  You have designed a very nice,=20
+	<span style=3D"background-color: #F0E7DD">very helpful tool</span>.&quot;<=
+/i><br>
+	<br>
+	Bob Gannon<br>
+	President<br>
+	Gannon Consulting, Inc.=09
+=09
+	<br><HR color=3D#51887B SIZE=3D2>
+	<i>&quot;<span style=3D"background-color: #F0E7DD">I love what you did</sp=
+an> with Excel.  Please keep me informed if you come up with something new.=
+&quot;</i><br>
+	<br>
+	Dennis Eining<br>
+	President<br>
+	DRE Consulting
+=09
+	<br><br>=09
+=09
+=09
+	</td>
+=09
+		</tr>
+		<tr><td>&nbsp;</td></tr>
+		<tr><td>
+	=09
+		&nbsp;</td></tr>
+		<tr><td>
+	=09
+	=09
+			</td></tr>
+	</table>
+   =20
+  =20
+    </td>
+  </tr>
+</table>
+
+<!-- Start Quantcast tag -->
+			<script type=3D"text/javascript" src=3D"http://quantserve.com/quant.js">=
+</script>
+			<script type=3D"text/javascript">
+			_qacct=3D"p-f7M-MQaqTI-k2";quantserve();</script>
+			<noscript>
+			<img src=3D"http://quantserve.com/pixel/p-f7M-MQaqTI-k2.gif" style=3D"di=
+splay: none" height=3D"1" width=3D"1"/></noscript>
+<!-- End Quantcast tag -->
+
+<!-- Google Analytics -->
+<script type=3D"text/javascript">
+var gaJsHost =3D (("https:" =3D=3D document.location.protocol) ? "https://s=
+sl." : "http://www.");
+document.write(unescape("%3Cscript src=3D'" + gaJsHost + "google-analytics.=
+com/ga.js' type=3D'text/javascript'%3E%3C/script%3E"));
+</script>
+<script type=3D"text/javascript">
+try {
+var pageTracker =3D _gat._getTracker("UA-253271-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<!-- ClickTale Bottom part -->
+<div id=3D"ClickTaleDiv" style=3D"display: none;"></div>
+<script src=3D"http://s.clicktale.net/WRb.js" type=3D"text/javascript"></sc=
+ript>
+<script type=3D"text/javascript">
+if(typeof ClickTale=3D=3D'function') ClickTale(13804,0.1,"www");
+</script>
+<!-- ClickTale end of Bottom part -->
+
+</body>
+</html>
+------=_NextPart_000_0000_DAEBEB24.5AAF3E47
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://peltiertech.com/Common/MVP_H_Blue.png
+
+iVBORw0KGgoAAAANSUhEUgAAALYAAABKCAMAAAAhfl5UAAAAUVBMVEVQhbynwt3T4O7///9ajMD0
+9/pwm8iRstW90eWyyeHe6PJ7o8zI2OpllMTp7/aGq9Ccutmowsn1+NRbjb6Ss8Wzysr//9Xf6dDU
+4c9xnMFmlL8UpyH3AAAHcUlEQVR4XtXbi3LkphIGYLqbO+jivSU57/+gRz8tgsfyVkbyJmvh3QEx
+LeazqkHCZZsfW/nj5UblD4jBfjG3Ki/K/mZuVr6B/WJuV1429l/3Y3/d2M/E2eo/lfvP7esJdRbn
+78aGWuC+FVvVcN+KDfV/7fb2Onuor7s9LefRUUTKVfZQP+8mRE1ozSLCZnIip91JPsyG+nm3sgPO
+k8YuIkJn2SIyRz+tuVxlQ33Crey4NRZlX1k5vYjYhr/KhvqMW9lzb7AxtkzmZCkiYpQNQuIczrGh
+Pucm2ZObd3YpxeKNQLQYiyOiCTMVxyi2EAWETCsaqAEuwK/Fmlq51nCGDfU5N9hzS27UYIPQRzKg
+ZHQE6cnkHVrUG9liiFFKIYqzzyfYXX3GTSIVnoK6szGSsrtFa2jd3rDaED6yczb8LFvV59zKXpHc
+K+rOxpGksio7Rs8ieakizmL6+WkNONEFiMubJOFErtLTbKhPupVdnMhUxZXBZpHaJ9uqi2MwEAf0
+tLFyyxmH18cp6ZmIzLNsqC+4wWaRMAsPNl6os1GpCL0TxsJ7GsIi/MjWG/2zbKivuMEmEfx7ZJfO
+HhVDGnQi7iE02FfWbagvuUknnEP1wA6PbGSGA1vdyWj61Ivsob7mpqZEMY/sNNgtqxfNcKzXjDns
+EKIZfpUN9TW3slkgfsUGzJpFQSqqbXmZpsVob0RIm6WDLXSGDfVVN9h4EXrNXhA8SweZhHwWvbKO
+nUhtb81OZB6pj57yNBvqy27qyuUVW50y2EgGnYlF+tNA6CP2qBXHT7OhLij6UQHNuG4vuQ3bDgvK
+Qnx0B2ZvLDNb45mTMcyMmFAlE7pYP2RlyclujZRlrhP6lurmiNgelWap05NsqKU/iPUm0atnOlOo
+B0/Z+c+wl1S1aFuZKMT9Cbr5aYTPzv9+NtSDjbYKCT1Tz7VMONKsC+L872UPtYwt3aLsxnW667B6
+ydU7Cerfylb1YAed4hZGSFkkI1mUvT8dyaN72rcFpfx0V+NL27SMABE+BHFPT5F/YkPd2cB6rKI7
+m3WIuFWps93Ofu0mvUn7d+8VS4NGEd+Wt/BB9lAPdmnjVTT6yUsTmdzZeWere7AjUEe2d7oKB4CB
+/+jVHurBblkB5m4sLY89UlvZWk3S3YM9A3VkF1H2pE8fCPs4W9WDzX0m1mF07ZprO/Da81/dgy3W
+zMpeKldM6sRbnUVyszjJ+ObTlJhTUTZzMIHZWO0Dm7j6nU3M6/tsE9+wC4T4kDH/mDXu9botWrId
+bFkmERbab1hBb+3URzZVb/OL9vjGxqCk/RjAsI6q7Ix2OrKHe7AJN8Htv4z5R/DOr9g2D3VnZ5G0
+CIM9iwtO5q3mQksUie3MVbcSlmpYnNAjm9HHYK9ZZELf0r5Fd2Af3P3KVmSBspHWy6LJTDt6cQ9q
+ZXMWTpJYCImAQW1/QuqbrI1UJaOFzdsDu/exZBMaVzAmzpkO7OEe7H05STKWtclrMlPPhoPaEMzC
+srAQEgHxBeOGwTZO4izJeGTYG7Zl7WNhXCFCH0sr5cge7sHWSZY7u46QwR7qwV5EnEzKDo3dTiqD
+XZFJC3KI8ht2RN9gr8p2vBV/ZA/3YK/osNLZTiPmA1vVg21aMLekjSb2JZ+UPZabRuU37Bl9I0mK
+Jkn+pyfAONhVF9vO1qs/yWAf1cpmkWr2KUlY7eY1iJAXYeoruO4gMo0kmcmJGIc+HSNlTFsR8OuS
+6oF9cDe2U0Zn69VfB/ug7mxCBNje6YouWuXxSIyIduyUvbfFVOm5jZIw1m7iA/vgbmzxqAa7alp2
+9rtqUyiYiWgygYoxvnL17W5BeCaLTBoVqB0nDoGCIQpor4UINaEv0Bo5YTycsnIlf2Af3LoFS1vl
+2kHU/Zgei0R0dfWn2N2o+8kC9adhw/3r1db/62wTL6snZJJ9d8Ty7ncTyf7URiKn2CZeU/eZym/f
+CtLZx3i6yr7kHuojW/gw3GzeLavI8gvZJl5Qj5+4yk+e+o+lePMr2SZeUCsbi3thTomNXbd6MsmJ
+Y49dQ9yUgZlL2ztE45l9jzLMa8Sx7h+usU28oB5sQdGbnbOtKqEdTAsq0uHbY2GPMjp23TPNX2Ob
+eFqt7OJEQOAYRCqJpDDLTN5JxS46yryEMInUkhp7jwpGxK3YVlANQYQusk08rdYLpYTZmKT7yozc
+7hc2Mt42XodB5x6VHvYKTvgq28RT6sEO+3acRfSFFYHCyJ/Yup1v7D2KO1v3D5fZcJ9SK3st1vyE
+nZk57Rskm5HP77JnyZSvs+E+p9YpaTqbRKYNwT1JFg3y6NIfTIG9Rw22yIrjy2y4T6gPbEy2BATY
+1okLgUtNy2YqHNLO7lGDLZzkOvvohvoEW0/OmgItOTQn4NXRwO5Rna17hg+yTTyhNoVoUj8FVLiR
+2E3cjnzlFOzS7iU2MpPVLYUhjSIqGKDvH9C+zIZ7qO/0e4BxqO/EhlvV92LDDfXd2CZC/anYX56K
+I2s+F/vH/8ztyteb/pL/bf+kAn/A8vVWGaJ/wLKVL99fblO+f4H4/62+dDaTLI4PAAAAAElFTkSu
+QmCC
+------=_NextPart_000_0000_DAEBEB24.5AAF3E47
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-E50F07CA:http://peltiertech.com/Common/jpStyles.css
+
+/* Effective stylesheet produced by snapshot save */
+BODY { font-size: 10pt; font-family: verdana,arial,helvetica,sans-serif; co=
+lor: rgb(0, 0, 0); }
+P { font-size: 10pt; font-family: verdana,arial,helvetica,sans-serif; color=
+: rgb(0, 0, 0); }
+LI { font-size: 10pt; font-family: verdana,arial,helvetica,sans-serif; colo=
+r: rgb(0, 0, 0); }
+H1 { font-size: 180%; font-family: verdana,arial,helvetica,sans-serif; colo=
+r: rgb(0, 0, 0); font-style: normal; font-weight: bold; }
+H2 { font-size: 160%; font-family: verdana,arial,helvetica,sans-serif; font=
+-style: italic; font-weight: bold; }
+H3 { font-size: 145%; font-family: verdana,arial,helvetica,sans-serif; font=
+-style: normal; font-weight: bold; }
+H4 { font-size: 120%; font-family: verdana,arial,helvetica,sans-serif; font=
+-style: normal; font-weight: bold; }
+H5 { font-size: 110%; font-family: verdana,arial,helvetica,sans-serif; font=
+-style: italic; font-weight: bold; }
+H6 { font-size: 100%; font-family: verdana,arial,helvetica,sans-serif; font=
+-style: italic; font-weight: bold; }
+PRE { font-size: 8pt; font-family: courier new,courier,lucida console,lucid=
+a typewriter,monospace; color: rgb(0, 0, 0); }
+PRE.CODE { color: rgb(0, 0, 204); font-weight: bold; }
+table.Excel { font-family: Arial,Helvetica; font-size: 80%; }
+PRE.Excel { font-size: 100%; font-family: Arial Narrow,Arial,Helvetica; }
+TT { font-size: 9pt; font-family: courier new,courier,lucida console,lucida=
+ typewriter,monospace; color: rgb(0, 0, 204); }
+TT.CODE { font-weight: bold; }
+TT.BLACK { color: rgb(0, 0, 0); }
+.xlTable { font-family: Arial,sans-serif; }
+.class2 A:link { text-decoration: underline; color: white; }
+.class2 A:visited { text-decoration: underline; color: white; }
+.class2 A:active { text-decoration: underline; color: white; }
+.class2 A:hover { text-decoration: underline; color: white; }
+.class3 A:link { text-decoration: none; }
+.class3 A:visited { text-decoration: none; }
+.class3 A:active { text-decoration: none; }
+.class3 A:hover { text-decoration: none; }
+div.feedburnerFeedBlock { border: 2px solid rgb(221, 221, 221); background-=
+color: rgb(255, 255, 238); padding: 12px; margin: 12px 0pt; }
+div.feedburnerFeedBlock p.feedTitle { margin-top: 0pt; font-weight: bold;=
+ font-size: 150%; }
+div.feedburnerFeedBlock li { margin-top: 12px; }
+div.feedburnerFeedBlock li span.headline { font-weight: bold; }
+
+------=_NextPart_000_0000_DAEBEB24.5AAF3E47
+Content-Type: text/plain
+Content-Transfer-Encoding: base64
+Content-Location: http://peltiertech.com/Common/PTS.ico
+
+AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAAAAAAAAAAAAAAAAAEA
+AAAAAAA6OjYA0p4KADo2sgCKbiIAWk4uADqangA6NlIAPs7WADo2xgA6Oj4AroYWADpeYgA+7vYA
+3qYGAGpaKgA6NtIAPj42AJZ2HgA+troAOjZaAD76+gA6OjoA1qIKADo2wgBmVioAPuLmADo2ygA6
+Pj4AtooWAD7y+gDipgYAcl4qADo21gCaehoAPsrSADo2XgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAPDw8CFwgPDw8PDw8PDwAADw8PBhUVDw8PDw8PDw8AAA8PDxMV
+FQ8PDw8PDw8PAAAPDw8TFRUPDw8PDw8PDwAADw8PExUVEyMCGg8PDw8AAB0dHQsVFRUVFRUiHR0d
+AAAdHR0LFRUVFRsVCQwdHQAAFB0dCxUVHR0FFRUZHR0AAB0dHQsVFQwdBxUVEh0dAAAeHh4EFRUe
+HiEVFQoeHgAAHh4eBBUVFRUQFRUWHh4AAB4eHh8VFRUVFRUBDR4eAAAeHh4RAxgYGA4cDR4eHgAA
+Hh4eHh4eHh4eHh4eHh4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+------=_NextPart_000_0000_DAEBEB24.5AAF3E47
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.google.com/cse/intl/en/images/google_custom_search_watermark.gif
+
+R0lGODlhdwAQAPcAANfX1/7+/vz8/Pv7+/n5+f39/fb29vf39/Ly8vz7+/r6+/r6+vPz8/X19vf2
+9v/9/PTz8/n7//T09O/v7q3Nr/Dx8fTV0MvV6d/a2fDw8v/++uXl5uTt/fTW0rfC2ty6td7n3v/8
+++Xm6dLa6v79/PLx7fDw7/X4/bXA2fTz8dXW2vX19fX19NjU0/j4+LjB1uncq9br19Ps1OrhwLjD
+2+u8tu3v7erq6tbW1ua5tPna1sLQ7N3n++fGwqu3z+C5tefEv9rV1NTW2+nc2/Pz9uLi4vLz8/77
+4uDa2dvZz8HI1+js6dbUza3Lr87S3Obm5+zt7dyyrfbwzdmvqfr7+9fe7tfc6bi/0Nvi79/f4MDL
+4+Pe3tDY6qu84urp7r/H16m74tvq3OTdwuDcy+/j4v389MfR5Onp6sDI2dzAvNm2sa6/5fDLxvDg
+ofHt7fXrxOvT0N/d3f/7+9zy3drb3ebZ1+zb2LzE2Nzj8fTh3trY0O67svDjqurq67rC1djg8v/9
+1vDjqenp6dzt3Onq7ezo5MLH1O/p16zMr/HNx8fL1d7b29DZ7vb19cjP4OPi3dbd69Lb7cPM4Pr7
+/cXQ6Ofr873K5s7OzsrY9M7Z8fv47eva2PPz9PDz9/79/a693vzl4eHFwff29/Lj4Prh3djh89bc
+6ePU0ejn56vLr+DXst3o3Pvv7e7HwbC/4K283fz9/7Tcttfa4sPM3sXN3/XFvNnl+L7E0/Hx8uft
++err6tnc4trc4t3VtuXbqe7u7q3MsL7I4Pb09Obr9tDX5cDO6OWsp//g2tnT0t3t3avNrd/h5/Py
+8rvC1NbJx/X29fLrs9Dd99ra2+3nzePj4t/V1Ojo6MrV6+Xu/OPh3d+6tdzn3NnX0ebl5vn6+6fF
+qd+4stnUvOTu/f319O/1/tHc8uDh4//+/uLp+eHa2a2+4////MjO3OHf29Xf9erp6vb299fS0fb2
+9d7Y06enp////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAAB3ABAA
+AAj/AOsJHEiwoMGDCBMqXMiwocOHECNKnEix4sII6KqMyMTDG8UAMWLZsEiypERyZuhMQLCBhhIB
+FEEoQ1AQgE0A9XCa3EkyQjFpBCt0g1nvgZyC6zQkXEWhgcAQD+oFwJHTZkF6WBvSm4h1K1eFHK4c
+OHgOlB04iRoJPHJo2psU9WDlwhONEZFtFA6QILWJDRkGl3IKHui1XuGEhx0WTqxYYblbAQ4ec2aA
+Sqgf9QCF46RADIwCtoQ4cIQiQRhEA3QgCzBkygrEVwV67Wo4a23ZXW0TNqibtu3fugtSehG5oKda
+iwS6MVYIGjeBJdo82mGuXgZXEpKlEtYq3ag6cUTB/yY423Bs8+bLoyf8WzZ59OXVF7QCpsLAYaUw
+edmDROCCHPPwkYRAAwSihyXs1NNJMwYMAgwENVSDAAELJaZeb+6llyFj7uWG21bywXdQA2tIUlwC
+y3xyBhBpCDTOB4LMoApMZfhCDS6GRHINKvXM0cQAPWhDlEKLibibkSBu+F6HSyYpYogEifBKMJWc
+MAkWPkABgRqnsGJBCwWw0MsYmkjBhAv1KHBBF4TUI8M3SzATBTgd5DEAkb1lRRtufCJ5VZ4g+sae
+kgj9oogfsxDDSxYG1CMBBlu8s4BAB7STzQ0UYsOFLHeoY8QzRehSDwNBxGPNkDylalIABDhAAKpS
+GTRUnDhfmFBAArQ4oequvFoEiQdEmaJCr8QW2xA8aGjhzh+7yGPss9AWNEAfT0wAa7TYGhQQADs=
+
+------=_NextPart_000_0000_DAEBEB24.5AAF3E47
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://ic.tynt.com/b/h?id=d7J6f6pJar3Rmgab7jrHtB&ts=1310673565055
+
+R0lGODlhAQABAID/AP///wAAACwAAAAAAQABAAACAkQBADs=
+------=_NextPart_000_0000_DAEBEB24.5AAF3E47
+Content-Type: text/javascript
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-92BFC8EE:http://www.google.com/coop/cse/brand?form=cse-search-box&lang=en
+
+/* Script removed by snapshot save */
+
+------=_NextPart_000_0000_DAEBEB24.5AAF3E47
+Content-Type: text/javascript
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-546141B0:http://pagead2.googlesyndication.com/pagead/show_ads.js
+
+/* Script removed by snapshot save */
+
+------=_NextPart_000_0000_DAEBEB24.5AAF3E47
+Content-Type: text/javascript
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-CE7DBCF7:http://www.google-analytics.com/ga.js
+
+/* Script removed by snapshot save */
+
+------=_NextPart_000_0000_DAEBEB24.5AAF3E47
+Content-Type: text/javascript
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-CD7464C8:http://edge.quantserve.com/quant.js
+
+/* Script removed by snapshot save */
+
+------=_NextPart_000_0000_DAEBEB24.5AAF3E47
+Content-Type: text/javascript
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-9B52B3D8:http://tcr.tynt.com/javascripts/Tracer.js?user=d7J6f6pJar3Rmgab7jrHtB&st=1
+
+/* Script removed by snapshot save */
+
+------=_NextPart_000_0000_DAEBEB24.5AAF3E47--

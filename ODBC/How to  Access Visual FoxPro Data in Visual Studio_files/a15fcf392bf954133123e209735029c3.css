@@ -1,0 +1,74 @@
+/* Effective stylesheet produced by snapshot save */
+body { font-family: Verdana; font-size: 0.83em; }
+img { border: 0pt none; }
+body a { text-decoration: none; }
+body a:hover { text-decoration: underline; }
+#CodeSnippet { width: 90%; padding: 0pt; margin-top: 1em; margin-bottom: 1em; }
+#CodeSnippet_LangName { border-left: 1px solid black; border-top: 1px solid black; border-right: 1px solid black; width: 100%; background-color: rgb(0, 0, 0); padding: 0.3em 0.3em 0.3em 1em; color: rgb(255, 255, 255); }
+#CodeSnippet_Code { border: 1px solid black; width: 100%; overflow: auto; background-color: rgb(255, 255, 255); padding: 0.3em 0.3em 0.3em 1em; }
+#CodeSnippet_Code pre { font-size: 9pt; }
+.propertySet { margin: 6px 0pt 20px; }
+.propertySetTitle { font-size: 14pt; color: rgb(179, 0, 0); }
+.property { margin: 0pt 0pt 2px; }
+.propertyName { font-weight: bold; }
+.propertyXmlValue { font-family: 'Courier New',Courier,monospace; }
+.headings { border: thin solid rgb(0, 0, 0); background-color: Black; color: White; text-align: left; }
+.content { text-align: left; border-left: medium none; }
+.footer { float: none; }
+.LibC_o { background-image: url("urn:not-loaded:http://i3.msdn.microsoft.com/Hash/2b9c67bc21c2c96e8e6769087350edbd.jpg"); background-repeat: no-repeat; }
+.LibC_c { background: url("urn:not-loaded:http://i3.msdn.microsoft.com/Hash/3637558d2071c1618e3344a45d533d9f.jpg") no-repeat scroll 0% 0% transparent; }
+.collapsiblePanelHeader { font-weight: bold; }
+.collapsiblePanelContent { font-weight: normal; }
+.title { color: rgb(0, 0, 0); font-family: Arial,Helvetica,sans-serif; font-size: 190%; font-style: normal; font-variant: normal; font-weight: bold; line-height: normal; margin: 0pt 0pt 10px; }
+.endnote { margin: 10px; }
+.endnote .title { font-family: Verdana; font-size: 100%; }
+.endnote .url { font-family: Verdana; font-size: 100%; font-style: italic; }
+#CodeSnippetTabs, .cl_vs_arrow, .versionclick, #vsPanel { display: none; visibility: hidden; }
+.logo { float: right; }
+.footer { visibility: hidden; }
+.copyright { visibility: visible; }
+.navigation, .header, .bottomAdsContainer, .LW_CodeSnippetContainerTabLeft, .LW_CollapsibleArea_Img, .LW_CodeSnippetContainerTabRight, .LW_CodeSnippetContainerTabLeftActive, .LW_CodeSnippetContainerTabRightActive, .LW_CodeSnippetContainerTabLeft, .LW_CodeSnippetContainerTabFirst, .LW_CodeSnippetContainerTab, .LW_CodeSnippetContainerTabLast, .LW_CodeSnippetToolBar { display: none; visibility: hidden; }
+.content, .contentPlaceHolder { overflow: visible; }
+.LW_CodeSnippetContainerCode { border: 1px solid rgb(128, 128, 128); padding-left: 13px; padding-right: 13px; margin-top: 6px; margin-bottom: 13px; }
+.LW_CodeSnippetContainerCodeCollection { border: 0pt none; margin-bottom: 6px; }
+.LW_CodeSnippetContainerTabActiveFirst, .LW_CodeSnippetContainerTabActive, .LW_CodeSnippetContainerTabActiveLast { border: 0pt none; }
+.LW_CodeSnippetContainerTabLinkBold { font-weight: bold; color: rgb(230, 106, 56); }
+.LW_CollapsibleArea_TitleDiv { margin-top: 19px; margin-bottom: 19px; }
+.LW_CollapsibleArea_Title { font-family: 'Segoe UI',Verdana,Arial; font-size: 1.538em; color: rgb(63, 82, 156); font-weight: bold; word-wrap: break-word; padding-left: 6px; }
+.sectionblock, .sectionnone { display: block; }
+.LW_CollapsibleArea_HrDiv { padding-top: 12px; }
+.LW_CollapsibleArea_Hr { border-width: medium medium 0pt; border-style: none none solid; border-color: -moz-use-text-color -moz-use-text-color rgb(229, 229, 229); color: rgb(229, 229, 229); margin-left: 4px; }
+#mainsection { margin-bottom: 26px; }
+.cl_lw_vs_seperator, #versionclick, .CommunityContentFaq { display: none; visibility: hidden; }
+.linksTable { border: 1px solid rgb(128, 128, 128); margin-top: 26px; margin-bottom: 26px; padding-bottom: 6px; }
+.CommunityContent { border: 1px solid rgb(128, 128, 128); margin-top: 26px; margin-bottom: 13px; padding-bottom: 0pt; }
+.CommunityContentContainer { border: 0pt none; }
+.linksTableTitle, .h1, .CommunityContentHeaderTitle h1 { vertical-align: middle; background-color: rgb(204, 204, 204); color: Black; font-size: 1.1em; font-family: 'Segoe UI',Verdana,Arial; font-weight: bold; float: none; }
+.CommunityContentHeaderTitleContainer { vertical-align: middle; background-color: rgb(204, 204, 204); color: Black; float: none; }
+.CommunityContentHeader a, .AnnotationHistory, .cl_nav_offline_nav_slice { display: none; visibility: hidden; }
+.CommunityContentHeader { padding: 0pt; border: 0pt none; }
+.Annotation { border-top: 1px solid rgb(128, 128, 128); }
+.AnnotationTitle { padding: 13px; }
+.AnnotationTitle a { font-weight: normal; margin-left: 10px; }
+.AnnotationBody { word-wrap: break-word; padding-left: 13px; }
+.AnnotationHistory { padding-right: 13px; text-align: right; }
+.AnnotationComplete { clear: both; width: 100%; }
+.AnnotationAddedContainer {  }
+.AnnotationEditedContainer { float: right; padding-top: 9px; padding-bottom: 0pt; margin-bottom: 0pt; }
+.AnnotationEditedContainer ul { margin-top: 8px; padding-top: 5px; margin-right: 5px; margin-left: 0pt; padding-left: 0pt; }
+.AnnotationAddedContainer ul { margin-top: 16px; padding-top: 14px; margin-right: 5px; margin-left: 0pt; padding-left: 0pt; }
+.HistoryGraphic { margin-top: 11px; text-align: right; }
+.ModificationHistory { height: 60px; }
+.ModificationHistory ul { margin-top: 0pt; list-style-type: none; float: right; padding-right: 5px; text-align: right; }
+.AddedUserAvatar { margin-top: 9px; border: 1px solid rgb(187, 187, 187); float: right; height: 34px; width: 34px; margin-right: 13px; }
+.EditedUserAvatar { margin-top: 9px; border: 1px solid rgb(187, 187, 187); height: 25px; width: 25px; float: right; margin-right: 26px; }
+#curversion { float: none; }
+.alert { border-style: solid; border-width: 1px; border-color: rgb(187, 187, 187); background-color: rgb(252, 254, 197); margin-bottom: 10px; }
+.alert table { border-width: 0pt; }
+.alert th { border-width: 0pt; padding: 10px 11px 11px 1px; font-weight: bold; border-collapse: collapse; border-spacing: 0pt; border-style: hidden; float: left; }
+.alert td { border-width: 0pt; padding: 1px 11px 11px 10px; }
+.nameColumn, .descriptionColumn { text-align: left; }
+#TocResize { display: none; }
+.TranslationViewSwitcher { display: none; }
+.TranslationAlertBox div { border-right-width: 0pt; }
+.exportToolBar { display: none; }

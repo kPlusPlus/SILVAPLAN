@@ -1,0 +1,554 @@
+From: <Saved by Mozilla 5.0 (Windows)>
+Subject: GooSL - =?utf-8?Q?pretra=C5=BEivanje_=C5=A0L?=
+Date: Tue, 01 Nov 2011 16:22:53 +0100
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_943A92FD.8E20E4EE"
+X-MAF-Information: Produced By MAF V2.0.2
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_943A92FD.8E20E4EE
+Content-Type: text/html;
+	charset="windows-1250"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.sumari.hr/sumlist/gootxt.asp?id=199001&s=65&s2=72
+
+<html><head>
+<meta http-equiv=3D"content-type" content=3D"text/html; charset=3Dwindows-1=
+250">
+<meta http-equiv=3D"Content-Language" content=3D"hr">
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dwindows-1=
+250">
+<link rel=3D"stylesheet" type=3D"text/css" href=3D"urn:snapshot-0E523C2B:ht=
+tp://www.sumari.hr/sumlist/sl.css">
+<title>GooSL - pretra=9Eivanje =8AL</title>
+</head>
+
+<body>
+
+<img src=3D"http://www.sumari.hr/sumlist/hsdM.gif" align=3D"left" border=3D=
+"0">
+<p class=3D"nas3">DIGITALNA ARHIVA =8AUMARSKOG LISTA
+<br><font size=3D"-1">prilago=F0eno pretra=9Eivanje po punom tekstu</font><=
+br><br>
+<br><br>
+
+
+</p><hr><table width=3D"600">
+<tbody><tr><td class=3D"tabctxt"><a href=3D"http://www.sumari.hr/sumlist/sa=
+drzaj.asp?gb=3DB199001">=8AUMARSKI LIST  1-2/1990      str. 65</a>=A0=A0=A0=
+=A0<a href=3D"http://www.sumari.hr/sumlist/gootxt.asp?id=3D199001&amp;s=3D6=
+4"> &lt;-- </a><a href=3D"http://www.sumari.hr/sumlist/gootxt.asp?id=3D1990=
+01&amp;s=3D65"> 65 </a><a href=3D"http://www.sumari.hr/sumlist/gootxt.asp?i=
+d=3D199001&amp;s=3D66"> --&gt; </a>=A0=A0=A0<a href=3D"http://www.sumari.hr=
+/sumlist/199001.pdf#page=3D65"><font color=3D"red">=A0=A0=A0=A0PDF</font></=
+a><br></td></tr><tr><td class=3D"txt3"><br>IZVORNI ZNANSTVENI =C8LANCI - OR=
+IGINAL SCIENTIFIC PAPERS UDK 630^2.001/2 =9Aum. list CXIV (1390) 63<br><br>=
+<br>OTKLANJANJE POGRE=8AKE LOGARITAMSKOG IZJEDNA=C8ENJA MIHAJLOVE FUNKCIJE<=
+br><br><br>Tono KRU=8EI=C6*<br><br><br>SA=8EETAK: U radu je istra=9Eeno kak=
+o se primjenom ra=E8unara mo=9Ee to=E8no izjedna=E8iti visinska krivulja,=
+ gdje se kao matemati=E8ki model koristi Mi haj lov a funkcija (H =3D 1.3=
+ + b0 e(-bl/d&gt;). Kori=9A=E6ena je metoda pretpostavljanja parametra bt,=
+ nakon =E8ega se parametar h, vrlo lako izra=E8una (iz uvjeta suma odstupan=
+ja =3D 0). Zatim se za te parametre izra=E8una i suma kvadrata odstupanja.=
+ U=E8ini se slijede=E6a pretpostavka parametra b| ve=E6a, odnosno manjaod=
+ prethodne za neki korak =BBk=AB, za koju se ponovi isti postupak. Dobivena=
+ suma kvadrata odstupanja druge pretpostavke se usporedi s onom iz prethodn=
+e u svrhu dono=9Aenja odluke o daljnjemtoku istog procesa sve dok se kontro=
+lirano ne do=F0e do onih parametara kod kojih su zadovoljeni uvjeti: 2(H =
+=97 h) =3D 0 i S(H =97 h)=3D min. Kao prva pretpostavka koristi se parameta=
+r b| dobiven logaritamskom metodom sa =E8im se proces pretpostavljanja skra=
+=E6uje.<br><br><br>Klju=E8ne rije=E8i: visinska krivulja, Mihajlova funkcij=
+a, pogre=9Aka izjedna=E8enja<br><br><br>UVOD<br><br><br>Problem izjedna=E8e=
+nja pomo=E6u funkcija koje se logaritmiranjcm daju svesti na linearni oblik=
+ je ve=E6 relativno dugo poznat (Emrovi=E6 , 1953, 1960). U stvari problem=
+ je nastao tek onda kad su prvi ra=E8unari omogu=E6ili =9Airoku primjenu ra=
+=E8unskih metoda izjedna=E8avanja umjesto dotada=9Anjih grafi=E8kih odnosno=
+ grafi=E8ko-ra=E8unskih i onda kad je parove to=E8aka Ti (xi( y,); i =3D =
+=3D 1,2, ...N, trebalo izjedna=E8iti nekom iz familije funkcija kod kojih=
+ nije mogu=E6e derivirati sume kvadrata odstupanja (SKO) kao funkciju param=
+etara (b=84,b,,...bn), tj.:<br><br><br>F(bo,b1,...bn) =3D 2[yi =97 f(x,)]=
+=BB.<br><br><br>Odnosno dobivene parcijalne derivacije izjedna=E8iti s nulo=
+m i rije=9Aiti n+ 1 Gaussovi h normalnih jednad=9Ebi. U prvom redu to su ra=
+zni oblici eksponencijalnih funkcija, parabola i hiperbola kod kojih se tra=
+=9Eeni parametri mogu dobiti na gornji na=E8in, ali tek ako se izvr=9Ai log=
+aritamska transformacija. Kod takvog na=E8ina nastaje pogre=9Aka koja je u=
+ =9Aumarstvu prvo<br><br><br>Tono Kru=9Ei=E6, dipl. ing., =8Aumarski fakult=
+et Zagreb, =8Aimunska c. 25<br><br><br>=0C <br></td></tr>
+<tr><td class=3D"tabctxt"><a href=3D"http://www.sumari.hr/sumlist/sadrzaj.a=
+sp?gb=3DB199001">=8AUMARSKI LIST  1-2/1990      str. 66</a>=A0=A0=A0=A0<a=
+ href=3D"http://www.sumari.hr/sumlist/gootxt.asp?id=3D199001&amp;s=3D65">=
+ &lt;-- </a><a href=3D"http://www.sumari.hr/sumlist/gootxt.asp?id=3D199001&=
+amp;s=3D66"> 66 </a><a href=3D"http://www.sumari.hr/sumlist/gootxt.asp?id=
+=3D199001&amp;s=3D67"> --&gt; </a>=A0=A0=A0<a href=3D"http://www.sumari.hr/=
+sumlist/199001.pdf#page=3D65"><font color=3D"red">=A0=A0=A0=A0PDF</font></a=
+><br></td></tr><tr><td class=3D"txt3"><br>uo=E8ena kod izjedna=E8enja drvno=
+gromadnih tablica i koja se otklanja Meyerovom korekturom (Meyer, 1941).<br=
+><br><br>Ova pogre=9Aka logaritamskog transformiranja nastaje uslijed pozna=
+tog odnosa aritmeti=E8ke i geometrijske sredine. U cilju otklanjanja ove po=
+gre=9Ake, uo=E8ena je pogodnost elektroni=E8kog ra=E8unara (Hi tree , 1973,=
+ 1976, 1985).<br><br><br>Cilj istra=9Eivanja<br><br><br>Kako je danas i u=
+ na=9Aem =9Aumarstvu ra=E8unalo sve =E8e=9A=E6e prisutno i ima sve ve=E6u=
+ primjenu, na=9A je zadatak da taj stroj koristimo =9Ato vi=9Ae i =9Ato bol=
+je, da =9Ato manje vremena tro=9Aimo na dugotrajna ra=E8unanja. U ovom radu=
+ se nastojalo pokazati da nam ra=E8unalo mo=9Ee koristiti ne samo kao stroj=
+ koji brzo ra=E8una ono =9Ato bismo ina=E8e i sami izra=E8unali (samo s ne=
+=9Ato vi=9Ae vremena!?), nego kao stroj pomo=E6u kojeg se mogu razvijati i=
+ nove metode koje daju to=E8niji rezultat.<br><br><br>Cilj istra=9Eivanja=
+ u ovom radu je da se koriste=E6i ra=E8unar izjedna=E8i sastojinska visinsk=
+a krivulja pomo=E6u Mihajlove funkcije uz zadovoljenje oba tra=9Eena uvjeta=
+, a da se pri tome ne koristimo normalnim jednad=9Ebama.<br><br><br>METODA=
+ RADA<br><br><br>Regresijski model visinske krivulje obi=E8no dobivamo ra=
+=E8unskim putem primjenom metode najmanjih kvadrata uz pomo=E6 logaritamske=
+ transformacije:<br><br><br>H =3D 1.3 + b=84  e(-bi/=F0) H =97 izra=E8unata=
+ visina d =97 prsni promjer e =97 baza prirodnog logaritma bo, bi =97 param=
+etri koje dobijemo izjedna=E8enjem odnosno, log (H =97 1.3) =3D log bo + (-=
+b,  log e)  (=B4/=84) (0)<br><br><br>L/=F0;<br><br><br>Izvr=9Aimo li supsti=
+tuciju: Y =3D=3D log (H=971.3); X =3D C =3D log bn; K =3D =3D-b]  log e, do=
+bijemo pravac, odnosno jednostavnu linearnu regresiju:<br><br><br>Y =3D C=
+ + K  X Kad izvr=9Aimo izjedna=E8enje iz C i K izra=E8unamo odgovaraju=E6i=
+ b0 i bt.<br><br><br>Me=F0utim, po=9Ato smo izjedna=E8ili logaritme, tj. za=
+dovoljili smo samo uvjete: 2 (log H =97 log h) =3D 0 i 2 (log H =97 log h)2=
+ =3D minimum<br><br><br>h =97 izmjerena z=B4-ta visina<br><br><br>H =97 izr=
+a=E8unat r-ta visina<br><br><br>pa kad izvr=9Aimo retransformaciju, razumlj=
+ivo, ne posti=9Eemo iste uvjete i za numeruse, tj. dobivamo pogre=9Aku loga=
+ritamskog transformiranja.<br><br><br>I(H-h)^0 i 2 (H =97 h)2 &gt; minimum<=
+br><br><br>=0C <br></td></tr>
+<tr><td class=3D"tabctxt"><a href=3D"http://www.sumari.hr/sumlist/sadrzaj.a=
+sp?gb=3DB199001">=8AUMARSKI LIST  1-2/1990      str. 67</a>=A0=A0=A0=A0<a=
+ href=3D"http://www.sumari.hr/sumlist/gootxt.asp?id=3D199001&amp;s=3D66">=
+ &lt;-- </a><a href=3D"http://www.sumari.hr/sumlist/gootxt.asp?id=3D199001&=
+amp;s=3D67"> 67 </a><a href=3D"http://www.sumari.hr/sumlist/gootxt.asp?id=
+=3D199001&amp;s=3D68"> --&gt; </a>=A0=A0=A0<a href=3D"http://www.sumari.hr/=
+sumlist/199001.pdf#page=3D65"><font color=3D"red">=A0=A0=A0=A0PDF</font></a=
+><br></td></tr><tr><td class=3D"txt3"><br>Na takav na=E8in dobiven regresij=
+ski model je u pravilu ni=9Ei od stvarnog. Da bismo ovu pogre=9Aku otklonil=
+i, izradio sam novi na=E8in izjedna=E8enja Mihajlove funkcije. Kao =9Ato se=
+ vidi iz modela Mihajlove funkcije, za deriviranje problemati=E8an je param=
+etar bl; no ako pretpostavim njegovu vrijednost npr. bt =3D 20 tad imamo:=
+ H =3D b0  e(-20/d) + 1.3 (1)<br><br><br>Parametar b0 je u tom slu=E8aju iz=
+ra=E8unljiv i to na dva na=E8ina, ovisno kojem uvjetu =9Eelim zadovoljiti:<=
+br><br><br>a) 2 (h =97 H) =3D 0 (postupak a)<br><br><br>h =3D mjerena i-ta=
+ visina H =3D ra=E8unata visina po izrazu (1) za prsni promjer (d) kojeg je=
+ imalo stablo i-te visine.<br><br><br>Dakle iz 2 (h =97 b0-e(-2=B0=B4d&gt;=
+ =97 1.3) =3D 0 ra=E8unam:<br><br><br>2h =97n-1.3 bo =3D (2) 2 e(-20/d)<br>=
+<br><br>b) 2 (h =97 H)2 =3D min. (postupak b)<br><br><br>Ako derivaciju fun=
+kcije F(b=BB) =3D 2 (h =97 bo  e(--0/d)=971.3)2 izjedna=E8im s nulom dobiva=
+mo: 2 h .e(-20/d) _ 1.3 2 e(-2()ld) bo=B4 =3D (3)<br><br><br>2 (e(-20/d))2<=
+br><br><br>Dakle, b=84 je onaj b0 koji uz pretpostavljeni bx zadovoljava uv=
+jet a), a bi=B4 je onaj koji zadovoljava uvjet b). S time sam postigao da=
+ jedan parametar, koji je mogu=E6e ra=E8unati, ra=E8unam, a drugi, koji ne=
+ mogu ra=E8unati, pretpostavljam. Sada, kada imam oba parametra, lako ra=E8=
+unam sumu kvadrata odstupanja (SKO) koja se s tom kombinacijom parametara=
+ posti=9Ee:<br><br><br>SKO =3D 2 (h; =97 A  e&lt;-B=B4d&lt;) =97 1.3)2<br><=
+br><br>A =3D b=84 ili A =3D bo=B4 B =3D pretpostavljen parametar bi<br><br>=
+<br>Na isti na=E8in mogu izra=E8unati i sumu odstupanja (SO), s tim da =E6e=
+ ova SO biti jednaka nuli za svaki A =3D bo, a samo za jedan A =3D bn=B4 =
+=E6e biti SO =3D 0. U=E8inio sam to za izmjerene visine za jelu iz Gorskog=
+ kotara (graf 2).<br><br><br>Ra=E8unam sam zadao da izra=E8una za svaki B=
+ u intervalu od bj =3D 12 do b| =3D 32 (za svaki B je element N), bo, a zat=
+im za takav b0 i bi, tako=F0er da izra=E8una SO j SKO. Rezultate ovog ra=E8=
+unanja sam prikazao i grafi=E8ki (graf. 1) gdje je bo prikazan krivuljom 1,=
+ SO krivuljom 2, SKO krivuljom 3.<br><br><br>65<br><br><br>=0C <br></td></t=
+r>
+<tr><td class=3D"tabctxt"><a href=3D"http://www.sumari.hr/sumlist/sadrzaj.a=
+sp?gb=3DB199001">=8AUMARSKI LIST  1-2/1990      str. 68</a>=A0=A0=A0=A0<a=
+ href=3D"http://www.sumari.hr/sumlist/gootxt.asp?id=3D199001&amp;s=3D67">=
+ &lt;-- </a><a href=3D"http://www.sumari.hr/sumlist/gootxt.asp?id=3D199001&=
+amp;s=3D68"> 68 </a><a href=3D"http://www.sumari.hr/sumlist/gootxt.asp?id=
+=3D199001&amp;s=3D69"> --&gt; </a>=A0=A0=A0<a href=3D"http://www.sumari.hr/=
+sumlist/199001.pdf#page=3D65"><font color=3D"red">=A0=A0=A0=A0PDF</font></a=
+><br></td></tr><tr><td class=3D"txt3"><br>Graf. 1. I(H-h)=B4 ~=AE !:(H-h)=
+=3Df(bo,b1) =A9 I(H-h)=3Df(b=B40,b1)-SO=B4 SKO---=AE i(H-h)=B4--f(b0,b1) =
+=A9 KH-hJ=B4-ftb=B4^b,, 40 3500" *?0 3000 -40 -60 2500<br><br><br>2000<br><=
+br><br>Tako=F0er sam zadao ra=E8unani da u istom intervalu izra=E8una svaki=
+ b=BB=B4 i za taj b,,=B4 i b, izra=E8una isto SO=B4 i SKO=B4, i taj rezulta=
+t sam prikazao grafi=E8ki (graf. 1) gdje je b0=B4 prikazan krivuljom 4, SO=
+=B4 krivuljom 5, SKO=B4 krivuljom 6.<br><br><br>Vidi se da su krivulje glat=
+ke te da krivulje SKO (kriv. 3 i 6) imaju minimum oko bi =3D 22.1, a krivul=
+je SKO i SKO=B4 u tom dijelu se neznatno razlikuju, ali razlika u istom dij=
+elu izme=F0u vrijednosti SO i SO=B4 je uo=E8ljiva.<br><br><br>Ra=E8unar je=
+ mogu=E6e isprogramirati tako da sam pronalazi minimume funkcije SKO i SKO=
+=B4 i na taj na=E8in izjedna=E8i, u ovom slu=E8aju, visinsku<br><br><br>=0C=
+ <br></td></tr>
+<tr><td class=3D"tabctxt"><a href=3D"http://www.sumari.hr/sumlist/sadrzaj.a=
+sp?gb=3DB199001">=8AUMARSKI LIST  1-2/1990      str. 69</a>=A0=A0=A0=A0<a=
+ href=3D"http://www.sumari.hr/sumlist/gootxt.asp?id=3D199001&amp;s=3D68">=
+ &lt;-- </a><a href=3D"http://www.sumari.hr/sumlist/gootxt.asp?id=3D199001&=
+amp;s=3D69"> 69 </a><a href=3D"http://www.sumari.hr/sumlist/gootxt.asp?id=
+=3D199001&amp;s=3D70"> --&gt; </a>=A0=A0=A0<a href=3D"http://www.sumari.hr/=
+sumlist/199001.pdf#page=3D65"><font color=3D"red">=A0=A0=A0=A0PDF</font></a=
+><br></td></tr><tr><td class=3D"txt3"><br>5raf 2. Visinska krivi lja za jel=
+u IGorski Kotar) h(m)<br><br><br> =AB  =AB ff <br><br><br>35 *<br><br><br>8=
+ e 0^^^% =BB -=BB =B4 J^***=B0 *-=B4""=B4"""<br><br><br><a 2fs*^<br=3D""><b=
+r><br>30<br><br><br>o<br><br><br>0 o<br><br><br>0 0<br><br><br>=AB %*.=B4=
+=B4 =B0=B0 =B0<br><br><br>s 0<br><br><br>25<br><br><br><br><br><br>* /^ 20=
+ <br><br><br>* / * izjedna=E8eno metodom 1<br><br><br>15 "<br><br><br>izjed=
+na=E8eno metodom 2<br><br><br>izjedna=E8eno metodom 3<br><br><br>10 "<br><b=
+r><br><br><br><br>i<br><br><br>5"<br><br><br>10 20 30 40 SO 60 70 dlj30(cm)=
+<br><br><br>krivulju. Naravno, bolje je da isprogramiram ra=E8unalo da na=
+=F0e onu kombinaciju parametara b0 i bj gdje je b0 ra=E8unat po postupku a)=
+, tj. po izrazu<br><br><br>(2) i koja daje SKO =3D minimum. Na taj na=E8in=
+ su zadovoljena oba uvjeta i SO =3D 0 i SKO =3D minimum. To alternativni po=
+stupak b) ne bi zadovoljio, tj. model bi imao pogre=9Aku izjedna=E8enja koj=
+a je mala, ali imajmo na umu da ta pogre=9Aka ipak ima karakter sistematske=
+ pogre=9Ake. Iz literature je poznato da postoje i drugi sli=E8ni postupci=
+ i metode izjedna=E8enja primjenom kompjutera, me=F0utim, kod kojih nisu za=
+dovoljena oba uvjeta izjedna=E8enja. Obi=E8no se posti=9Ee samo drugi uvjet=
+, tj. SKO =3D minimum (Hi tree , 1973, 1985).<br><br><br>PRIMJER<br><br><br=
+>Izjedna=E8it =E6u visinsku krivulju za jelu izmjerenu na nastavno pokusnom=
+ =9Aumskom objektu Zalesina, gosp. jedinice Kupja=E8ki vrh, odjel 1, odsjek=
+ 2.<br><br><br>=0C <br></a></td></tr>
+<tr><td class=3D"tabctxt"><a href=3D"http://www.sumari.hr/sumlist/sadrzaj.a=
+sp?gb=3DB199001">=8AUMARSKI LIST  1-2/1990      str. 70</a>=A0=A0=A0=A0<a=
+ href=3D"http://www.sumari.hr/sumlist/gootxt.asp?id=3D199001&amp;s=3D69">=
+ &lt;-- </a><a href=3D"http://www.sumari.hr/sumlist/gootxt.asp?id=3D199001&=
+amp;s=3D70"> 70 </a><a href=3D"http://www.sumari.hr/sumlist/gootxt.asp?id=
+=3D199001&amp;s=3D71"> --&gt; </a>=A0=A0=A0<a href=3D"http://www.sumari.hr/=
+sumlist/199001.pdf#page=3D65"><font color=3D"red">=A0=A0=A0=A0PDF</font></a=
+><br></td></tr><tr><td class=3D"txt3"><br>Veli=E8ina uzorka n =3D 139. Svak=
+a visina je prikazana kao to=E8ka na grafikonu 2 (si. 2). Visine sam izjedn=
+a=E8io Mihajlovom funkcijom na tri razli=E8ita na=E8ina:<br><br><br>ki. <br=
+><br><br>1) Samo primjenom logaritamske transformacije<br><br><br>2) Metodo=
+m koju primjenjuje Hitrec (Hi tree , 1973)<br><br><br>3) Metodom opisanom=
+ u ovom radu (uvjet SO =3D 0 i SKO =3D min.).<br><br><br>Dobiveni rezultati=
+ prikazani su u slijede=E6oj tablici:<br><br><br>Metoda b0 b, I H I h SO SK=
+O pg (o/o) 1 42.443 21.384 3156.25 3232.5 =9776.25 2349.61 =973.25 2 44.438=
+ 22.142 3228.77 3232.5 =97 3.73 2292.10 =970.12 3 44.440 22.100 3232.50 323=
+2.5 0.00 2292.19 0.00<br><br><br>bo, b, =97 parametri Mahijalove funkcije:=
+ H =3D bo  e("d/bi&gt; + 1<br><br><br>H =97 izra=E8unata visina<br><br><br>=
+d =97 prsni promjer<br><br><br>e =97 baza prir. log. (2.718)<br><br><br>I=
+ H =97 suma izjedna=E8enih visina<br><br><br>I h =97 suma izmjerenih visina=
+<br><br><br>SO =97 suma odstupanja [I (H =97 h)]<br><br><br>SKO =97 suma kv=
+adratnog odstupanja [I (H =97 h)2] pg ("/o) =97 pogre=9Aka izjedna=E8enja=
+ u postotku [(SO Ih ) 100]<br><br><br>Ove visinske krivulje su prikazane na=
+ grafikonu 2 gdje se mo=9Ee i okularno vidjeti kakva je razlika izme=F0u ov=
+e tri metode izjedna=E8enja.<br><br><br>IZRADA PROGRAMA<br><br><br>Program=
+ je napravljen u GW Basic-u i primjenljiv je samo za Mihajlovu funkciju. Pr=
+ednost programa je da se ne mora nakon unosa podataka ra=E8unalu zadavati=
+ prvi pretpostavljeni parametar. Kao prvi pretpostavljeni b| od kojeg ra=E8=
+unalo po=E8inje proces pretpostavljanja parametara je b, kojeg izra=E8una=
+ u prvom dijelu programa logaritamskim na=E8inom. Na ovaj na=E8in se izvo=
+=F0enje programa znatno ubrzava, a korisniku olak=9Aava upotreba. Nakon uno=
+sa podataka po=E8inje ra=E8unanje koje traje oko dvije minute (ovisno<br><b=
+r><br>o verziji ra=E8unala PC, XT ili AT). Izlaz su parametri bo i b, i st.=
+ devijacija oko lin. izjedna=E8enja s mogu=E6no=9A=E6u ispisivanja istih na=
+ printer zajedno s izjedna=E8enim visinama u =9Eeljenom rasponu promjera i=
+ odabranim korakom. DISKUSIJA<br><br><br>Primjer visinske krivulje za jelu=
+ iz Gorskog kotara izjedna=E8enu na tri na=E8ina Mihajlovom funkcijom pokaz=
+uje da pogre=9Aku logaritamskog izjedna=E8enja ne smijemo zanemariti. Iz re=
+zultata se vidi da je najve=E6a pogre=9Aka izjedna=E8enja kao i SKO kod 1.=
+ metode =9Ato je i logi=E8no, a najmanja pogre=9Aka kod 3. No kao =9Ato se=
+ vidi iz grafikona 2, pogre=9Aka je neznatno pozitivna za<br><br><br>=0C <b=
+r></td></tr>
+<tr><td class=3D"tabctxt"><a href=3D"http://www.sumari.hr/sumlist/sadrzaj.a=
+sp?gb=3DB199001">=8AUMARSKI LIST  1-2/1990      str. 71</a>=A0=A0=A0=A0<a=
+ href=3D"http://www.sumari.hr/sumlist/gootxt.asp?id=3D199001&amp;s=3D70">=
+ &lt;-- </a><a href=3D"http://www.sumari.hr/sumlist/gootxt.asp?id=3D199001&=
+amp;s=3D71"> 71 </a><a href=3D"http://www.sumari.hr/sumlist/gootxt.asp?id=
+=3D199001&amp;s=3D72"> --&gt; </a>=A0=A0=A0<a href=3D"http://www.sumari.hr/=
+sumlist/199001.pdf#page=3D65"><font color=3D"red">=A0=A0=A0=A0PDF</font></a=
+><br></td></tr><tr><td class=3D"txt3"><br>najtanja stabla, a u ostalom dije=
+lu je znatno negativna, tj. za stabla ja=E8ih promjera i ve=E6ih visina.<br=
+><br><br>To =9Ato je postignuto u ovom radu za Mihajlovu funkciju mo=9Ee se=
+ posti=E6i i za bilo koju funkciju gdje primjenjujemo logaritamsku transfor=
+maciju. =C8injenica, da je daleko manja razlika u podru=E8ju tanjih stabala=
+, ukazuje na to da kod logaritamskog izjedna=E8enja uslijed transformacije=
+ varijabli, deblja i vi=9Aa stabla neopravdano imaju smanjeni ponder u odno=
+su na tanka i niska, a to zna=E8i da najlo=9Aije izjedna=E8enje imaju uprav=
+o najdeblja stabla. Ovo je rano uo=E8eno kod izjedna=E8enja dvoulaznih tabl=
+ica gdje se koristi Schumachei- Hallova funkcija (V =3D a-db-hc), tj. njena=
+ logaritamska transformacija (log V =3D a + b  log d + c  log h). Do sada=
+ je ve=E6 publicirano niz doma=E6ih tablica izjedna=E8enih ovom metodom, a=
+ to zna=E8i i s pogre=9Akom koja se nastojala izbje=E6i na dva na=E8ina:<br=
+><br><br>=97 tanja stabla od 20 cm izjedna=E8avana su nomogramskom metodom,=
+ =97 primjenom Meyerove korekture. Osim na Schumacher-Hallovu funkciju, ova=
+ kompjutorska metoda pretpostavljanja bi se uspje=9Ano mogla primijeniti i=
+ na one modele koji se ne mogu izjedna=E8iti =E8ak ni logaritamskom metodom=
+ npr.:<br><br><br>Z =3D a0 + at  XW) + a,  Y&gt;&gt;1<br><br><br>ZAKLJU=C8A=
+K<br><br><br>Ra=E8unalo u =9Aumarstvu dobiva jo=9A jedan plus kod primjene=
+ ra=E8unskih metoda izjedna=E8enja nekih funkcija kod kojih se do sada kori=
+stila uglavnom samo logaritamska transformacija te linearna ili obi=E8na mu=
+ltipla regresija takvog transformiranog modela. Pogre=9Aku takvog izjedna=
+=E8enja mo=9Eemo uspje=9Ano izbje=E6i primjenom kompjuterske metode pretpos=
+tavljanju, opisane u ovom radu.<br><br><br>Metoda je primjenjiva zahvaljuju=
+=E6i brzini kompjutera u izvo=F0enju programa u kojem se do pravih parameta=
+ra dolazi nizom pretpostavki istih, te direktnim ra=E8unanjem sume kvadrata=
+ odstupanja (SKO) i sume odstupanja (SO) za svaku takvu pretpostavku; sve=
+ tako dok se ne prona=F0e ona kombinacija parametara kod koje su ispunjeni=
+ uvjeti najboljeg izjedna=E8enja: SO =3D 0 i SKO =3D=3D minimum.<br><br><br=
+>LITERATURA<br><br><br>Emrovi=E6 , B. (1953): O izjedna=E8enju pomo=E6u fun=
+kcija, koje se logaritmiranjem<br><br><br>daju svesti na linearni oblik. Gl=
+asnik za =9Aumske pokuse br. 11 (str. 73=97110). Emrovi=E6 , B. (1960): O=
+ najpodesnijem obliku izjednad=9Ebene funkcije potrebne za ra=E8unsko izjed=
+na=E8enje pri sastavu dvolulaznih drvnogromadnih tablica. Glasnik za =9Aums=
+ke pokuse, Vol. XIV. (str. 49=97126).<br><br><br>Hi tree, V. (1973): Izjedn=
+a=E8enje podataka metodom najmanjih kvadrata bez Gaussovih normalnih jednad=
+=9Ebi, =8Aumarski list, Vol. 97 (str. 293=97297). Hitrec , V. (1976): Curve=
+ fitting by the Method of Least Squares Without Normal Gaussian Equations,=
+ Diskussion Paper, XVI World Congres, Oslo. Hitrec , V. (1985):Matemali=E8k=
+i modeli i rje=9Aenja nekih problema u =9Aumarstvu i tehnologiji drva, Glas=
+nik za =9Aumske pokuse. Vol. 23 (str. 34=9736).<br><br><br>69<br><br><br>=
+=0C <br></td></tr>
+<tr><td class=3D"tabctxt"><a href=3D"http://www.sumari.hr/sumlist/sadrzaj.a=
+sp?gb=3DB199001">=8AUMARSKI LIST  1-2/1990      str. 72</a>=A0=A0=A0=A0<a=
+ href=3D"http://www.sumari.hr/sumlist/gootxt.asp?id=3D199001&amp;s=3D71">=
+ &lt;-- </a><a href=3D"http://www.sumari.hr/sumlist/gootxt.asp?id=3D199001&=
+amp;s=3D72"> 72 </a><a href=3D"http://www.sumari.hr/sumlist/gootxt.asp?id=
+=3D199001&amp;s=3D73"> --&gt; </a>=A0=A0=A0<a href=3D"http://www.sumari.hr/=
+sumlist/199001.pdf#page=3D65"><font color=3D"red">=A0=A0=A0=A0PDF</font></a=
+><br></td></tr><tr><td class=3D"txt3"><br>Meyer , H.A. (1941): A Correction=
+ for a Systematic Error Occuring in the Aplic<br><br><br>ation or the Logar=
+ithmic Volume Equation. The Pennsylvania State Forest<br><br><br>School, Re=
+search Paper No 7. Microsoft Corporation (1987): Microsoft GW-BASIC, User=
+=B4s Guide and<br><br><br>User=B4s Reference.<br><br><br>Error Removal in=
+ the Logarithmic Equalization of the Mihajlov Function<br><br><br>Summary<b=
+r><br><br>In this work, the possibility of computer application for the equ=
+alization of the altitude curve has been investigated, whereby the Mihajlo=
+ v function (H =3D 1.3 + b0e(-bld) has been used as a suitable mathematical=
+ model.<br><br><br>A supposed parameter (bj) method has been used, enabling=
+ a consequent calculation of a parameter b0 (out of the condition: deviatio=
+n sum =3D 0). Next, the sum of the squares of the s. d. for these parameter=
+s has been calculated. The same procedure has been repeated for the next su=
+pposed parameter bt, which differs from the preliminary or introductory one=
+. The difference was a step =B4k=B4. Thus achieved sum of the squares of th=
+e s. d. of the second supposition has been compared with the first one, or=
+ with the preliminary one. The procedure has been used to decide on the pro=
+gress of continuing the further investigations of the matter until it gave=
+ deliberately derived parameters which satisfy the following conditions: th=
+e sum of deviations (SO) =3D 0; the sum of the squares of standard deviatio=
+ns (SKO) =3D minimum. The parameter b, has been used as the first suppositi=
+on derived by a logarithmic method, which shortens the supposing procedure.=
+<br><br><br>=0C <br></td></tr>
+
+
+
+
+</tbody></table></body></html>
+------=_NextPart_000_0000_943A92FD.8E20E4EE
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.sumari.hr/sumlist/hsdM.gif
+
+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
+CmaUgzWJZGHlsWZeFWSeZ3cokaAgKezjjjmTqZ04444004444004444004444004444004444004
+44400444401//9k=
+------=_NextPart_000_0000_943A92FD.8E20E4EE
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-0E523C2B:http://www.sumari.hr/sumlist/sl.css
+
+/* Effective stylesheet produced by snapshot save */
+A { text-decoration: none; font-family: Trebuchet MS; font-size: 8pt; }
+a:link { color: rgb(0, 102, 102); text-decoration: none; font-weight: bold;=
+ }
+a:visited { color: rgb(0, 102, 102); text-decoration: none; font-weight: bo=
+ld; }
+a:hover { color: rgb(153, 0, 0); text-decoration: none; font-weight: bold; }
+IMG { border: 0pt none; }
+.nas1 { color: rgb(0, 0, 128); font-family: Verdana; font-size: 14pt; text-=
+align: center; }
+.nas2 { color: rgb(0, 0, 128); font-family: Verdana; font-size: 12pt; text-=
+align: center; }
+.nas3 { color: rgb(128, 0, 128); font-family: Verdana; font-size: 12pt; tex=
+t-align: left; }
+.nas3c { color: rgb(128, 0, 128); font-family: Verdana; font-size: 10pt; te=
+xt-align: center; }
+.nas3r { color: rgb(128, 0, 128); font-family: Verdana; font-size: 10pt; te=
+xt-align: right; }
+.nas4 { color: rgb(128, 0, 128); font-family: Tahoma; font-size: 10pt; text=
+-align: center; }
+.txt1 { font-family: Tahoma; font-size: 10pt; text-align: justify; }
+.txt2 { color: rgb(0, 0, 0); font-family: Arial; font-size: 10pt; text-alig=
+n: justify; }
+.txt2z { color: rgb(0, 128, 0); font-family: Arial; font-size: 10pt; text-a=
+lign: justify; }
+.txt2c { color: rgb(255, 0, 0); font-family: Arial; font-size: 10pt; text-a=
+lign: justify; }
+.txt3 { color: rgb(0, 0, 128); font-family: Arial; font-size: 8pt; text-ali=
+gn: justify; }
+.txtc { color: rgb(0, 0, 128); font-family: Arial; font-size: 8pt; text-ali=
+gn: center; }
+.saz { font-size: 11px; color: rgb(0, 0, 0); text-align: justify; font-fami=
+ly: Trebuchet MS; }
+.sazr { font-size: 11px; color: rgb(0, 0, 0); text-align: right; font-famil=
+y: Trebuchet MS; }
+.aut { font-size: 12px; color: rgb(0, 0, 0); text-align: left; font-family:=
+ Trebuchet MS; }
+.str { font-size: 12px; color: rgb(0, 0, 0); text-align: right; font-family=
+: Trebuchet MS; }
+.nas { font-size: 13px; color: rgb(0, 0, 0); text-align: left; font-family:=
+ Trebuchet MS; font-weight: bold; }
+.ktg1 { font-size: 13px; background-color: rgb(0, 0, 0); color: rgb(255, 25=
+5, 255); text-align: left; font-family: Trebuchet MS; font-weight: bold; }
+.ktg2 { font-size: 14px; color: rgb(0, 85, 0); text-align: left; font-famil=
+y: Trebuchet MS; font-weight: bold; }
+.ktg1943 { font-size: 14px; color: rgb(0, 0, 0); text-align: center; font-f=
+amily: Trebuchet MS; }
+.ktg2943 { font-size: 14px; color: rgb(0, 0, 0); text-align: left; font-fam=
+ily: Trebuchet MS; }
+.ktg1879 { font-size: 16px; background-color: rgb(204, 204, 204); color: rg=
+b(0, 0, 0); text-align: center; font-family: Times; font-weight: bold; }
+.ktg2879 { font-size: 14px; color: rgb(0, 0, 0); text-align: left; font-fam=
+ily: Times; }
+.tabtxt { font-size: 10pt; color: rgb(0, 0, 128); text-align: left; font-fa=
+mily: Trebuchet MS; }
+.tabctxt { font-size: 10px; margin-left: 5px; color: rgb(0, 51, 0); font-fa=
+mily: Verdana,Arial,Helvetica,sans-serif; text-align: left; }
+.tabctxtc { font-size: 10px; margin-left: 5px; color: rgb(255, 0, 0); font-=
+family: Verdana,Arial,Helvetica,sans-serif; text-align: justify; }
+.tabctxtzeb { font-size: 10px; margin-left: 5px; color: rgb(0, 51, 0); font=
+-family: Verdana,Arial,Helvetica,sans-serif; text-align: justify; backgroun=
+d-color: rgb(224, 255, 198); }
+.tabcbr { font-size: 10px; margin-left: 5px; color: rgb(0, 51, 0); font-fam=
+ily: Verdana,Arial,Helvetica,sans-serif; text-align: right; }
+.tabcbrzeb { font-size: 10px; margin-left: 5px; color: rgb(0, 51, 0); font-=
+family: Verdana,Arial,Helvetica,sans-serif; text-align: right; background-c=
+olor: rgb(224, 255, 198); }
+.tabtxtb { font-size: 10pt; color: rgb(0, 0, 128); text-align: left; font-f=
+amily: Trebuchet MS; font-weight: bold; }
+.tabtxtc { font-size: 10pt; color: rgb(255, 0, 0); text-align: left; font-f=
+amily: Trebuchet MS; }
+.tabbr { font-size: 10pt; color: rgb(0, 0, 128); text-align: right; font-fa=
+mily: Trebuchet MS; }
+.tablnas { font-family: Trebuchet MS; color: rgb(0, 0, 128); text-indent:=
+ 5px; text-align: left; font-weight: bold; border-left: 1px solid rgb(255,=
+ 255, 204); border-right: 1px solid rgb(102, 102, 99); border-width: 1px;=
+ border-style: solid; border-color: rgb(255, 255, 204) rgb(102, 102, 99) rg=
+b(102, 102, 99) rgb(255, 255, 204); }
+.tabcnas { font-family: Trebuchet MS; color: rgb(0, 0, 128); text-indent:=
+ 5px; text-align: center; font-weight: bold; border-left: 1px solid rgb(255=
+, 255, 204); border-right: 1px solid rgb(102, 102, 99); border-width: 1px;=
+ border-style: solid; border-color: rgb(255, 255, 204) rgb(102, 102, 99) rg=
+b(102, 102, 99) rgb(255, 255, 204); }
+.tabrnas { font-family: Trebuchet MS; color: rgb(0, 0, 128); background-col=
+or: rgb(192, 192, 192); text-indent: 5px; text-align: right; font-weight:=
+ bold; border-left: 1px solid rgb(255, 255, 204); border-right: 1px solid=
+ rgb(102, 102, 99); border-width: 1px; border-style: solid; border-color:=
+ rgb(255, 255, 204) rgb(102, 102, 99) rgb(102, 102, 99) rgb(255, 255, 204);=
+ }
+.link { color: rgb(0, 102, 102); text-decoration: none; font-family: Trebuc=
+het MS; font-size: 8pt; font-weight: bold; }
+LI { color: slategray; font-family: 'Arial CE'; font-size: x-small; font-va=
+riant: small-caps; }
+BODY { color: dimgray; font-family: 'Arial CE'; font-size: 10pt; }
+
+------=_NextPart_000_0000_943A92FD.8E20E4EE--

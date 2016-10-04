@@ -1,0 +1,1 @@
+SELECT [qVrstaDrva].[ID], [qVrstaDrva].[Vrsta] FROM qVrstaDrva ORDER BY [Vrsta]; 
